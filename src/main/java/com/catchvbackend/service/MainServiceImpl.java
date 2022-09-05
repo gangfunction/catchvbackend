@@ -1,4 +1,4 @@
-package service;
+package com.catchvbackend.service;
 
 import lombok.Getter;
 import lombok.Setter;

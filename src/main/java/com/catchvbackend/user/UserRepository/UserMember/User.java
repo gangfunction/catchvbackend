@@ -1,4 +1,4 @@
-package user.UserRepository.UserMember;
+package com.catchvbackend.user.UserRepository.UserMember;
 
 import lombok.Data;
 

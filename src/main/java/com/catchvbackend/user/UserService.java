@@ -1,6 +1,6 @@
-package user;
+package com.catchvbackend.user;
 
-import user.UserRepository.UserMember.UserRepository;
+import com.catchvbackend.user.UserRepository.UserMember.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

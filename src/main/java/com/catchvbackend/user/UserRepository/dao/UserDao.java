@@ -1,6 +1,6 @@
-package user.UserRepository.dao;
+package com.catchvbackend.user.UserRepository.dao;
 
-import user.UserRepository.UserMember.User;
+import com.catchvbackend.user.UserRepository.UserMember.User;
 
 import java.util.Optional;
 
