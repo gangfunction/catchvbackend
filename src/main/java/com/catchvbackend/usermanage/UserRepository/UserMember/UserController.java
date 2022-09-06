@@ -1,6 +1,6 @@
-package com.catchvbackend.user.UserRepository.UserMember;
+package com.catchvbackend.usermanage.UserRepository.UserMember;
 
-import com.catchvbackend.user.UserService;
+import com.catchvbackend.usermanage.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;

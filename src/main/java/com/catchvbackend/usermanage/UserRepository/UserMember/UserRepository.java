@@ -1,4 +1,4 @@
-package com.catchvbackend.user.UserRepository.UserMember;
+package com.catchvbackend.usermanage.UserRepository.UserMember;
 
 
 import org.springframework.stereotype.Repository;
