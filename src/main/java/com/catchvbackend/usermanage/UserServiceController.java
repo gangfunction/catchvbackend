@@ -36,7 +36,7 @@ public class UserServiceController {
         this.jdbcTemplate = jdbcTemplate;
         this.userRepository = userRepository;
     }
-    @PostMapping("/api/login")
+    @PostMapping("/api")
     public void showUser(@RequestBody User user) {
         log.info("showUser: " + user.getUserEmail() + " " + user.getUserPassword());
         userDao.login(user.getUserEmail(), user.getUserPassword());
@@ -45,22 +45,22 @@ public class UserServiceController {
     @PostMapping("/api/logout")
     public void logoutUser(@RequestBody User user){
         int test = userDao.changeStatus(user.getUserEmail());
-        log.info("로그아웃."+test);
+        log.info("logout."+test);
     }
 
-    @PostMapping("/api/register")
+    @PutMapping("/api")
     public void registerUser(@RequestBody User user) {
         log.info("register"+user);
         userDao.register(user);
     }
 
-    @PostMapping("/api/edit")
+    @PatchMapping("/api")
     public void editUser(@RequestBody User user) {
         log.info("edit :"+user);
         userDao.edit(user);
     }
 
-    @RequestMapping("/api/out")
+    @DeleteMapping("/api")
     public void outUser(@RequestBody User user) {
         log.info("delete user");
         userDao.delete(user.getUserEmail());
