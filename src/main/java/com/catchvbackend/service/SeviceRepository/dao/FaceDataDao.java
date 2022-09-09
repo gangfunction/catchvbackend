@@ -4,6 +4,6 @@ import com.catchvbackend.service.SeviceRepository.Image.FaceData;
 
 public interface FaceDataDao {
 
-    void upload(FaceData faceData);
+    void upload(FaceData faceData, String userEmail, String startDate);
 
 }

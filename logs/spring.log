@@ -1204,3 +1204,74 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 2022-09-09 09:46:50.756  INFO 26184 --- [http-nio-8080-exec-4] c.c.s.S.dao.FaceDataDaoJDBC              : 업로드 성공
 2022-09-09 09:46:50.758  INFO 26184 --- [http-nio-8080-exec-4] c.c.s.S.dao.FaceDataDaoJDBC              : 업로드 성공
 >>>>>>> Stashed changes
+2022-09-09 12:52:07.660  INFO 39896 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 39896 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-09 12:52:07.666  INFO 39896 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-09 12:52:07.953  INFO 39896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-09 12:52:07.954  INFO 39896 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-09 12:52:08.815  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-09 12:52:08.817  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-09 12:52:08.832  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2022-09-09 12:52:08.840  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-09 12:52:08.840  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-09 12:52:08.845  INFO 39896 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-09-09 12:52:09.506  INFO 39896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-09 12:52:09.514  INFO 39896 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-09 12:52:09.514  INFO 39896 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-09 12:52:09.589  INFO 39896 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-09 12:52:09.590  INFO 39896 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1636 ms
+2022-09-09 12:52:09.737  INFO 39896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-09 12:52:10.092  INFO 39896 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-09 12:52:10.140  INFO 39896 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-09 12:52:10.170  INFO 39896 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-09 12:52:10.274  INFO 39896 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-09 12:52:10.360  INFO 39896 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-09 12:52:10.473  INFO 39896 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-09 12:52:10.478  INFO 39896 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-09 12:52:10.597  WARN 39896 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-09 12:52:11.517  INFO 39896 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-09 12:52:11.562  INFO 39896 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-09 12:52:11.581  INFO 39896 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.32 seconds (JVM running for 5.251)
+2022-09-09 12:54:28.911  INFO 39896 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-09 12:54:28.912  INFO 39896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-09 12:54:28.915  INFO 39896 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-09 12:54:29.166  INFO 39896 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : uploaded bygangfunction@gmail.com
+2022-09-09 12:54:29.170  INFO 39896 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : startDateWed Sep 07 2022 12:54:03 GMT+0900 (한국 표준시)
+2022-09-09 12:54:29.247  INFO 39896 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : Received message
+2022-09-09 12:54:29.330  INFO 39896 --- [http-nio-8080-exec-1] c.c.s.S.dao.FaceDataDaoJDBC              : 업로드 성공
+2022-09-09 12:59:59.723  INFO 39896 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-09 12:59:59.735  INFO 39896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-09 12:59:59.755  INFO 39896 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-09 13:00:05.696  INFO 40184 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 40184 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-09 13:00:05.700  INFO 40184 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-09 13:00:05.966  INFO 40184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-09 13:00:05.966  INFO 40184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-09 13:00:06.743  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-09 13:00:06.744  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-09 13:00:06.761  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces.
+2022-09-09 13:00:06.769  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-09 13:00:06.770  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-09 13:00:06.775  INFO 40184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2022-09-09 13:00:07.434  INFO 40184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-09 13:00:07.443  INFO 40184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-09 13:00:07.444  INFO 40184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-09 13:00:07.526  INFO 40184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-09 13:00:07.527  INFO 40184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1561 ms
+2022-09-09 13:00:07.668  INFO 40184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-09 13:00:08.039  INFO 40184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-09 13:00:08.086  INFO 40184 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-09 13:00:08.118  INFO 40184 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-09 13:00:08.224  INFO 40184 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-09 13:00:08.310  INFO 40184 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-09 13:00:08.420  INFO 40184 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-09 13:00:08.426  INFO 40184 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-09 13:00:08.596  WARN 40184 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-09 13:00:09.546  INFO 40184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-09 13:00:09.585  INFO 40184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-09 13:00:09.604  INFO 40184 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.327 seconds (JVM running for 5.262)
+2022-09-09 13:00:31.724  INFO 40184 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-09 13:00:31.724  INFO 40184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-09 13:00:31.725  INFO 40184 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-09 13:00:31.908  INFO 40184 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : uploaded bygangfunction@gmail.com
+2022-09-09 13:00:31.910  INFO 40184 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : startDateFri Sep 09 2022 13:00:12 GMT+0900 (한국 표준시)
+2022-09-09 13:00:31.984  INFO 40184 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : Received message
+2022-09-09 13:00:32.054  INFO 40184 --- [http-nio-8080-exec-1] c.c.s.S.dao.FaceDataDaoJDBC              : 업로드 성공

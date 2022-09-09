@@ -2,25 +2,18 @@ package com.catchvbackend.service.controller;
 
 import com.catchvbackend.service.SeviceRepository.Image.FaceData;
 import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
+import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.LinkedMultiValueMap;
-<<<<<<< Updated upstream
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-=======
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
->>>>>>> Stashed changes
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -28,40 +21,27 @@ import java.util.List;
 @RequestMapping("/image")
 public class MainServiceController {
 
+    private final FaceDataDaoJDBC imageDaoJDBC;
     @Autowired
-    private FaceDataDaoJDBC imageDaoJDBC;
+    public MainServiceController(FaceDataDaoJDBC imageDaoJDBC) {
+        this.imageDaoJDBC = imageDaoJDBC;
 
-    @PostMapping(value = "/api")
-    public void uploadImage(@RequestParam("files") List<MultipartFile> faceDatalist,
-                            @RequestParam("email") String userEmail){
-        log.info("upload");
-        log.info(""+userEmail);
-        MultipartFile multipartFile;
-        for(int i=0;i<faceDatalist.size();i++) {
-            if(i==faceDatalist.size()-1){
-                log.info(""+faceDatalist.get(i));
-            }else {
-                FaceData faceData = new FaceData();
-                multipartFile = faceDatalist.get(i);
-                try {
-                    faceData.setName(multipartFile.getName());
-                    faceData.setImage(multipartFile.getBytes());
-                    faceData.setSize(multipartFile.getSize());
-                    imageDaoJDBC.upload(faceData);
-                } catch (IOException e) {
-                    log.info("Exception" + e);
-                }
-            }
-        }
+    }
+    private static final RestTemplate REST_TEMPLATE;
+    static{
+        SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(5000);
+        factory.setReadTimeout(5000);
+        factory.setBufferRequestBody(false);
+        REST_TEMPLATE = new RestTemplate(factory);
     }
 
-    @PostMapping(value = "/api/flask")
-    public void flaskApi(@RequestParam("files") List<MultipartFile> faceDatalist,
-                                 @RequestParam("email") String userEmail) {
+    private ResponseEntity<?> send(List<MultipartFile> files, String userEmail,String startDate){
+        String url = "http://localhost:5001/image/api";
+        LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        JsonNode response;
+        HttpStatus httpStatus = HttpStatus.CREATED;
 
-<<<<<<< Updated upstream
-        String url = "http://localhost:5001/user/"+userEmail;
-=======
         try {
             for (MultipartFile file : files) {
                 if (!file.isEmpty()) {
@@ -71,22 +51,15 @@ public class MainServiceController {
                 }
             }
             map.add("userEmail", userEmail);
+            map.add("startDate", startDate);
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
->>>>>>> Stashed changes
 
-        RestTemplate restTemplate = new RestTemplate();
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+            HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity
+                    = new HttpEntity<>(map, headers);
+            response = REST_TEMPLATE.postForObject(url, requestEntity, JsonNode.class);
 
-<<<<<<< Updated upstream
-        MultiValueMap<String, List<byte[]>> params = new LinkedMultiValueMap<>();
-
-        ArrayList<byte[]> list = new ArrayList<>();
-
-        for(int i=0;i<faceDatalist.size();i++) {
-=======
         } catch (HttpStatusCodeException e) {
             HttpStatus errorHttpStatus = HttpStatus.valueOf(e.getStatusCode().value());
             String errorResponse = e.getResponseBodyAsString();
@@ -105,10 +78,11 @@ public class MainServiceController {
 
     @PostMapping(value = "/api")
     public void uploadImage(@RequestParam("files") List<MultipartFile> faceDatalist,
-                            @RequestParam("email") String userEmail){
+                            @RequestParam("email") String userEmail, @RequestParam("startDate") String startDate){
         log.info("uploaded by"+userEmail);
+        log.info("startDate"+startDate);
         //대기열 존재하지 않을시
-        send(faceDatalist, userEmail);
+        send(faceDatalist, userEmail,startDate);
 
 
         //만약 대기열이 존재할시
@@ -116,22 +90,14 @@ public class MainServiceController {
         for (MultipartFile file  : faceDatalist) {
             FaceData faceData = new FaceData();
             multipartFile = file;
->>>>>>> Stashed changes
             try {
-                list.add(faceDatalist.get(i).getBytes());
-            }catch (IOException e){
-                e.printStackTrace();
+                faceData.setName(multipartFile.getName());
+                faceData.setImage(multipartFile.getBytes());
+                faceData.setSize(multipartFile.getSize());
+                imageDaoJDBC.upload(faceData, userEmail, startDate);
+            } catch (IOException e) {
+                log.info("Exception" + e);
             }
         }
-
-        params.add("files", list);
-
-        HttpEntity<MultiValueMap<String, List<byte[]>>> request = new HttpEntity<>(params, headers);
-
-        ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
-
-        if (response.getStatusCode() == HttpStatus.OK){
-            log.info("connect"+response);
         }
-    }
 }
