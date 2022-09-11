@@ -4,7 +4,10 @@ import com.catchvbackend.service.SeviceRepository.Image.FaceData;
 import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.json.JSONParser;
+import org.apache.tomcat.util.json.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.LinkedMultiValueMap;
@@ -14,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
@@ -72,8 +76,18 @@ public class MainServiceController {
         return new ResponseEntity<>(response, httpStatus);
     }
     @PostMapping(value="/receive")
-    public void receiveMessage(@RequestBody String something){
+    public void receiveMessage(@RequestBody String message){
+
+        log.info(message);
+
         log.info("Received message");
+    }
+    @ResponseBody
+    @PostMapping(value="/result")
+    public void resultJson(@RequestBody HashMap<String, Object> resultData) throws ParseException {
+        JSONParser jsonParser = new JSONParser(String.valueOf(resultData));
+        JSONObject jsonObject = (JSONObject) jsonParser.parse();
+        log.info(String.valueOf(resultData));
     }
 
     @PostMapping(value = "/api")

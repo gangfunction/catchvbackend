@@ -22,6 +22,7 @@ public class FaceDataDaoJDBC implements FaceDataDao {
     public void upload(FaceData faceData, String userEmail, String startDate){
         String sql = "insert into FaceData(id, image, name, size, uploader,startDate) values(?, ?, ?, ?, ?,?)";
         String msg = "업로드 실패";
+        log.info(startDate);
         try {
             jdbcTemplate.update(
                     sql,

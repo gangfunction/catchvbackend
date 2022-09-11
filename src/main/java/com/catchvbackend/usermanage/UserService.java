@@ -12,9 +12,7 @@ public class UserService {
     public void getUsers(Long user){
 
     }
-    public void getUser(Long userId){
 
-    }
     public void registerUser(String username, String password){
 
     }

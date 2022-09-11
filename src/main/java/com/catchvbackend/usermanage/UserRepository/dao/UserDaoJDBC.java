@@ -138,26 +138,3 @@ public class UserDaoJDBC implements UserDao {
 
     }
 }
-/**
- * public User get(String id ){
- * return this.jdbcTemplate.queryForObject("select *from users where id =?",
- * new Object[]{id} ,
- * new RowMapper<User>(){
- * public User mapRow(ResultSet rs, int rowNum) throws SQLEXCEPTION{
- * User user = new User();
- * user.setUserEmail(rs.getString("userEmail"));
- * user.setUserEmail(rs.getString("userPassword"))
- * return user;
- * }
- * );
- * }
- * private RowMapper<User> userMapper =
- * new RowMapper<User>(){
- * public User mapRow(ResultSet rs, int rowNum) throws SQLException{
- * User user = new User();
- * user.setUserEmail(rs.getString("userEmail"));
- * user.setUserEmail(rs.getString("userPassword"))
- * return user;
- * }
- * }
- */
