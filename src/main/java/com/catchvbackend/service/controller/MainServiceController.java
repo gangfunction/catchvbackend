@@ -1,11 +1,13 @@
 package com.catchvbackend.service.controller;
 
 import com.catchvbackend.service.SeviceRepository.Image.FaceData;
+import com.catchvbackend.service.SeviceRepository.ResultData;
 import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
+import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -17,6 +19,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 @Slf4j
@@ -81,9 +85,21 @@ public class MainServiceController {
     }
     @PostMapping(value="/request")
     @ResponseBody
-    public void requestImage(@RequestBody String message){
-        log.info(message);
-        log.info("RequestBody");
+    public List<ResultData> requestImage(@RequestBody String message) throws JSONException {
+        HashMap<String, String> dict= new HashMap<>();
+        JSONObject json = new JSONObject(String.valueOf(message));
+        Iterator i = json.keys();
+        while(i.hasNext()){
+            String k = i.next().toString();
+            dict.put(k, json.getString(k));
+        }
+        String userEmail = dict.get("userEmail");
+        log.info(userEmail);
+        List<ResultData> results = imageDaoJDBC.checkResult(userEmail);
+        log.info(results.toString());
+        return results;
+
+
 
     }
 

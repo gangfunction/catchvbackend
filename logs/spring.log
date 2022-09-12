@@ -2905,3 +2905,701 @@ gangfunction@gmail.com
 2022-09-12 15:08:24.519  INFO 20766 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : RequestBody
 2022-09-12 15:13:37.089  INFO 20766 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : {"userEmail":"gangfunction@gmail.com"}
 2022-09-12 15:13:37.092  INFO 20766 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : RequestBody
+2022-09-12 15:29:03.222  INFO 20766 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:29:03.233  INFO 20766 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:29:03.255  INFO 20766 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:29:09.493  INFO 22652 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 22652 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:29:09.497  INFO 22652 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:29:09.772  INFO 22652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:29:09.772  INFO 22652 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:29:10.589  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:29:10.590  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:29:10.604  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:29:10.615  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:29:10.615  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:29:10.619  INFO 22652 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:29:11.288  INFO 22652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:29:11.296  INFO 22652 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:29:11.297  INFO 22652 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:29:11.368  INFO 22652 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:29:11.369  INFO 22652 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1596 ms
+2022-09-12 15:29:11.501  INFO 22652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:29:11.844  INFO 22652 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:29:11.947  INFO 22652 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:29:11.978  INFO 22652 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:29:12.085  INFO 22652 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:29:12.161  INFO 22652 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:29:12.314  INFO 22652 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:29:12.321  INFO 22652 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:29:12.504  WARN 22652 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:29:13.559  INFO 22652 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:29:13.612  INFO 22652 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:29:13.637  INFO 22652 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.585 seconds (JVM running for 5.485)
+2022-09-12 15:29:23.706  INFO 22652 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:29:23.711  INFO 22652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:29:23.726  INFO 22652 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:29:29.706  INFO 22676 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 22676 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:29:29.709  INFO 22676 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:29:30.015  INFO 22676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:29:30.016  INFO 22676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:29:30.874  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:29:30.875  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:29:30.892  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:29:30.902  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:29:30.903  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:29:30.908  INFO 22676 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:29:31.654  INFO 22676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:29:31.663  INFO 22676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:29:31.663  INFO 22676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:29:31.787  INFO 22676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:29:31.789  INFO 22676 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1772 ms
+2022-09-12 15:29:31.952  INFO 22676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:29:32.316  INFO 22676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:29:32.365  INFO 22676 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:29:32.397  INFO 22676 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:29:32.522  INFO 22676 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:29:32.598  INFO 22676 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:29:32.713  INFO 22676 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:29:32.720  INFO 22676 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:29:32.947  WARN 22676 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:29:33.862  INFO 22676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:29:33.903  INFO 22676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:29:33.921  INFO 22676 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.672 seconds (JVM running for 5.533)
+2022-09-12 15:29:50.837  INFO 22676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:29:50.837  INFO 22676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:29:50.839  INFO 22676 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-12 15:29:51.047  INFO 22676 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : {}
+2022-09-12 15:29:51.049  INFO 22676 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : RequestBody
+2022-09-12 15:30:32.804  INFO 22676 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:30:32.809  INFO 22676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:30:32.830  INFO 22676 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:30:38.766  INFO 22750 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 22750 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:30:38.767  INFO 22750 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:30:39.075  INFO 22750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:30:39.076  INFO 22750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:30:39.904  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:30:39.905  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:30:39.919  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:30:39.929  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:30:39.930  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:30:39.934  INFO 22750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:30:40.627  INFO 22750 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:30:40.637  INFO 22750 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:30:40.637  INFO 22750 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:30:40.718  INFO 22750 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:30:40.719  INFO 22750 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1643 ms
+2022-09-12 15:30:40.861  INFO 22750 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:30:41.192  INFO 22750 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:30:41.243  INFO 22750 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:30:41.274  INFO 22750 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:30:41.382  INFO 22750 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:30:41.459  INFO 22750 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:30:41.575  INFO 22750 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:30:41.581  INFO 22750 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:30:41.747  WARN 22750 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:30:42.676  INFO 22750 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:30:42.719  INFO 22750 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:30:42.738  INFO 22750 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.393 seconds (JVM running for 5.254)
+2022-09-12 15:30:46.394  INFO 22750 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:30:46.394  INFO 22750 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:30:46.395  INFO 22750 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-12 15:30:46.616 ERROR 22750 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.boot.configurationprocessor.json.JSONException: No value for userEmail] with root cause
+
+org.springframework.boot.configurationprocessor.json.JSONException: No value for userEmail
+	at org.springframework.boot.configurationprocessor.json.JSONObject.get(JSONObject.java:374) ~[spring-boot-configuration-processor-2.7.3.jar:2.7.3]
+	at org.springframework.boot.configurationprocessor.json.JSONObject.getString(JSONObject.java:558) ~[spring-boot-configuration-processor-2.7.3.jar:2.7.3]
+	at com.catchvbackend.service.controller.MainServiceController.requestImage(MainServiceController.java:86) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-09-12 15:32:28.753  INFO 22750 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:32:28.758  INFO 22750 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:32:28.777  INFO 22750 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:32:34.611  INFO 22882 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 22882 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:32:34.612  INFO 22882 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:32:34.897  INFO 22882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:32:34.897  INFO 22882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:32:35.737  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:32:35.738  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:32:35.752  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:32:35.761  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:32:35.762  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:32:35.766  INFO 22882 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:32:36.427  INFO 22882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:32:36.436  INFO 22882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:32:36.436  INFO 22882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:32:36.529  INFO 22882 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:32:36.530  INFO 22882 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1633 ms
+2022-09-12 15:32:36.674  INFO 22882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:32:37.006  INFO 22882 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:32:37.053  INFO 22882 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:32:37.082  INFO 22882 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:32:37.182  INFO 22882 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:32:37.256  INFO 22882 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:32:37.364  INFO 22882 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:32:37.369  INFO 22882 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:32:37.520  WARN 22882 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:32:38.495  INFO 22882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:32:38.534  INFO 22882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:32:38.552  INFO 22882 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.352 seconds (JVM running for 5.137)
+2022-09-12 15:32:50.972  INFO 22882 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:32:50.973  INFO 22882 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:32:50.975  INFO 22882 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-12 15:32:51.156  INFO 22882 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : {"userEmail":"gangfunction@gmail.com"}
+2022-09-12 15:39:25.415  INFO 22882 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:39:25.425  INFO 22882 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:39:25.445  INFO 22882 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:39:31.499  INFO 23349 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 23349 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:39:31.509  INFO 23349 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:39:31.806  INFO 23349 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:39:31.806  INFO 23349 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:39:32.668  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:39:32.669  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:39:32.685  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:39:32.693  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:39:32.694  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:39:32.698  INFO 23349 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:39:33.386  INFO 23349 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:39:33.395  INFO 23349 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:39:33.395  INFO 23349 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:39:33.473  INFO 23349 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:39:33.475  INFO 23349 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1668 ms
+2022-09-12 15:39:33.615  INFO 23349 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:39:33.976  INFO 23349 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:39:34.074  INFO 23349 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:39:34.117  INFO 23349 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:39:34.226  INFO 23349 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:39:34.299  INFO 23349 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:39:34.411  INFO 23349 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:39:34.417  INFO 23349 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:39:34.611  WARN 23349 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:39:35.503  INFO 23349 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:39:35.542  INFO 23349 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:39:35.563  INFO 23349 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.486 seconds (JVM running for 5.312)
+2022-09-12 15:40:02.710  INFO 23349 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:40:02.711  INFO 23349 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:40:02.713  INFO 23349 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-12 15:40:02.909  INFO 23349 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [gangfunction@gmail.com]
+2022-09-12 15:43:46.290  INFO 23349 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:43:46.300  INFO 23349 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:43:46.336  INFO 23349 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:43:52.602  INFO 23624 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 23624 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:43:52.606  INFO 23624 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:43:52.885  INFO 23624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:43:52.885  INFO 23624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:43:53.692  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:43:53.693  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:43:53.709  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:43:53.719  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:43:53.720  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:43:53.724  INFO 23624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:43:54.394  INFO 23624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:43:54.402  INFO 23624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:43:54.402  INFO 23624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:43:54.509  INFO 23624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:43:54.510  INFO 23624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1624 ms
+2022-09-12 15:43:54.658  INFO 23624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:43:55.018  INFO 23624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:43:55.119  INFO 23624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:43:55.151  INFO 23624 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:43:55.277  INFO 23624 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:43:55.360  INFO 23624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:43:55.469  INFO 23624 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:43:55.474  INFO 23624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:43:55.650  WARN 23624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:43:56.648  INFO 23624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:43:56.694  INFO 23624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:43:56.714  INFO 23624 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.55 seconds (JVM running for 5.531)
+2022-09-12 15:43:58.445  INFO 23624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:43:58.446  INFO 23624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:43:58.447  INFO 23624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-12 15:43:58.629 ERROR 23624 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.String; ([Ljava.lang.Object; and [Ljava.lang.String; are in module java.base of loader 'bootstrap')] with root cause
+
+java.lang.ClassCastException: class [Ljava.lang.Object; cannot be cast to class [Ljava.lang.String; ([Ljava.lang.Object; and [Ljava.lang.String; are in module java.base of loader 'bootstrap')
+	at com.catchvbackend.service.controller.MainServiceController.requestImage(MainServiceController.java:95) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-09-12 15:45:46.787  INFO 23624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:45:46.793  INFO 23624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 15:45:46.813  INFO 23624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 15:45:53.082  INFO 23757 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 23757 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 15:45:53.084  INFO 23757 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 15:45:53.405  INFO 23757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 15:45:53.406  INFO 23757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 15:45:54.237  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:45:54.238  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 15:45:54.255  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces.
+2022-09-12 15:45:54.269  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 15:45:54.269  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 15:45:54.273  INFO 23757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 15:45:54.946  INFO 23757 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 15:45:54.954  INFO 23757 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 15:45:54.954  INFO 23757 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 15:45:55.076  INFO 23757 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 15:45:55.077  INFO 23757 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1671 ms
+2022-09-12 15:45:55.218  INFO 23757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 15:45:55.560  INFO 23757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 15:45:55.661  INFO 23757 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 15:45:55.695  INFO 23757 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 15:45:55.800  INFO 23757 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 15:45:55.875  INFO 23757 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 15:45:55.988  INFO 23757 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 15:45:55.993  INFO 23757 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 15:45:56.129  WARN 23757 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 15:45:57.045  INFO 23757 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 15:45:57.093  INFO 23757 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 15:45:57.113  INFO 23757 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.471 seconds (JVM running for 5.381)
+2022-09-12 15:45:59.963  INFO 23757 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 15:45:59.963  INFO 23757 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 15:45:59.964  INFO 23757 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-12 15:46:00.148  INFO 23757 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [gangfunction@gmail.com]
+2022-09-12 15:46:00.150  INFO 23757 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:21:22.143  INFO 23757 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:21:22.153  INFO 23757 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 16:21:22.164  INFO 23757 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 16:21:28.643  INFO 26021 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 26021 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 16:21:28.646  INFO 26021 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 16:21:28.920  INFO 26021 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 16:21:28.920  INFO 26021 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 16:21:29.793  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:21:29.795  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 16:21:29.853  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 JDBC repository interfaces.
+2022-09-12 16:21:29.863  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:21:29.864  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 16:21:29.869  INFO 26021 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 16:21:30.538  INFO 26021 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 16:21:30.547  INFO 26021 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 16:21:30.547  INFO 26021 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 16:21:30.613  INFO 26021 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 16:21:30.614  INFO 26021 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1693 ms
+2022-09-12 16:21:30.751  INFO 26021 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 16:21:31.083  INFO 26021 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 16:21:31.131  INFO 26021 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 16:21:31.161  INFO 26021 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 16:21:31.257  INFO 26021 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 16:21:31.344  INFO 26021 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 16:21:31.459  INFO 26021 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 16:21:31.464  INFO 26021 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:21:31.600  WARN 26021 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 16:21:32.578  INFO 26021 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 16:21:32.620  INFO 26021 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 16:21:32.639  INFO 26021 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.42 seconds (JVM running for 5.356)
+2022-09-12 16:22:11.044  INFO 26021 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 16:22:11.044  INFO 26021 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 16:22:11.046  INFO 26021 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-12 16:22:11.211  INFO 26021 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:22:11.266  INFO 26021 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : []
+2022-09-12 16:22:46.551  INFO 26021 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:22:46.556  INFO 26021 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : []
+2022-09-12 16:23:39.546  INFO 26021 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:23:39.551  INFO 26021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 16:23:39.567  INFO 26021 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 16:23:45.555  INFO 26175 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 26175 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 16:23:45.557  INFO 26175 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 16:23:45.868  INFO 26175 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 16:23:45.869  INFO 26175 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 16:23:46.627  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:23:46.628  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 16:23:46.644  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2022-09-12 16:23:46.656  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:23:46.656  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 16:23:46.660  INFO 26175 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 16:23:47.324  INFO 26175 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 16:23:47.333  INFO 26175 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 16:23:47.334  INFO 26175 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 16:23:47.420  INFO 26175 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 16:23:47.422  INFO 26175 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1553 ms
+2022-09-12 16:23:47.559  INFO 26175 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 16:23:47.908  INFO 26175 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 16:23:47.953  INFO 26175 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 16:23:47.981  INFO 26175 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 16:23:48.078  INFO 26175 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 16:23:48.157  INFO 26175 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 16:23:48.271  INFO 26175 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 16:23:48.276  INFO 26175 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:23:48.419  WARN 26175 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 16:23:49.404  INFO 26175 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 16:23:49.448  INFO 26175 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 16:23:49.468  INFO 26175 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.317 seconds (JVM running for 5.262)
+2022-09-12 16:23:56.677  INFO 26175 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 16:23:56.678  INFO 26175 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 16:23:56.679  INFO 26175 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-12 16:23:56.837  INFO 26175 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:23:56.904  INFO 26175 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:30:33.363  INFO 26175 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : processing started
+2022-09-12 16:30:33.368  INFO 26175 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : https://www.youtube.com/watch?v=yvCP6_pXjAk
+2022-09-12 16:30:33.368  INFO 26175 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : https://www.youtube.com/watch?v=yvCP6_pXjAk
+2022-09-12 16:30:33.369  INFO 26175 --- [http-nio-8080-exec-5] c.c.s.S.dao.FaceDataDaoJDBC              : Kirara_Asuka
+2022-09-12 16:30:33.380  INFO 26175 --- [http-nio-8080-exec-5] c.c.s.S.dao.FaceDataDaoJDBC              : 결과 저장
+2022-09-12 16:38:14.024  INFO 26175 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:38:14.039  INFO 26175 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 16:38:14.059  INFO 26175 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 16:38:19.978  INFO 27107 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 27107 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 16:38:19.979  INFO 27107 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 16:38:20.262  INFO 27107 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 16:38:20.262  INFO 27107 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 16:38:21.162  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:38:21.163  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 16:38:21.178  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2022-09-12 16:38:21.187  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 16:38:21.188  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 16:38:21.192  INFO 27107 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 16:38:21.876  INFO 27107 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 16:38:21.886  INFO 27107 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 16:38:21.887  INFO 27107 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 16:38:22.011  INFO 27107 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 16:38:22.012  INFO 27107 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1749 ms
+2022-09-12 16:38:22.160  INFO 27107 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 16:38:22.499  INFO 27107 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 16:38:22.544  INFO 27107 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 16:38:22.574  INFO 27107 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 16:38:22.680  INFO 27107 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 16:38:22.759  INFO 27107 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 16:38:22.870  INFO 27107 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 16:38:22.875  INFO 27107 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 16:38:23.031  WARN 27107 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 16:38:23.884  INFO 27107 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 16:38:23.924  INFO 27107 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 16:38:23.942  INFO 27107 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.354 seconds (JVM running for 5.164)
+2022-09-12 16:38:35.477  INFO 27107 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 16:38:35.477  INFO 27107 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 16:38:35.479  INFO 27107 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-12 16:38:35.644  INFO 27107 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:38:35.710  INFO 27107 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:39:45.265  INFO 27107 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:39:45.275  INFO 27107 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:45:08.983  INFO 27107 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:45:09.004  INFO 27107 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:46:11.358  INFO 27107 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:46:11.368  INFO 27107 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:48:27.697  INFO 27107 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:48:27.725  INFO 27107 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:49:41.666  INFO 27107 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:49:41.670  INFO 27107 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:50:25.031  INFO 27107 --- [http-nio-8080-exec-7] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:50:25.034  INFO 27107 --- [http-nio-8080-exec-7] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:56:27.254  INFO 27107 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:56:27.269  INFO 27107 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 16:58:54.668  INFO 27107 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 16:58:54.677  INFO 27107 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:03:27.070  INFO 27107 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:03:27.085  INFO 27107 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 17:03:27.107  INFO 27107 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 17:03:33.636  INFO 29322 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 29322 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 17:03:33.649  INFO 29322 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 17:03:33.960  INFO 29322 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 17:03:33.960  INFO 29322 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 17:03:34.835  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:03:34.836  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 17:03:34.852  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JDBC repository interfaces.
+2022-09-12 17:03:34.861  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:03:34.862  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 17:03:34.866  INFO 29322 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 17:03:35.519  INFO 29322 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 17:03:35.526  INFO 29322 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 17:03:35.527  INFO 29322 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 17:03:35.609  INFO 29322 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 17:03:35.610  INFO 29322 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1650 ms
+2022-09-12 17:03:35.748  INFO 29322 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 17:03:36.084  INFO 29322 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 17:03:36.129  INFO 29322 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 17:03:36.159  INFO 29322 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 17:03:36.262  INFO 29322 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 17:03:36.340  INFO 29322 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 17:03:36.453  INFO 29322 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 17:03:36.459  INFO 29322 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:03:36.641  WARN 29322 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 17:03:37.683  INFO 29322 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 17:03:37.739  INFO 29322 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 17:03:37.764  INFO 29322 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.559 seconds (JVM running for 5.676)
+2022-09-12 17:03:54.541  INFO 29322 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:03:54.545  INFO 29322 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 17:03:54.557  INFO 29322 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 17:04:00.475  INFO 29391 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 29391 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 17:04:00.476  INFO 29391 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 17:04:00.727  INFO 29391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 17:04:00.728  INFO 29391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 17:04:01.519  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:04:01.520  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 17:04:01.534  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 JDBC repository interfaces.
+2022-09-12 17:04:01.543  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:04:01.543  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 17:04:01.548  INFO 29391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 17:04:02.197  INFO 29391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 17:04:02.207  INFO 29391 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 17:04:02.207  INFO 29391 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 17:04:02.298  INFO 29391 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 17:04:02.299  INFO 29391 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1571 ms
+2022-09-12 17:04:02.435  INFO 29391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 17:04:02.764  INFO 29391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 17:04:02.810  INFO 29391 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 17:04:02.838  INFO 29391 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 17:04:02.935  INFO 29391 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 17:04:03.006  INFO 29391 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 17:04:03.114  INFO 29391 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 17:04:03.119  INFO 29391 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:04:03.278  WARN 29391 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 17:04:04.169  INFO 29391 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 17:04:04.208  INFO 29391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 17:04:04.226  INFO 29391 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.112 seconds (JVM running for 4.95)
+2022-09-12 17:04:14.752  INFO 29391 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 17:04:14.753  INFO 29391 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 17:04:14.758  INFO 29391 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-09-12 17:04:14.923  INFO 29391 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:04:14.983  INFO 29391 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:04:14.994 ERROR 29391 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.springframework.boot.configurationprocessor.json.JSONTokener (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.springframework.boot.configurationprocessor.json.JSONTokener is in unnamed module of loader 'app')] with root cause
+
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.springframework.boot.configurationprocessor.json.JSONTokener (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.springframework.boot.configurationprocessor.json.JSONTokener is in unnamed module of loader 'app')
+	at com.catchvbackend.service.controller.MainServiceController.requestImage(MainServiceController.java:101) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-09-12 17:04:36.371  INFO 29391 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:04:36.382  INFO 29391 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:04:36.386 ERROR 29391 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.springframework.boot.configurationprocessor.json.JSONTokener (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.springframework.boot.configurationprocessor.json.JSONTokener is in unnamed module of loader 'app')] with root cause
+
+java.lang.ClassCastException: class java.util.ArrayList cannot be cast to class org.springframework.boot.configurationprocessor.json.JSONTokener (java.util.ArrayList is in module java.base of loader 'bootstrap'; org.springframework.boot.configurationprocessor.json.JSONTokener is in unnamed module of loader 'app')
+	at com.catchvbackend.service.controller.MainServiceController.requestImage(MainServiceController.java:101) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-09-12 17:04:51.312  INFO 29391 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:04:51.316  INFO 29391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-12 17:04:51.332  INFO 29391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-12 17:04:57.138  INFO 29458 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 29458 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
+2022-09-12 17:04:57.139  INFO 29458 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 17:04:57.428  INFO 29458 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-12 17:04:57.429  INFO 29458 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-12 17:04:58.244  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:04:58.245  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-09-12 17:04:58.260  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JDBC repository interfaces.
+2022-09-12 17:04:58.271  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-09-12 17:04:58.271  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-12 17:04:58.275  INFO 29458 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JPA repository interfaces.
+2022-09-12 17:04:58.962  INFO 29458 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-12 17:04:58.970  INFO 29458 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-12 17:04:58.971  INFO 29458 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-12 17:04:59.113  INFO 29458 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-12 17:04:59.114  INFO 29458 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1685 ms
+2022-09-12 17:04:59.260  INFO 29458 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-12 17:04:59.631  INFO 29458 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-12 17:04:59.678  INFO 29458 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-12 17:04:59.706  INFO 29458 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-12 17:04:59.809  INFO 29458 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-12 17:04:59.883  INFO 29458 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-12 17:05:00.001  INFO 29458 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-12 17:05:00.006  INFO 29458 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-12 17:05:00.163  WARN 29458 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-12 17:05:01.046  INFO 29458 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-12 17:05:01.086  INFO 29458 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-12 17:05:01.104  INFO 29458 --- [restartedMain] c.c.CatchvbackendApplication             : Started CatchvbackendApplication in 4.363 seconds (JVM running for 5.113)
+2022-09-12 17:05:06.230  INFO 29458 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-12 17:05:06.230  INFO 29458 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-12 17:05:06.231  INFO 29458 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-12 17:05:06.393  INFO 29458 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:05:06.474  INFO 29458 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:09:38.972  INFO 29458 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:09:38.988  INFO 29458 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:17:47.231  INFO 29458 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:17:47.239  INFO 29458 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:22:20.699  INFO 29458 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:22:20.715  INFO 29458 --- [http-nio-8080-exec-1] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:23:31.357  INFO 29458 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:23:31.367  INFO 29458 --- [http-nio-8080-exec-2] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:23:47.434  INFO 29458 --- [http-nio-8080-exec-6] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:23:47.440  INFO 29458 --- [http-nio-8080-exec-6] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:23:57.163  INFO 29458 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:23:57.165  INFO 29458 --- [http-nio-8080-exec-8] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:25:04.487  INFO 29458 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:25:04.503  INFO 29458 --- [http-nio-8080-exec-10] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:33:10.740  INFO 29458 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:33:10.752  INFO 29458 --- [http-nio-8080-exec-4] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:43:57.932  INFO 29458 --- [http-nio-8080-exec-6] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:43:57.943  INFO 29458 --- [http-nio-8080-exec-6] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:44:58.253  INFO 29458 --- [http-nio-8080-exec-9] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:44:58.267  INFO 29458 --- [http-nio-8080-exec-9] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:47:54.706  INFO 29458 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:47:54.725  INFO 29458 --- [http-nio-8080-exec-3] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:51:47.698  INFO 29458 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:51:47.703  INFO 29458 --- [http-nio-8080-exec-5] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:52:01.677  INFO 29458 --- [http-nio-8080-exec-7] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:52:01.681  INFO 29458 --- [http-nio-8080-exec-7] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]
+2022-09-12 17:52:11.634  INFO 29458 --- [http-nio-8080-exec-9] c.c.s.controller.MainServiceController   : gangfunction@gmail.com
+2022-09-12 17:52:11.637  INFO 29458 --- [http-nio-8080-exec-9] c.c.s.controller.MainServiceController   : [ResultData(videoCount=1, detectCount=2, userEmail=gangfunction@gmail.com, urlList=[https://www.youtube.com/watch?v=yvCP6_pXjAk, https://www.youtube.com/watch?v=yvCP6_pXjAk])]

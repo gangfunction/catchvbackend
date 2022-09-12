@@ -1,11 +1,15 @@
 package com.catchvbackend.service.SeviceRepository.dao;
 
 import com.catchvbackend.service.SeviceRepository.Image.FaceData;
+import com.catchvbackend.service.SeviceRepository.ResultData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Slf4j
 @Component
@@ -48,6 +52,22 @@ public class FaceDataDaoJDBC implements FaceDataDao {
 
 
     }
+
+    public List<ResultData> checkResult(String userEmail) {
+        String sql = "select * from ResultData where userEmail=?";
+        return jdbcTemplate.query(sql,userRowMapper(),userEmail);
+    }
+    private static RowMapper<ResultData> userRowMapper() {
+        return (rs, rowNum) -> {
+            ResultData resultData = new ResultData();
+            resultData.setVideoCount(rs.getInt("videoCount"));
+            resultData.setDetectCount(rs.getInt("detectCount"));
+            resultData.setUserEmail(rs.getString("userEmail"));
+            resultData.setUrlList(rs.getString("urlList"));
+            return resultData;
+        };
+    }
+
 }
 
 
