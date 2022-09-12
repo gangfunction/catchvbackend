@@ -6,12 +6,11 @@ import java.util.Optional;
 
 public interface UserDao {
 
-    User register(User user);
+    void register(User user);
 
     int changeStatus(String userEmail);
 
-    Optional findById(long id);
-    Optional findByEmail(String userEmail);
+    Optional<User> findByEmail(String userEmail);
 
     void login(String userEmail, String userPassword);
     void delete(String email);
