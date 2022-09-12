@@ -21,20 +21,33 @@ public class FaceDataDaoJDBC implements FaceDataDao {
     @Override
     public void upload(FaceData faceData, String userEmail, String startDate){
         String sql = "insert into FaceData(id, image, name, size, uploader,startDate) values(?, ?, ?, ?, ?,?)";
-        String msg = "업로드 실패";
         log.info(startDate);
         try {
             jdbcTemplate.update(
                     sql,
                     0, faceData.getImage(), faceData.getName(), faceData.getSize(), userEmail, startDate);
-            msg = "업로드 성공";
+            log.info("업로드 성공");
         } catch (Exception e){
             log.info(""+e);
         }
-        log.info(msg);
+        log.info("업로드 실패");
     }
 
 
+    public void saveResult(int videoCount, int detectCount, String userEmail, String urlList) {
+        String sql = "insert into ResultData(videoCount,detectCount,userEmail,urlList) values(?,?,?,?)";
+        log.info(userEmail);
+        try {
+            jdbcTemplate.update(
+                    sql, videoCount, detectCount, userEmail, urlList);
+            log.info("결과 저장");
+        }
+        catch (Exception e){
+            log.info(""+e);
+        }
+
+
+    }
 }
 
 

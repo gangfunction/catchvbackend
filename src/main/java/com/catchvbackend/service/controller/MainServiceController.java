@@ -4,8 +4,9 @@ import com.catchvbackend.service.SeviceRepository.Image.FaceData;
 import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.json.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.configurationprocessor.json.JSONArray;
+import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.LinkedMultiValueMap;
@@ -15,6 +16,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
@@ -75,15 +77,51 @@ public class MainServiceController {
     @PostMapping(value="/receive")
     public void receiveMessage(@RequestBody String message){
 
-        log.info(message.toString());
-
         log.info("Received message");
+    }
+    @PostMapping(value="/request")
+    @ResponseBody
+    public void requestImage(@RequestBody String message){
+        log.info(message);
+        log.info("RequestBody");
+
     }
 
     @ResponseBody
     @PostMapping(value="/result")
-    public void resultJson(@RequestBody String resultData) throws ParseException {
-        log.info(resultData);
+    public void resultJson(@RequestBody String resultData) {
+        log.info("processing started");
+        resultJsonProcessing(resultData);
+
+    }
+    private void resultJsonProcessing(String resultData) {
+        try{
+            JSONObject jsonObject = new JSONObject(resultData);
+            int videoCount = Integer.parseInt(jsonObject.getString("total_inspected_video_count"));
+            JSONArray result= jsonObject.getJSONArray("result");
+            JSONObject processUserInfo = (JSONObject) result.get(0);
+            String userEmail=processUserInfo.getString("requested_user_email");
+            JSONArray processUrlLists=processUserInfo.getJSONArray("urls");
+            ArrayList<String> urlList= new ArrayList<>();
+            if(processUrlLists != null){
+                for(int i=0;i<processUrlLists.length();i++){
+                    String tempString= processUrlLists.getString(i);
+                    String ptempString = tempString.replaceAll("\"","");
+                    log.info(ptempString);
+                    urlList.add(ptempString);
+                }
+            }
+            int detectCount =urlList.size();
+            String stringUrlList=urlList.toString();
+            imageDaoJDBC.saveResult(videoCount,detectCount,userEmail,stringUrlList);
+
+
+        }catch(Exception e){
+            log.error("Error processing result json",e);
+        }
+
+
+
     }
 
     @PostMapping(value = "/api")
