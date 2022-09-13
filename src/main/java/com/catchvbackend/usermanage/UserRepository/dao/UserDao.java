@@ -10,7 +10,7 @@ public interface UserDao {
 
     int changeStatus(String userEmail);
 
-    Optional<User> findByEmail(String userEmail);
+    User findByEmail(String userEmail);
 
     void login(String userEmail, String userPassword);
     void delete(String email);

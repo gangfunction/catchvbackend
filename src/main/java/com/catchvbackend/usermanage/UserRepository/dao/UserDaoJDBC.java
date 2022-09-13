@@ -7,6 +7,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.ObjectUtils;
+import org.thymeleaf.util.ListUtils;
 
 import java.util.List;
 import java.util.Objects;
@@ -24,8 +26,8 @@ public class UserDaoJDBC implements UserDao {
 
     @Override
     public void register(User user) {
-        Optional<User> user1 = findByEmail(user.getUserEmail());
-        if (user1.isEmpty()) {
+        User user1 = findByEmail(user.getUserEmail());
+        if (ObjectUtils.isEmpty(user1)) {
             log.info("회원가입 성공");
             String sql = "insert into User(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
             jdbcTemplate.update(
@@ -38,11 +40,11 @@ public class UserDaoJDBC implements UserDao {
 
     @Override
     public void login(String userEmail, String userPassword) {
-        Optional<User> user = findByEmail(userEmail);
+        User user = findByEmail(userEmail);
         //id확인
-        if (Objects.requireNonNull(user).isPresent()) {
-            if (user.get().getUserPassword().equals(userPassword)) {
-                int test = changeStatus(user.get().getUserEmail());
+        if (!ObjectUtils.isEmpty(user)) {
+            if (user.getUserPassword().equals(userPassword)) {
+                int test = changeStatus(user.getUserEmail());
                 log.info("로그인 성공"+test);
             } else {
                 log.info("비밀번호 틀림");
@@ -54,26 +56,26 @@ public class UserDaoJDBC implements UserDao {
 
     @Override
     public int changeStatus(String userEmail){
-        Optional<User> user = findByEmail(userEmail);
-        log.info(Objects.requireNonNull(user.orElse(null)).getUserEmail());
+        User user = findByEmail(userEmail);
+        log.info(ObjectUtils.isEmpty(user)+"");
         String sql = "update user set loginstatus=? where id = ?";
 
-        if(user.orElse(null).getLoginstatus()==0) {
+        if(user.getLoginstatus()==0) {
             jdbcTemplate.update(
                     sql,
-                    1, user.orElse(null).getId());
+                    1, user.getId());
             return 1;
         } else {
             jdbcTemplate.update(
                     sql,
-                    0, user.orElse(null).getId());
+                    0, user.getId());
             return 0;
         }
     }
 
 
     @Override
-    public Optional<User> findByEmail(String email) {
+    public User findByEmail(String email) {
         String sql = "select * from User where useremail=?";
         List<User> result = jdbcTemplate.query(
                 sql,
@@ -81,24 +83,28 @@ public class UserDaoJDBC implements UserDao {
                 email
         );
         log.info(result.toString());
-        return result.stream().findAny();
+
+        if(ListUtils.isEmpty(result)){
+          return null;
+        }
+        return result.get(0);
     }
 
     @Override
     public void delete(String email) {
-        Optional<User> user = findByEmail(email);
+        User user = findByEmail(email);
         String sql = "delete from User where id=?";
-        int result = jdbcTemplate.update(sql, Objects.requireNonNull(user.orElse(null)).getId());
+        int result = jdbcTemplate.update(sql, user.getId());
         log.info(result+"개 행 삭제 성공");
     }
 
     @Override
     public void edit(User user){
-        Optional<User> user1 = findByEmail(user.getUserEmail());
+        User user1 = findByEmail(user.getUserEmail());
         String sql = "update user set userpassword=? where id=?";
         jdbcTemplate.update(
                 sql,
-                user.getUserPassword(), Objects.requireNonNull(user1.orElse(null)).getId());
+                user.getUserPassword(), user1.getId());
     }
 
 
