@@ -4,6 +4,7 @@ import com.catchvbackend.service.SeviceRepository.Image.FaceData;
 import com.catchvbackend.service.SeviceRepository.ResultData;
 import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.opencsv.CSVReader;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
@@ -11,17 +12,21 @@ import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+
 
 @Slf4j
 @RestController
@@ -163,5 +168,16 @@ public class MainServiceController {
                 log.info("Exception" + e);
             }
         }
-        }
+    }
+
+    @GetMapping(value = "/responseCsv")
+    public void responseCsv(){
+        String url = "http://localhost:5001/image/toCsv";
+        REST_TEMPLATE.getForEntity(url, String.class);
+    }
+
+    @PostMapping(value = "/downCsv")
+    public void downCsvFile(@RequestBody String files){
+        log.info(files+"");
+    }
 }
