@@ -1,8 +1,6 @@
-package com.catchvbackend.usermanage.UserRepository.dao;
+package com.catchvbackend.api.member.repository.dao;
 
-import com.catchvbackend.usermanage.UserRepository.UserMember.User;
-
-import java.util.Optional;
+import com.catchvbackend.api.member.repository.User;
 
 public interface UserDao {
 

@@ -1,4 +1,4 @@
-package com.catchvbackend.service.SeviceRepository.Image;
+package com.catchvbackend.api.service.repository;
 
 import lombok.Data;
 

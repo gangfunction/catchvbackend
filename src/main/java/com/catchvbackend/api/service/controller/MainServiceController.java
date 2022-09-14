@@ -1,10 +1,9 @@
-package com.catchvbackend.service.controller;
+package com.catchvbackend.api.service.controller;
 
-import com.catchvbackend.service.SeviceRepository.Image.FaceData;
-import com.catchvbackend.service.SeviceRepository.ResultData;
-import com.catchvbackend.service.SeviceRepository.dao.FaceDataDaoJDBC;
+import com.catchvbackend.api.service.repository.FaceData;
+import com.catchvbackend.api.service.repository.ResultData;
+import com.catchvbackend.api.service.repository.dao.FaceDataDaoImpl;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.opencsv.CSVReader;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONArray;
@@ -12,7 +11,6 @@ import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
-import org.springframework.ui.Model;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.HttpStatusCodeException;
@@ -20,12 +18,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 
 @Slf4j
@@ -33,12 +27,7 @@ import java.util.List;
 @RequestMapping("/image")
 public class MainServiceController {
 
-    private final FaceDataDaoJDBC imageDaoJDBC;
-    @Autowired
-    public MainServiceController(FaceDataDaoJDBC imageDaoJDBC) {
-        this.imageDaoJDBC = imageDaoJDBC;
-
-    }
+    private final FaceDataDaoImpl imageDaoJDBC;
     private static final RestTemplate REST_TEMPLATE;
     static{
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
@@ -47,6 +36,13 @@ public class MainServiceController {
         factory.setBufferRequestBody(false);
         REST_TEMPLATE = new RestTemplate(factory);
     }
+
+    @Autowired
+    public MainServiceController(FaceDataDaoImpl imageDaoJDBC) {
+        this.imageDaoJDBC = imageDaoJDBC;
+
+    }
+
 
     private ResponseEntity<?> send(List<MultipartFile> files, String userEmail,String startDate){
         String url = "http://localhost:5001/image/api";
@@ -85,7 +81,6 @@ public class MainServiceController {
     }
     @PostMapping(value="/receive")
     public void receiveMessage(@RequestBody String message){
-
         log.info("Received message");
     }
     @PostMapping(value="/request")
@@ -99,12 +94,8 @@ public class MainServiceController {
             dict.put(k, json.getString(k));
         }
         String userEmail = dict.get("userEmail");
-        log.info(userEmail);
         List<ResultData> results = imageDaoJDBC.checkResult(userEmail);
-        log.info(results.toString());
         return results;
-
-
 
     }
 
@@ -175,6 +166,6 @@ public class MainServiceController {
 
     @PostMapping(value = "/downCsv")
     public void downCsvFile(@RequestBody String files){
-        File file = new File(String.valueOf(files.getBytes()));
+        File file = new File(Arrays.toString(files.getBytes()));
     }
 }

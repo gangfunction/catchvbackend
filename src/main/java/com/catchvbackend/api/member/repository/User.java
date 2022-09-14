@@ -1,4 +1,4 @@
-package com.catchvbackend.usermanage.UserRepository.UserMember;
+package com.catchvbackend.api.member.repository;
 
 import lombok.Data;
 

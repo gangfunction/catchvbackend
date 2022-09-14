@@ -1,8 +1,7 @@
-package com.catchvbackend.usermanage;
+package com.catchvbackend.api.member.controller;
 
-import com.catchvbackend.usermanage.UserRepository.UserMember.User;
-import com.catchvbackend.usermanage.UserRepository.UserMember.UserRepository;
-import com.catchvbackend.usermanage.UserRepository.dao.UserDaoJDBC;
+import com.catchvbackend.api.member.repository.User;
+import com.catchvbackend.api.member.repository.dao.UserDaoImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,10 +12,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/user")
 public class UserServiceController {
-    private final UserDaoJDBC userDao;
+    private final UserDaoImpl userDao;
 
     @Autowired
-    public UserServiceController(UserDaoJDBC userDao, JdbcTemplate jdbcTemplate, UserRepository userRepository) {
+    public UserServiceController(UserDaoImpl userDao, JdbcTemplate jdbcTemplate) {
         this.userDao = userDao;
     }
 

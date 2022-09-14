@@ -65,7 +65,7 @@ Caused by: java.lang.NoClassDefFoundError: com/catchvbackend/usermanage/UserRepo
 	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555) ~[na:na]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:304) ~[spring-beans-5.3.22.jar:5.3.22]
 	... 23 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.catchvbackend.usermanage.UserRepository.dao.UserDaoJDBC
+Caused by: java.lang.ClassNotFoundException: com.catchvbackend.usermanage.UserRepository.dao.UserDaoImpl
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
@@ -94,7 +94,7 @@ Caused by: java.lang.ClassNotFoundException: com.catchvbackend.usermanage.UserRe
 2022-09-12 10:59:03.382  INFO 2027 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
 2022-09-12 10:59:03.393  INFO 2027 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2022-09-12 10:59:03.395  INFO 2027 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-12 10:59:03.438  WARN 2027 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceController' defined in file [/Users/leegangju/Downloads/github/catchvbackend/out/production/classes/com/catchvbackend/usermanage/UserServiceController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoJDBC' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-09-12 10:59:03.438  WARN 2027 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceController' defined in file [/Users/leegangju/Downloads/github/catchvbackend/out/production/classes/com/catchvbackend/usermanage/UserServiceController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
 2022-09-12 10:59:03.438  INFO 2027 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-09-12 10:59:03.438  INFO 2027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
 2022-09-12 10:59:03.442  INFO 2027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
@@ -110,12 +110,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 0 of constructor in com.catchvbackend.usermanage.UserServiceController required a bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoJDBC' that could not be found.
+Parameter 0 of constructor in com.catchvbackend.usermanage.UserServiceController required a bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoImpl' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoJDBC' in your configuration.
+Consider defining a bean of type 'com.catchvbackend.usermanage.UserRepository.dao.UserDaoImpl' in your configuration.
 
 2022-09-12 10:59:04.847  INFO 4640 --- [restartedMain] c.c.CatchvbackendApplication             : Starting CatchvbackendApplication using Java 17.0.1 on MacBook-Pro.local with PID 4640 (/Users/leegangju/Downloads/github/catchvbackend/out/production/classes started by leegangju in /Users/leegangju/Downloads/github/catchvbackend)
 2022-09-12 10:59:04.848  INFO 4640 --- [restartedMain] c.c.CatchvbackendApplication             : No active profile set, falling back to 1 default profile: "default"

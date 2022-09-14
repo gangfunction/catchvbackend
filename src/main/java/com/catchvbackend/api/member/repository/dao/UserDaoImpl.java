@@ -1,6 +1,6 @@
-package com.catchvbackend.usermanage.UserRepository.dao;
+package com.catchvbackend.api.member.repository.dao;
 
-import com.catchvbackend.usermanage.UserRepository.UserMember.User;
+import com.catchvbackend.api.member.repository.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,17 +11,16 @@ import org.springframework.util.ObjectUtils;
 import org.thymeleaf.util.ListUtils;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+
 @Slf4j
 @Component
 @Repository
-public class UserDaoJDBC implements UserDao {
+public class UserDaoImpl implements UserDao {
     private static JdbcTemplate jdbcTemplate;
 
     @Autowired
     public void setDataSource(JdbcTemplate jdbcTemplate) {
-        UserDaoJDBC.jdbcTemplate = jdbcTemplate;
+        UserDaoImpl.jdbcTemplate = jdbcTemplate;
     }
 
     @Override

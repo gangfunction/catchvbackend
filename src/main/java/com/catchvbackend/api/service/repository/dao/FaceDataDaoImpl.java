@@ -1,7 +1,7 @@
-package com.catchvbackend.service.SeviceRepository.dao;
+package com.catchvbackend.api.service.repository.dao;
 
-import com.catchvbackend.service.SeviceRepository.Image.FaceData;
-import com.catchvbackend.service.SeviceRepository.ResultData;
+import com.catchvbackend.api.service.repository.FaceData;
+import com.catchvbackend.api.service.repository.ResultData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,12 +14,12 @@ import java.util.List;
 @Slf4j
 @Component
 @Repository
-public class FaceDataDaoJDBC implements FaceDataDao {
+public class FaceDataDaoImpl implements FaceDataDao {
     private static JdbcTemplate jdbcTemplate;
 
     @Autowired
     public void setDataSource(JdbcTemplate jdbcTemplate){
-        FaceDataDaoJDBC.jdbcTemplate = jdbcTemplate;
+        FaceDataDaoImpl.jdbcTemplate = jdbcTemplate;
     }
 
     @Override
