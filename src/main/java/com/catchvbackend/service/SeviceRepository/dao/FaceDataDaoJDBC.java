@@ -32,9 +32,8 @@ public class FaceDataDaoJDBC implements FaceDataDao {
                     0, faceData.getImage(), faceData.getName(), faceData.getSize(), userEmail, startDate);
             log.info("업로드 성공");
         } catch (Exception e){
-            log.info(""+e);
+            log.info("업로드 실패:"+e);
         }
-        log.info("업로드 실패");
     }
 
 
