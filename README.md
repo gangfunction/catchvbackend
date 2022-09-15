@@ -1,5 +1,22 @@
-HTTP를 받아오면 그에 따라 데이터베이스에 그와 관련한 자료가 있는지 요청하는 메소드
-POST를 사용해 리소스를 생성한다.
-GET을 통해 데이터베이스에 존재하는 리소스를 조회한다.
-PUT을 통해 수정하고
-DELETE를 통해 리소스를 삭제한다.
+# Catch V 
+
+## Backend
+
+### Introduction
+
+### Stacks and Dependencies
+Framework: Spring,SpringBoot
+
+Languages: Java
+
+### Issues
+
+### Contributors
+
+<!-- Copy-paste in your Readme.md file -->
+
+<a href = "https://github.com/Tanu-N-Prabhu/Python/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=gangfunction/catchvfrontnext"/>
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
