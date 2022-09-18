@@ -1,4 +1,4 @@
-package com.example.catchvbackend;
+package com.catchvbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
