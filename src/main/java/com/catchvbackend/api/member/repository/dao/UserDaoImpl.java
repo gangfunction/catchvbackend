@@ -28,7 +28,7 @@ public class UserDaoImpl implements UserDao {
         User user1 = findByEmail(user.getUserEmail());
         if (ObjectUtils.isEmpty(user1)) {
             log.info("회원가입 성공");
-            String sql = "insert into User(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
+            String sql = "insert into user(id,userEmail,userPassword,loginStatus) values(?,?,?,?)";
             jdbcTemplate.update(
                     sql,
                     0, user.getUserEmail(), user.getUserPassword(), 0);
@@ -57,9 +57,9 @@ public class UserDaoImpl implements UserDao {
     public int changeStatus(String userEmail){
         User user = findByEmail(userEmail);
         log.info(ObjectUtils.isEmpty(user)+"");
-        String sql = "update user set loginstatus=? where id = ?";
+        String sql = "update user set loginStatus=? where id = ?";
 
-        if(user.getLoginstatus()==0) {
+        if(user.getLoginStatus()==0) {
             jdbcTemplate.update(
                     sql,
                     1, user.getId());
@@ -75,7 +75,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByEmail(String email) {
-        String sql = "select * from User where useremail=?";
+        String sql = "select * from user where userEmail=?";
         List<User> result = jdbcTemplate.query(
                 sql,
                 userRowMapper(),
@@ -92,7 +92,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void delete(String email) {
         User user = findByEmail(email);
-        String sql = "delete from User where id=?";
+        String sql = "delete from user where id=?";
         int result = jdbcTemplate.update(sql, user.getId());
         log.info(result+"개 행 삭제 성공");
     }
@@ -100,7 +100,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void edit(User user){
         User user1 = findByEmail(user.getUserEmail());
-        String sql = "update user set userpassword=? where id=?";
+        String sql = "update user set userPassword=? where id=?";
         jdbcTemplate.update(
                 sql,
                 user.getUserPassword(), user1.getId());
@@ -111,9 +111,9 @@ public class UserDaoImpl implements UserDao {
         return (rs, rowNum) -> {
             User user = new User();
             user.setId(rs.getLong("id"));
-            user.setUserEmail(rs.getString("useremail"));
-            user.setUserPassword(rs.getString("userpassword"));
-            user.setLoginstatus(rs.getInt("loginstatus"));
+            user.setUserEmail(rs.getString("userEmail"));
+            user.setUserPassword(rs.getString("userPassword"));
+            user.setLoginStatus(rs.getInt("loginStatus"));
             return user;
         };
     }

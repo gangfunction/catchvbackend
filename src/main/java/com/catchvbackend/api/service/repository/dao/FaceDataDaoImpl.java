@@ -24,7 +24,7 @@ public class FaceDataDaoImpl implements FaceDataDao {
 
     @Override
     public void upload(FaceData faceData, String userEmail, String startDate){
-        String sql = "insert into FaceData(id, image, name, size, uploader,startDate) values(?, ?, ?, ?, ?,?)";
+        String sql = "insert into facedata(id, image, name, size, uploader,startDate) values(?, ?, ?, ?, ?,?)";
         log.info(startDate);
         try {
             jdbcTemplate.update(
@@ -38,7 +38,7 @@ public class FaceDataDaoImpl implements FaceDataDao {
 
 
     public void saveResult(int videoCount, int detectCount, String userEmail, String urlList) {
-        String sql = "insert into ResultData(videoCount,detectCount,userEmail,urlList) values(?,?,?,?)";
+        String sql = "insert into resultdata(videoCount,detectCount,userEmail,urlList) values(?,?,?,?)";
         log.info(userEmail);
         try {
             jdbcTemplate.update(
@@ -53,7 +53,7 @@ public class FaceDataDaoImpl implements FaceDataDao {
     }
 
     public List<ResultData> checkResult(String userEmail) {
-        String sql = "select * from ResultData where userEmail=?";
+        String sql = "select * from resultdata where userEmail=?";
         return jdbcTemplate.query(sql,userRowMapper(),userEmail);
     }
     private static RowMapper<ResultData> userRowMapper() {
