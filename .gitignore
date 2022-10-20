@@ -38,3 +38,4 @@ out/
 
 ### Secrets ###
 application.proterties
+.log
