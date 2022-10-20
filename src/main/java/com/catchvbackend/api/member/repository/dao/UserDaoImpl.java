@@ -59,9 +59,9 @@ public class UserDaoImpl implements UserDao {
     public int changeStatus(String userEmail){
         User user = findByEmail(userEmail);
         log.info(ObjectUtils.isEmpty(user)+"");
-        String sql = "update user set loginstatus=? where id = ?";
+        String sql = "update user set loginStatus=? where id = ?";
 
-        if(user.getLoginstatus()==0) {
+        if(user.getLoginStatus()==0) {
             jdbcTemplate.update(
                     sql,
                     1, user.getId());
@@ -77,7 +77,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByEmail(String email) {
-        String sql = "select * from user where useremail=?";
+        String sql = "select * from user where userEmail=?";
         List<User> result = jdbcTemplate.query(
                 sql,
                 userRowMapper(),
@@ -102,7 +102,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void edit(User user){
         User user1 = findByEmail(user.getUserEmail());
-        String sql = "update user set userpassword=? where id=?";
+        String sql = "update user set userPassword=? where id=?";
         jdbcTemplate.update(
                 sql,
                 user.getUserPassword(), user1.getId());
@@ -113,9 +113,9 @@ public class UserDaoImpl implements UserDao {
         return (rs, rowNum) -> {
             User user = new User();
             user.setId(rs.getLong("id"));
-            user.setUserEmail(rs.getString("useremail"));
-            user.setUserPassword(rs.getString("userpassword"));
-            user.setLoginstatus(rs.getInt("loginstatus"));
+            user.setUserEmail(rs.getString("userEmail"));
+            user.setUserPassword(rs.getString("userPassword"));
+            user.setLoginStatus(rs.getInt("loginStatus"));
             return user;
         };
     }

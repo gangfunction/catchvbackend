@@ -12,7 +12,7 @@ public class User {
 
     private String userPassword;
 
-    private int loginstatus;
+    private int loginStatus;
 
 
 }

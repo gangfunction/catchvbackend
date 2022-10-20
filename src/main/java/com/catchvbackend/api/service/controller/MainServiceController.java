@@ -86,7 +86,9 @@ public class MainServiceController {
     }
     @PostMapping(value="/request")
     @ResponseBody
-    public List<ResultData> requestImage(@RequestBody String message) throws JSONException {
+    public ResultData requestImage(@RequestBody String message) throws JSONException {
+        ResultData target = new ResultData();
+        int count = 0;
         HashMap<String, String> dict= new HashMap<>();
         JSONObject json = new JSONObject(String.valueOf(message));
         Iterator i = json.keys();
@@ -95,9 +97,19 @@ public class MainServiceController {
             dict.put(k, json.getString(k));
         }
         String userEmail = dict.get("userEmail");
+        log.info(userEmail);
+        ArrayList url = new ArrayList<>();
         List<ResultData> results = imageDaoJDBC.checkResult(userEmail);
-        return results;
+        for(ResultData r: results){
+            url.add(r.getUrlList());
+            count++;
+        }
+        target.setUserEmail(userEmail);
+        target.setUrlList(url.toString());
+        target.setDetectCount(count);
 
+        log.info(results.toString());
+        return target;
     }
 
     @ResponseBody
