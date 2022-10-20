@@ -23,13 +23,14 @@ public class UserServiceController {
 
 
     @PostMapping("/api")
-    public void showUser(@RequestBody User user) {
+    public HttpStatus showUser(@RequestBody User user) {
         if(!ObjectUtils.isEmpty(userDao.findByEmail(user.getUserEmail()))){
             log.info("정상적인 접근");
             userDao.login(user.getUserEmail(), user.getUserPassword());
+            return HttpStatus.ACCEPTED;
         }else{
             log.info("비정상적인 접근");
-
+            return HttpStatus.BAD_REQUEST;
         }
     }
 
@@ -52,9 +53,16 @@ public class UserServiceController {
     }
 
     @PatchMapping("/api")
-    public void editUser(@RequestBody User user) {
+    public HttpStatus editUser(@RequestBody User user) {
         log.info("edit :"+user);
-        userDao.edit(user);
+        if(!ObjectUtils.isEmpty(user))
+        {
+            userDao.edit(user);
+            return HttpStatus.ACCEPTED;
+        }
+        else{
+            return HttpStatus.BAD_REQUEST;
+        }
     }
 
     @DeleteMapping("/api")

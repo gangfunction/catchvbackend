@@ -30,7 +30,7 @@ public class UserDaoImpl implements UserDao {
         User user1 = findByEmail(user.getUserEmail());
         if (ObjectUtils.isEmpty(user1)) {
             log.info("회원가입 성공");
-            String sql = "insert into User(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
+            String sql = "insert into user(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
             jdbcTemplate.update(
                     sql,
                     0, user.getUserEmail(), user.getUserPassword(), 0);
@@ -77,7 +77,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByEmail(String email) {
-        String sql = "select * from User where useremail=?";
+        String sql = "select * from user where useremail=?";
         List<User> result = jdbcTemplate.query(
                 sql,
                 userRowMapper(),
@@ -94,7 +94,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void delete(String email) {
         User user = findByEmail(email);
-        String sql = "delete from User where id=?";
+        String sql = "delete from user where id=?";
         int result = jdbcTemplate.update(sql, user.getId());
         log.info(result+"개 행 삭제 성공");
     }
