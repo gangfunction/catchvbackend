@@ -1,6 +1,7 @@
 package com.catchvbackend.api.member.repository.dao;
 
 import com.catchvbackend.api.member.repository.User;
+import org.springframework.http.HttpStatus;
 
 public interface UserDao {
 
@@ -10,7 +11,7 @@ public interface UserDao {
 
     User findByEmail(String userEmail);
 
-    void login(String userEmail, String userPassword);
+    HttpStatus login(String userEmail, String userPassword);
     void delete(String email);
     void edit(User user);
 }

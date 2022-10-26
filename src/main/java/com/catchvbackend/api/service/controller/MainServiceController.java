@@ -44,7 +44,7 @@ public class MainServiceController {
     }
 
 
-    private ResponseEntity<?> send(List<MultipartFile> files, String userEmail,String startDate){
+    private ResponseEntity<?> send(List<MultipartFile> files, String userEmail,String startDate, String raw_len){
         String url = "http://localhost:5001/image/api";
         LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
         JsonNode response;
@@ -60,6 +60,7 @@ public class MainServiceController {
             }
             map.add("userEmail", userEmail);
             map.add("startDate", startDate);
+            map.add("raw_len" , raw_len);
             HttpHeaders headers = new HttpHeaders();
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
@@ -85,9 +86,7 @@ public class MainServiceController {
     }
     @PostMapping(value="/request")
     @ResponseBody
-    public ResultData requestImage(@RequestBody String message) throws JSONException {
-        ResultData target = new ResultData();
-        int count = 0;
+    public List<ResultData> requestImage(@RequestBody String message) throws JSONException {
         HashMap<String, String> dict= new HashMap<>();
         JSONObject json = new JSONObject(String.valueOf(message));
         Iterator i = json.keys();
@@ -96,19 +95,9 @@ public class MainServiceController {
             dict.put(k, json.getString(k));
         }
         String userEmail = dict.get("userEmail");
-        log.info(userEmail);
-        ArrayList url = new ArrayList<>();
         List<ResultData> results = imageDaoJDBC.checkResult(userEmail);
-        for(ResultData r: results){
-            url.add(r.getUrlList());
-            count++;
-        }
-        target.setUserEmail(userEmail);
-        target.setUrlList(url.toString());
-        target.setDetectCount(count);
+        return results;
 
-        log.info(results.toString());
-        return target;
     }
 
     @ResponseBody
@@ -147,11 +136,14 @@ public class MainServiceController {
 
     @PostMapping(value = "/api")
     public void uploadImage(@RequestParam("files") List<MultipartFile> faceDatalist,
-                            @RequestParam("email") String userEmail, @RequestParam("startDate") String startDate){
+                            @RequestParam("email") String userEmail,
+                            @RequestParam("startDate") String startDate,
+                            @RequestParam("raw_len") String raw_len){
         log.info("uploaded by"+userEmail);
         log.info("startDate"+startDate);
+        log.info("raw_len"+raw_len);
         //대기열 존재하지 않을시
-        send(faceDatalist, userEmail,startDate);
+        send(faceDatalist, userEmail,startDate,raw_len);
 
 
         //만약 대기열이 존재할시

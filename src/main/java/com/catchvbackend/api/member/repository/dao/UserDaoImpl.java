@@ -3,6 +3,7 @@ package com.catchvbackend.api.member.repository.dao;
 import com.catchvbackend.api.member.repository.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ import org.springframework.util.ObjectUtils;
 import org.thymeleaf.util.ListUtils;
 
 import java.util.List;
+import java.util.Objects;
 
 @Slf4j
 @Component
@@ -28,7 +30,7 @@ public class UserDaoImpl implements UserDao {
         User user1 = findByEmail(user.getUserEmail());
         if (ObjectUtils.isEmpty(user1)) {
             log.info("회원가입 성공");
-            String sql = "insert into user(id,userEmail,userPassword,loginStatus) values(?,?,?,?)";
+            String sql = "insert into user(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
             jdbcTemplate.update(
                     sql,
                     0, user.getUserEmail(), user.getUserPassword(), 0);
@@ -38,28 +40,28 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void login(String userEmail, String userPassword) {
+    public HttpStatus login(String userEmail, String userPassword) {
         User user = findByEmail(userEmail);
-        //id확인
-        if (!ObjectUtils.isEmpty(user)) {
-            if (user.getUserPassword().equals(userPassword)) {
-                int test = changeStatus(user.getUserEmail());
-                log.info("로그인 성공"+test);
-            } else {
-                log.info("비밀번호 틀림");
-            }
-            return;
-        }
+        log.info(user.getUserEmail() + " " + user.getUserPassword());
+        log.info(userEmail + " " + userPassword);
         log.info("아이디 확인");
+        if (Objects.equals(user.getUserPassword(), userPassword)) {
+            int test = changeStatus(user.getUserEmail());
+            log.info("로그인 성공"+test);
+            return HttpStatus.ACCEPTED;
+        } else {
+            log.info("비밀번호 틀림");
+            return HttpStatus.NOT_ACCEPTABLE;
+        }
     }
 
     @Override
     public int changeStatus(String userEmail){
         User user = findByEmail(userEmail);
         log.info(ObjectUtils.isEmpty(user)+"");
-        String sql = "update user set loginStatus=? where id = ?";
+        String sql = "update user set loginstatus=? where id = ?";
 
-        if(user.getLoginStatus()==0) {
+        if(user.getLoginstatus()==0) {
             jdbcTemplate.update(
                     sql,
                     1, user.getId());
@@ -75,7 +77,7 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public User findByEmail(String email) {
-        String sql = "select * from user where userEmail=?";
+        String sql = "select * from user where useremail=?";
         List<User> result = jdbcTemplate.query(
                 sql,
                 userRowMapper(),
@@ -100,7 +102,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public void edit(User user){
         User user1 = findByEmail(user.getUserEmail());
-        String sql = "update user set userPassword=? where id=?";
+        String sql = "update user set userpassword=? where id=?";
         jdbcTemplate.update(
                 sql,
                 user.getUserPassword(), user1.getId());
@@ -111,9 +113,9 @@ public class UserDaoImpl implements UserDao {
         return (rs, rowNum) -> {
             User user = new User();
             user.setId(rs.getLong("id"));
-            user.setUserEmail(rs.getString("userEmail"));
-            user.setUserPassword(rs.getString("userPassword"));
-            user.setLoginStatus(rs.getInt("loginStatus"));
+            user.setUserEmail(rs.getString("useremail"));
+            user.setUserPassword(rs.getString("userpassword"));
+            user.setLoginstatus(rs.getInt("loginstatus"));
             return user;
         };
     }

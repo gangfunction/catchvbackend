@@ -3,7 +3,9 @@ package com.catchvbackend.api.member.controller;
 import com.catchvbackend.api.member.repository.User;
 import com.catchvbackend.api.member.repository.dao.UserDaoImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,24 +21,17 @@ public class UserServiceController {
         this.userDao = userDao;
     }
 
-    @GetMapping
-    @ResponseBody
-    public User loginUser(@RequestBody User user){
-        log.info("User get: " + user.getId());
-        return null;
-    }
-    @PostMapping
-    @ResponseBody
-    public User saveUser(@RequestBody User user){
-        log.info("User post: " + user.getId());
-        return null;
-    }
-
 
     @PostMapping("/api")
-    public void showUser(@RequestBody User user) {
-        log.info("showUser: " + user.getUserEmail() + " " + user.getUserPassword());
-        userDao.login(user.getUserEmail(), user.getUserPassword());
+    public HttpStatus showUser(@RequestBody User user) {
+        if(!ObjectUtils.isEmpty(userDao.findByEmail(user.getUserEmail()))){
+            log.info("정상적인 접근");
+            userDao.login(user.getUserEmail(), user.getUserPassword());
+            return HttpStatus.ACCEPTED;
+        }else{
+            log.info("비정상적인 접근");
+            return HttpStatus.BAD_REQUEST;
+        }
     }
 
     @PostMapping("/api/logout")
@@ -44,17 +39,30 @@ public class UserServiceController {
         int test = userDao.changeStatus(user.getUserEmail());
         log.info("logout."+test);
     }
-
     @PutMapping("/api")
-    public void registerUser(@RequestBody User user) {
+    public HttpStatus registerUser(@RequestBody User user) {
         log.info("register"+user);
-        userDao.register(user);
+        if(!ObjectUtils.isEmpty(user))
+        {
+            userDao.register(user);
+            return HttpStatus.ACCEPTED;
+        }
+        else{
+            return HttpStatus.BAD_REQUEST;
+        }
     }
 
     @PatchMapping("/api")
-    public void editUser(@RequestBody User user) {
+    public HttpStatus editUser(@RequestBody User user) {
         log.info("edit :"+user);
-        userDao.edit(user);
+        if(!ObjectUtils.isEmpty(user))
+        {
+            userDao.edit(user);
+            return HttpStatus.ACCEPTED;
+        }
+        else{
+            return HttpStatus.BAD_REQUEST;
+        }
     }
 
     @DeleteMapping("/api")
