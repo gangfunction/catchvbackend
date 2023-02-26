@@ -1,8 +1,12 @@
 package com.catchvbackend.api.service.repository;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class ResultData {
     private int videoCount;
     private int detectCount;
