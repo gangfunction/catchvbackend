@@ -1,18 +1,16 @@
-package com.catchvbackend.api.service.repository.dao;
+package com.catchvbackend.api.mainService.repository.dao;
 
-import com.catchvbackend.api.service.repository.FaceData;
-import com.catchvbackend.api.service.repository.ResultData;
+import com.catchvbackend.api.mainService.repository.FaceData;
+import com.catchvbackend.api.mainService.repository.ResultData;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Slf4j
-@Component
 @Repository
 public class FaceDataDaoImpl implements FaceDataDao {
     private static JdbcTemplate jdbcTemplate;

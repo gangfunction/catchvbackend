@@ -1,4 +1,4 @@
-package com.catchvbackend.api.service.repository;
+package com.catchvbackend.api.mainService.repository;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

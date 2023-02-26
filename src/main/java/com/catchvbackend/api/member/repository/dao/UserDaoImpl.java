@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
 import org.thymeleaf.util.ListUtils;
@@ -15,7 +14,6 @@ import java.util.List;
 import java.util.Objects;
 
 @Slf4j
-@Component
 @Repository
 public class UserDaoImpl implements UserDao {
     private static JdbcTemplate jdbcTemplate;
