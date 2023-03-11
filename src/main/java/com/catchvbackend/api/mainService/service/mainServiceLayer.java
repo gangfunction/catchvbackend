@@ -1,7 +1,7 @@
 package com.catchvbackend.api.mainService.service;
 
 
-import com.catchvbackend.api.mainService.controller.MainServiceController;
+import com.catchvbackend.api.mainService.repository.FaceData;
 import com.catchvbackend.api.mainService.repository.dao.FaceDataDaoImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +16,7 @@ import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -56,8 +57,7 @@ public class mainServiceLayer {
             map.add("startDate", startDate);
             map.add("raw_len" , raw_len);
         } catch (HttpStatusCodeException e) {
-            HttpStatus errorHttpStatus = HttpStatus.valueOf(e.getStatusCode().value());
-            return new ResponseEntity<>(errorHttpStatus);
+            return new ResponseEntity<>(HttpStatus.valueOf(e.getStatusCode().value()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
@@ -100,7 +100,20 @@ public class mainServiceLayer {
             String k = i.next().toString();
             dict.put(k, json.getString(k));
         }
-        String userEmail = dict.get("userEmail");
-        return userEmail;
+        return dict.get("userEmail");
+    }
+
+    public static void addToWaitingList(FaceDataDaoImpl faceDataDao, List<MultipartFile> faceDatalist, String userEmail, String startDate) {
+        for (MultipartFile file  : faceDatalist) {
+            FaceData faceData = new FaceData();
+            try {
+                faceData.setName(file.getName());
+                faceData.setImage(file.getBytes());
+                faceData.setSize(file.getSize());
+                faceDataDao.upload(faceData, userEmail, startDate);
+            } catch (IOException e) {
+                log.info("Exception" + e);
+            }
+        }
     }
 }

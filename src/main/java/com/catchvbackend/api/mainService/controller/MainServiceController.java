@@ -1,6 +1,5 @@
 package com.catchvbackend.api.mainService.controller;
 
-import com.catchvbackend.api.mainService.repository.FaceData;
 import com.catchvbackend.api.mainService.repository.ResultData;
 import com.catchvbackend.api.mainService.repository.dao.FaceDataDaoImpl;
 import com.catchvbackend.api.mainService.service.mainServiceLayer;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 
 
@@ -28,9 +26,7 @@ public class MainServiceController {
     @Autowired
     public MainServiceController(FaceDataDaoImpl imageDaoJDBC) {
         this.imageDaoJDBC = imageDaoJDBC;
-
     }
-
 
     private ResponseEntity<HttpStatus> send(List<MultipartFile> files, String userEmail,String startDate, String raw_len){
         String url = "http://localhost:5001/image/api";
@@ -60,22 +56,8 @@ public class MainServiceController {
                             @RequestParam("raw_len") String raw_len){
         //대기열 존재하지 않을시
         send(faceDatalist, userEmail,startDate,raw_len);
-
-
         //만약 대기열이 존재할시
-        MultipartFile multipartFile ;
-        for (MultipartFile file  : faceDatalist) {
-            FaceData faceData = new FaceData();
-            multipartFile = file;
-            try {
-                faceData.setName(multipartFile.getName());
-                faceData.setImage(multipartFile.getBytes());
-                faceData.setSize(multipartFile.getSize());
-                imageDaoJDBC.upload(faceData, userEmail, startDate);
-            } catch (IOException e) {
-                log.info("Exception" + e);
-            }
-        }
+        mainServiceLayer.addToWaitingList(imageDaoJDBC, faceDatalist, userEmail, startDate);
     }
 
     @GetMapping(value = "/responseCsv")

@@ -56,10 +56,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public int changeStatus(String userEmail){
         User user = findByEmail(userEmail);
-        log.info(ObjectUtils.isEmpty(user)+"");
         String sql = "update user set loginstatus=? where id = ?";
-
-        if(user.getLoginstatus()==0) {
+        if(user.getLoginStatus()==0) {
             jdbcTemplate.update(
                     sql,
                     1, user.getId());
@@ -113,7 +111,7 @@ public class UserDaoImpl implements UserDao {
             user.setId(rs.getLong("id"));
             user.setUserEmail(rs.getString("useremail"));
             user.setUserPassword(rs.getString("userpassword"));
-            user.setLoginstatus(rs.getInt("loginstatus"));
+            user.setLoginStatus(rs.getInt("loginstatus"));
             return user;
         };
     }
