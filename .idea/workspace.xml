@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064fe9f7-b175-4fda-a931-40b650117d93" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a19ff6a-7108-4e46-b31d-82c57626a1d4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a19ff6a-7108-4e46-b31d-82c57626a1d4/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a19ff6a-7108-4e46-b31d-82c57626a1d4/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a19ff6a-7108-4e46-b31d-82c57626a1d4/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3a19ff6a-7108-4e46-b31d-82c57626a1d4/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/controller/MainServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/controller/MainServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/service/mainServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/service/mainServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/spring.log.2022-09-07.0.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDaoImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +221,8 @@
       <workItem from="1677376455856" duration="3020000" />
       <workItem from="1677379752134" duration="190000" />
       <workItem from="1677379945925" duration="11993000" />
-      <workItem from="1677496002199" duration="1840000" />
+      <workItem from="1677496002199" duration="2499000" />
+      <workItem from="1678972790502" duration="2171000" />
     </task>
     <servers />
   </component>

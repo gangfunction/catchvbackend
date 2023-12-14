@@ -4,6 +4,7 @@ import com.catchvbackend.api.member.repository.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -25,8 +26,8 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void register(User user) {
-        User user1 = findByEmail(user.getUserEmail());
-        if (ObjectUtils.isEmpty(user1)) {
+        User userEmail = findByEmail(user.getUserEmail());
+        if (ObjectUtils.isEmpty(userEmail)) {
             log.info("회원가입 성공");
             String sql = "insert into user(id,userEmail,userPassword,loginstatus) values(?,?,?,?)";
             jdbcTemplate.update(
@@ -38,7 +39,7 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public HttpStatus login(String userEmail, String userPassword) {
+    public ResponseEntity<HttpStatus> login(String userEmail, String userPassword) {
         User user = findByEmail(userEmail);
         log.info(user.getUserEmail() + " " + user.getUserPassword());
         log.info(userEmail + " " + userPassword);
@@ -46,10 +47,10 @@ public class UserDaoImpl implements UserDao {
         if (Objects.equals(user.getUserPassword(), userPassword)) {
             int test = changeStatus(user.getUserEmail());
             log.info("로그인 성공"+test);
-            return HttpStatus.ACCEPTED;
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
         } else {
             log.info("비밀번호 틀림");
-            return HttpStatus.NOT_ACCEPTABLE;
+            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
         }
     }
 
