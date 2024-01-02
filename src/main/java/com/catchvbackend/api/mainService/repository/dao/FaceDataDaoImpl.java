@@ -58,11 +58,10 @@ public class FaceDataDaoImpl implements FaceDataDao {
     }
     private static RowMapper<ResultData> userRowMapper() {
         return (rs, rowNum) -> {
-            ResultData resultData = new ResultData();
-            resultData.setVideoCount(rs.getInt("videoCount"));
-            resultData.setDetectCount(rs.getInt("detectCount"));
-            resultData.setUserEmail(rs.getString("userEmail"));
-            resultData.setUrlList(rs.getString("urlList"));
+            ResultData resultData = new ResultData(rs.getInt("videoCount"),
+                    rs.getInt("detectCount"),
+                    rs.getString("userEmail"),
+                    rs.getString("urlList"));
             return resultData;
         };
     }
