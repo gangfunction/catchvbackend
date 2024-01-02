@@ -26,9 +26,15 @@ import java.util.List;
 @Slf4j
 @Service
 public class mainServiceLayer {
-
+    /*
+    스프링 3.0부터 지원되었던 내장클레스 RestTemplate를 활용했습니다.
+    변경여지가 없으므로 변수명은 대문자로 활용했습니다.
+     */
     private static final RestTemplate REST_TEMPLATE;
 
+    /*
+    변경여지가 없고 항상 활용되어야하므로 스태틱블록을 활용했습니다.
+    */
     static{
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         factory.setConnectTimeout(5000);
@@ -36,6 +42,9 @@ public class mainServiceLayer {
         factory.setBufferRequestBody(false);
         REST_TEMPLATE = new RestTemplate(factory);
     }
+    /*
+    멀티파트 폼데이터를 활용해야 application/json에비해 대용량의 사진을 전송하기 용이했었습니다.
+     */
     public static void sendService(String url, LinkedMultiValueMap<String, Object> map) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
@@ -53,6 +62,9 @@ public class mainServiceLayer {
                     log.info("No files found");
                 }
             }
+            /*
+            매핑을 통해서 User 정보를 매핑했습니다.
+             */
             map.add("userEmail", userEmail);
             map.add("startDate", startDate);
             map.add("raw_len" , raw_len);

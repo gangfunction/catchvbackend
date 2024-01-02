@@ -30,6 +30,7 @@ public class FaceDataDaoImpl implements FaceDataDao {
                     0, faceData.getImage(), faceData.getName(), faceData.getSize(), userEmail, startDate);
             log.info("업로드 성공");
         } catch (Exception e){
+            //런타임에러이므로, 느슨하게 처리하는게 옳다고 판단했습니다.
             log.info("업로드 실패:"+e);
         }
     }
@@ -44,6 +45,7 @@ public class FaceDataDaoImpl implements FaceDataDao {
             log.info("결과 저장");
         }
         catch (Exception e){
+            //런타임에러이므로, 느슨하게 처리하는게 옳다고 판단했습니다.
             log.info(""+e);
         }
 

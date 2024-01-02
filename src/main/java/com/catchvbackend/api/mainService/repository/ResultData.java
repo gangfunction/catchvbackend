@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @RequiredArgsConstructor
 public class ResultData {
+    //최소 바이트수의 용량을 위해서 int와 String을 활용했습니다.
     private int videoCount;
     private int detectCount;
     private String userEmail;
