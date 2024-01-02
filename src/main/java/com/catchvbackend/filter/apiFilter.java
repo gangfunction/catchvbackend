@@ -1,7 +1,7 @@
 package com.catchvbackend.filter;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.ObjectUtils;
+import org.springframework.util.ObjectUtils;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

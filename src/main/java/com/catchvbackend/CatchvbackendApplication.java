@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @ServletComponentScan
-@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@SpringBootApplication
 public class CatchvbackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(CatchvbackendApplication.class, args);

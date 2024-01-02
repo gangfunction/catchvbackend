@@ -9,10 +9,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
-import org.thymeleaf.util.ListUtils;
 
 import java.util.List;
 import java.util.Objects;
+
 
 @Slf4j
 @Repository
@@ -82,7 +82,7 @@ public class UserDaoImpl implements UserDao {
         );
         log.info(result.toString());
 
-        if(ListUtils.isEmpty(result)){
+        if(result.isEmpty()){
           return null;
         }
         return result.get(0);
