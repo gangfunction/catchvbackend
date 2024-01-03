@@ -1,13 +1,13 @@
 package com.catchvbackend.api.mainService.service;
 
-
-import com.catchvbackend.api.mainService.repository.FaceData;
-import com.catchvbackend.api.mainService.repository.dao.FaceDataDaoImpl;
+import com.catchvbackend.api.mainService.controller.MainServiceControllerTestDto;
+import com.catchvbackend.api.mainService.repository.MainServiceRepositoryDto;
+import com.catchvbackend.api.mainService.repository.dao.FaceDataDaoImplTest;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
@@ -21,16 +21,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-
+import java.util.function.Consumer;
 
 @Slf4j
 @Service
-public class mainServiceLayer {
+public class MainServiceLayerTest {
     /*
-    스프링 3.0부터 지원되었던 내장클레스 RestTemplate를 활용했습니다.
-    변경여지가 없으므로 변수명은 대문자로 활용했습니다.
-     */
+스프링 3.0부터 지원되었던 내장클레스 RestTemplate를 활용했습니다.
+변경여지가 없으므로 변수명은 대문자로 활용했습니다.
+ */
     public static final RestTemplate REST_TEMPLATE;
+    static MainServiceControllerTestDto controllerTestDto;
 
     /*
     변경여지가 없고 항상 활용되어야하므로 스태틱블록을 활용했습니다.
@@ -51,6 +52,14 @@ public class mainServiceLayer {
         HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity
                 = new HttpEntity<>(map, headers);
         REST_TEMPLATE.postForObject(url, requestEntity, JsonNode.class);
+    }
+    public static ResponseEntity<HttpStatus> send(MainServiceControllerTestDto dto){
+        String url = "http://localhost:5001/image/api";
+        LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
+        HttpStatus httpStatus = HttpStatus.CREATED;
+        ResponseEntity<HttpStatus> errorHttpStatus = MainServiceLayerTest.sendServiceProcedure(dto.files, dto.userEmail, dto.startDate, dto.raw_len, url, map);
+        if (errorHttpStatus != null) return errorHttpStatus;
+        return new ResponseEntity<>(httpStatus);
     }
 
     public static ResponseEntity<HttpStatus> sendServiceProcedure(List<MultipartFile> files, String userEmail, String startDate, String raw_len, String url, LinkedMultiValueMap<String, Object> map) {
@@ -77,7 +86,7 @@ public class mainServiceLayer {
         return null;
     }
 
-    public static void resultJsonProcessing(FaceDataDaoImpl faceDataDao, String resultData) {
+    public static void resultJsonProcessing(FaceDataDaoImplTest faceDataDao, String resultData) {
         try{
             JSONObject jsonObject = new JSONObject(resultData);
             int videoCount = Integer.parseInt(jsonObject.getString("total_inspected_video_count"));
@@ -115,13 +124,14 @@ public class mainServiceLayer {
         return dict.get("userEmail");
     }
 
-    public static void addToWaitingList(FaceDataDaoImpl  faceDataDao, List<MultipartFile> faceDatalist, String userEmail, String startDate) throws IOException {
-        for (MultipartFile file  : faceDatalist) {
-            FaceData faceData = new FaceData(file.getBytes(), file.getName(), file.getSize());
-            faceDataDao.upload(faceData, userEmail, startDate);
+    public static Consumer<? super Object> addToWaitingList(MainServiceRepositoryDto dto) throws IOException {
+        for (MultipartFile file  : controllerTestDto.files) {
+            FaceDataDaoImplTest faceData = new FaceDataDaoImplTest();
+            faceData.upload( dto,
+                    controllerTestDto.userEmail,
+                    controllerTestDto.startDate);
         }
+        return null;
     }
 
-    public static void send(List<MultipartFile> faceDatalist, String userEmail, String startDate, String rawLen) {
-    }
 }

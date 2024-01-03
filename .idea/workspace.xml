@@ -5,7 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064fe9f7-b175-4fda-a931-40b650117d93" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/controller/MainServiceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/controller/MainServiceControllerTestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/repository/MainServiceRepositoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/service/MainServiceLayerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/controller/UserServiceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/repository/dao/UserDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/repository/dao/UserDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/service/MemberServiceLayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49e42681-010f-4b2f-9749-41aaa21125e8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49e42681-010f-4b2f-9749-41aaa21125e8/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49e42681-010f-4b2f-9749-41aaa21125e8/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/49e42681-010f-4b2f-9749-41aaa21125e8/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/catchvbackend.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/CatchvbackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/CatchvbackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/controller/MainServiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/controller/MainServiceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/FaceData.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/FaceData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/ResultData.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/ResultData.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/service/mainServiceLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/service/mainServiceLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CatchvbackendApplication.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/controller/MainServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/controller/MainServiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/FaceData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/FaceData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/service/mainServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/service/mainServiceLayer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,17 +100,22 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2ElU7ta5kKOToPOyocf8XXwZzKm" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
     "Gradle.catchvbackend 빌드.executor": "Run",
+    "HTTP 요청.generated-requests | #3.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -120,8 +163,15 @@
     <key name="MoveMembersDialog.RECENTS_KEY">
       <recent name="com.catchvbackend.api.mainService.service.mainServiceLayer" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.catchvbackend.api.mainService.controller" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.catchvbackend.api.mainService.repository" />
+      <recent name="com.catchvbackend.api.member.service" />
       <recent name="com.catchvbackend.api.member.repository.dao" />
+      <recent name="com.catchvbackend.api.member.controller" />
+      <recent name="com.catchvbackend.api.mainService.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -180,6 +230,9 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="generated-requests | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" requestIdentifier="#3" runType="단일 요청 실행">
+      <method v="2" />
+    </configuration>
     <configuration name="CatchvbackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="catchvbackend.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.catchvbackend.CatchvbackendApplication" />
@@ -189,6 +242,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP 요청.generated-requests | #3" />
         <item itemvalue="Gradle.loginTest.loginFailureTest" />
         <item itemvalue="Gradle.findByEmailTest.findByEmail" />
       </list>
@@ -226,7 +280,8 @@
       <workItem from="1677379945925" duration="11993000" />
       <workItem from="1677496002199" duration="2499000" />
       <workItem from="1678972790502" duration="2171000" />
-      <workItem from="1704188702162" duration="2071000" />
+      <workItem from="1704188702162" duration="12562000" />
+      <workItem from="1704265211614" duration="17667000" />
     </task>
     <servers />
   </component>

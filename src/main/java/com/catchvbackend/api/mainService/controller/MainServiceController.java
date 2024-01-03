@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,7 +55,7 @@ public class MainServiceController {
     public void uploadImage(@RequestParam("files") List<MultipartFile> faceDatalist,
                             @RequestParam("email") String userEmail,
                             @RequestParam("startDate") String startDate,
-                            @RequestParam("raw_len") String raw_len){
+                            @RequestParam("raw_len") String raw_len) throws IOException {
         //대기열 존재하지 않을시
         send(faceDatalist, userEmail,startDate,raw_len);
         //만약 대기열이 존재할시
