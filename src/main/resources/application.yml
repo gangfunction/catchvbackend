@@ -8,5 +8,18 @@ spring:
     url: jdbc:h2:tcp://localhost/~/test
     username: sa
     password:
-
-
+---
+spring:
+  profiles:
+    active: local
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
