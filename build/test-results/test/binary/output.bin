@@ -1,0 +1,6 @@
+Porg.springframework.context.annotation.internalConfigurationAnnotationProcessor
+Lorg.springframework.context.annotation.internalAutowiredAnnotationProcessor
+Iorg.springframework.context.annotation.internalCommonAnnotationProcessor
+Norg.springframework.context.annotation.internalPersistenceAnnotationProcessor
+Aorg.springframework.context.event.internalEventListenerProcessor
+?org.springframework.context.event.internalEventListenerFactory

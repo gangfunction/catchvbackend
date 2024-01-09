@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.ObjectUtils;
 
+import javax.sql.DataSource;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,11 +17,11 @@ import java.util.Objects;
 @Slf4j
 @Repository
 public class MemberRepositoryImpl implements MemberRepository {
-    private static JdbcTemplate jdbcTemplate;
+    private  JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public void setDataSource(JdbcTemplate jdbcTemplate) {
-        MemberRepositoryImpl.jdbcTemplate = jdbcTemplate;
+    public void setDataSource(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     @Override

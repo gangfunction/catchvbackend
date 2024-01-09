@@ -1,7 +1,6 @@
 package com.catchvbackend.api.Member.repository;
 
 import com.catchvbackend.api.Member.controller.MemberController;
-import com.catchvbackend.api.Member.repository.Member;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;

@@ -2,12 +2,11 @@ package com.catchvbackend.api.FaceData.service;
 
 
 import com.catchvbackend.api.FaceData.repository.FaceData;
-import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryImpl;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.http.*;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
@@ -31,6 +30,7 @@ public class FaceDataService {
     변경여지가 없으므로 변수명은 대문자로 활용했습니다.
      */
     public static final RestTemplate REST_TEMPLATE;
+
 
     /*
     변경여지가 없고 항상 활용되어야하므로 스태틱블록을 활용했습니다.
@@ -77,7 +77,7 @@ public class FaceDataService {
         return null;
     }
 
-    public static void resultJsonProcessing(FaceDataRepositoryImpl faceDataDao, String resultData) {
+    public  void resultJsonProcessing(FaceDataServiceDto serviceDto, String resultData) {
         try{
             JSONObject jsonObject = new JSONObject(resultData);
             int videoCount = Integer.parseInt(jsonObject.getString("total_inspected_video_count"));
@@ -96,7 +96,7 @@ public class FaceDataService {
             }
             int detectCount =urlList.size();
             String stringUrlList=urlList.toString();
-            faceDataDao.saveResult(videoCount,detectCount,userEmail,stringUrlList);
+            serviceDto.saveResult(videoCount,detectCount,userEmail,stringUrlList);
 
         }catch(Exception e){
             log.error("Error processing result json",e);
@@ -115,13 +115,12 @@ public class FaceDataService {
         return dict.get("userEmail");
     }
 
-    public static void addToWaitingList(FaceDataRepositoryImpl faceDataDao, List<MultipartFile> faceDatalist, String userEmail, String startDate) throws IOException {
+    public  void addToWaitingList(FaceDataServiceDto repositoryDto, List<MultipartFile> faceDatalist, String userEmail, String startDate) throws IOException {
         for (MultipartFile file  : faceDatalist) {
             FaceData faceData = new FaceData(file.getBytes(), file.getName(), file.getSize());
-            faceDataDao.upload(faceData, userEmail, startDate);
+            repositoryDto.upload(faceData, userEmail, startDate);
         }
+
     }
 
-    public static void send(List<MultipartFile> faceDatalist, String userEmail, String startDate, String rawLen) {
-    }
 }

@@ -1,6 +1,5 @@
 package com.catchvbackend.api.Member.repository;
 
-import com.catchvbackend.api.Member.repository.Member;
 import org.springframework.http.ResponseEntity;
 
 public interface MemberRepository {

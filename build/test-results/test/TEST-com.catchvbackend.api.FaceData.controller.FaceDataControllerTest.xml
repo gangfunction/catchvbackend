@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.catchvbackend.api.FaceData.controller.FaceDataControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-01-09T04:17:46" hostname="MacBook-Pro-2.local" time="0.054">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.catchvbackend.api.FaceData.controller.FaceDataControllerTest" time="0.054"/>
+  <system-out><![CDATA[org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.annotation.internalPersistenceAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

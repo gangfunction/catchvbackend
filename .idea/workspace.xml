@@ -5,105 +5,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064fe9f7-b175-4fda-a931-40b650117d93" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/MockControllerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/custom-template.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles 2.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/catchvbackend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/51bcdcc0-d2af-4324-bd22-2f1ad1692e0c/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-01-03T190315.400.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.syncignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/CatchvbackendApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/controller/MainServiceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/FaceData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/ResultData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/dao/FaceDataDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/mainService/service/mainServiceLayer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/member/controller/UserServiceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/member/repository/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/member/repository/dao/UserDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/member/repository/dao/UserDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/member/service/memberServiceLayer.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataRepositoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/service/QueueStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/FaceDataControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/CatchVBackEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/controller/FaceDataController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/repository/FaceData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/repository/FaceDataRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/repository/FaceDataRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataServiceDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/ResultFaceData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/Member/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/Member/repository/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/Member/repository/MemberRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/Member/repository/MemberRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/Member/service/MemberService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/config/WebConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/filter/apiFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/include/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/include/footer.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/include/header.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MainServiceController.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/mainServiceLayer.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CatchVBackEnd.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.enterprise.concurrent-api-1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.json-api-1.1.4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/javax.json.bind-api-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/.syncignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/CatchvbackendApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/controller/MainServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/FaceData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/ResultData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/dao/FaceDataDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/mainService/service/mainServiceLayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/controller/UserServiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/repository/dao/UserDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/member/service/memberServiceLayer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/filter/apiFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/CatchVBackEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/CatchVBackEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/controller/FaceDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/controller/FaceDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/service/FaceDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/service/FaceDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/service/FaceDataServiceDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/service/FaceDataServiceDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/Member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/Member/repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/Member/repository/MemberRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/Member/repository/MemberRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/filter/apiFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/filter/apiFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/footer.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/header.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/.syncignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/CatchvbackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/controller/MainServiceControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/controller/MainServiceControllerTestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/repository/MainServiceRepositoryDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/repository/dao/FaceDataDaoImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/mainService/service/MainServiceLayerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/controller/UserServiceControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/repository/dao/UserDaoImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/repository/dao/UserDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/repository/dao/loginTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/member/service/MemberServiceLayerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/MockControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/MockControllerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/Member/repository/loginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/Member/repository/loginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/events/EventTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,9 +96,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -172,6 +127,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -187,8 +145,10 @@
   &quot;keyToString&quot;: {
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.EventTest.builder.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FaceDataControllerTest.contextLoads.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MockControllerTests.createEvent.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MockControllerTests.createeEvent.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.catchvbackend [dependencies].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.catchvbackend 빌드.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 요청.generated-requests | #3.executor&quot;: &quot;Run&quot;,
     &quot;HTTP 요청.generated-requests | #4.executor&quot;: &quot;Run&quot;,
@@ -209,7 +169,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Develop&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/OneDrive/문서/GitHub/catchvfrontnext&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/leegangju/Documents/GitHub/catchvbackend/catchvbackend/src/test/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -219,6 +179,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;2f6f24b0aa5ddc10755bfe2746b38cf1&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -235,7 +196,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.catchvbackend.api.FaceData.service" />
       <recent name="com.catchvbackend.events" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -245,17 +210,18 @@
       <recent name="$PROJECT_DIR$/license" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.catchvbackend.api.FaceData.service.FaceDataServiceDto" />
       <recent name="com.catchvbackend.api.mainService.service.mainServiceLayer" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.catchvbackend.api.mainService.controller" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.catchvbackend.api.FaceData.controller" />
       <recent name="com.catchvbackend.events" />
       <recent name="com.catchvbackend.api.mainService.repository" />
       <recent name="com.catchvbackend.api.member.service" />
       <recent name="com.catchvbackend.api.member.repository.dao" />
-      <recent name="com.catchvbackend.api.member.controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -265,8 +231,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CatchVBackEnd">
-    <configuration name="EventTest.builder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.FaceDataControllerTest.contextLoads">
+    <configuration name="FaceDataControllerTest.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -279,7 +245,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.catchvbackend.events.EventTest.builder&quot;" />
+            <option value="&quot;com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.contextLoads&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -338,7 +304,26 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="generated-requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="4" requestIdentifier="#4" runType="단일 요청 실행">
+    <configuration name="catchvbackend [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="CatchVBackEnd" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
@@ -357,20 +342,13 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FaceDataControllerTest.contextLoads" />
         <item itemvalue="Spring Boot.CatchVBackEnd" />
+        <item itemvalue="Gradle.catchvbackend [dependencies]" />
         <item itemvalue="Gradle.MockControllerTests.createEvent" />
         <item itemvalue="Gradle.MockControllerTests.createeEvent" />
-        <item itemvalue="HTTP 요청.generated-requests | #4" />
-        <item itemvalue="Gradle.EventTest.builder" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-3183f394aec4-5f3ff201" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -400,6 +378,10 @@
       <workItem from="1704188702162" duration="12562000" />
       <workItem from="1704265211614" duration="17667000" />
       <workItem from="1704716342738" duration="4000" />
+      <workItem from="1704725690369" duration="393000" />
+      <workItem from="1704726090785" duration="15805000" />
+      <workItem from="1704773690821" duration="8802000" />
+      <workItem from="1704782678987" duration="7026000" />
     </task>
     <servers />
   </component>
