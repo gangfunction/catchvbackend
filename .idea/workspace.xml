@@ -5,21 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="064fe9f7-b175-4fda-a931-40b650117d93" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataCluster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceDataStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/FaceResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/ServiceResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/TempFaceDataRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/repository/UploadRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/controller/FaceDataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/controller/FaceDataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataServiceDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/api/FaceData/service/FaceDataServiceDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/filter/apiFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/catchvbackend/filter/apiFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/catchvbackend/api/FaceData/controller/FaceDataControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/catchvbackend/api/FaceData/controller/FaceDataControllerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.catchvbackend.api.FaceData.controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.catchvbackend.api.FaceData.controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/test/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/FaceDataControllerTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/FaceDataControllerTest.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/controller/FaceDataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/catchvbackend/api/FaceData/controller/FaceDataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/FaceDataControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/catchvbackend/api/FaceData/controller/FaceDataControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +72,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -107,6 +122,7 @@
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;Gradle.EventTest.builder.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.FaceDataControllerTest.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FaceDataControllerTest.resquestImageTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MockControllerTests.createEvent.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.MockControllerTests.createeEvent.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.catchvbackend [dependencies].executor&quot;: &quot;Run&quot;,
@@ -157,6 +173,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.catchvbackend.api.FaceData.repository" />
       <recent name="com.catchvbackend.api.FaceData.service" />
       <recent name="com.catchvbackend.events" />
     </key>
@@ -192,7 +209,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.CatchVBackEnd">
+  <component name="RunManager" selected="Gradle.FaceDataControllerTest.resquestImageTest">
     <configuration name="FaceDataControllerTest.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -217,6 +234,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="FaceDataControllerTest.resquestImageTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.catchvbackend.api.FaceData.controller.FaceDataControllerTest.resquestImageTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="MockControllerTests.createEvent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,30 +272,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.catchvbackend.api.FaceData.controller.MockControllerTests.createEvent&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="MockControllerTests.createeEvent" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.catchvbackend.api.FaceData.controller.MockControllerTests.createeEvent&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -303,11 +320,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.FaceDataControllerTest.resquestImageTest" />
         <item itemvalue="Spring Boot.CatchVBackEnd" />
         <item itemvalue="Gradle.FaceDataControllerTest.contextLoads" />
         <item itemvalue="Gradle.catchvbackend [dependencies]" />
         <item itemvalue="Gradle.MockControllerTests.createEvent" />
-        <item itemvalue="Gradle.MockControllerTests.createeEvent" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +359,14 @@
       <workItem from="1704725690369" duration="393000" />
       <workItem from="1704726090785" duration="15805000" />
       <workItem from="1704773690821" duration="8802000" />
-      <workItem from="1704782678987" duration="7618000" />
+      <workItem from="1704782678987" duration="8436000" />
+      <workItem from="1704840820610" duration="452000" />
+      <workItem from="1704860099012" duration="712000" />
+      <workItem from="1704863387915" duration="8021000" />
+      <workItem from="1704954270206" duration="373000" />
+      <workItem from="1704954645577" duration="93000" />
+      <workItem from="1704954745561" duration="62000" />
+      <workItem from="1704954816579" duration="4446000" />
     </task>
     <servers />
   </component>
@@ -359,5 +383,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
