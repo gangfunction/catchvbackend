@@ -1,21 +1,24 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.repository.TempFaceDataRepository;
+import com.catchvbackend.api.FaceData.repository.data.FaceDataCluster;
+import com.catchvbackend.api.FaceData.repository.data.FaceDataClusterRepository;
+import com.catchvbackend.api.FaceData.repository.data.ServiceResult;
 import com.catchvbackend.api.FaceData.service.FaceDataService;
+import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.filter.CharacterEncodingFilter;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -31,17 +34,20 @@ class FaceDataControllerTest {
     ObjectMapper objectMapper;
 
     @MockBean
-    TempFaceDataRepository repository;
+    FaceDataClusterRepository repository;
+
+
     MockMvc mockMvc;
     @Autowired
     WebApplicationContext ac;
 
 
+
     @BeforeEach
     public void setup(){
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(ac)
-                .addFilter(new CharacterEncodingFilter("UTF-8", true))
-                .build();
+//        this.mockMvc = MockMvcBuilders.webAppContextSetup(ac)
+//                .addFilter(new CharacterEncodingFilter("UTF-8", true))
+//                .build();
     }
 
     @Test
@@ -67,6 +73,28 @@ class FaceDataControllerTest {
     public void resultJsonTest(){
 
     }
+    @Test
+    public void FaceData(){
+        FaceDataCluster data = FaceDataCluster.builder()
+                .serviceResult(ServiceResult.builder()
+                        .videoCount(1)
+                        .detectCount(1)
+                        .urlList(new String[]{"kimbob"})
+                        .userEmail("userEmail@naver.com")
+                        .build())
+                .build();
+        data.setId(1);
+        Mockito.when(this.repository.save(data)).thenReturn(data);
+    }
 
+    @Test
+    public void creeateEvent_BAD_REQUEST() throws Exception {
+        //given - facedataclusterdto to build
+        FaceDataServiceDto serviceDto = FaceDataServiceDto.builder().build();
+        this.mockMvc.perform(post("/image"))
+                .andExpect(status().isBadRequest());
+        //when
 
+        //then
+    }
 }

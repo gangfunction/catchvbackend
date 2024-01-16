@@ -23,3 +23,8 @@ spring:
   config:
     activate:
       on-profile: prod
+---
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true

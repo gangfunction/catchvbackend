@@ -1,18 +1,18 @@
-package com.catchvbackend.api.FaceData.repository;
+package com.catchvbackend.api.FaceData.repository.data;
 
 import lombok.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
-import java.util.List;
+import javax.validation.constraints.NotEmpty;
+
 @Builder @AllArgsConstructor @NoArgsConstructor
 @Getter @Setter @EqualsAndHashCode(of="id")
 @Entity
 public class FaceDataCluster {
     @Id
-    @GeneratedValue
+    @NotEmpty
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @Enumerated(EnumType.STRING)
     private FaceDataStatus status;
     @Embedded

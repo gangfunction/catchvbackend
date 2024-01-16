@@ -1,4 +1,4 @@
-package com.catchvbackend.api.FaceData.repository;
+package com.catchvbackend.api.FaceData.repository.data;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
