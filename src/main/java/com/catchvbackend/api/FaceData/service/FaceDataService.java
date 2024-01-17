@@ -1,7 +1,7 @@
 package com.catchvbackend.api.FaceData.service;
 
 
-import com.catchvbackend.api.FaceData.repository.FaceData;
+import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryDto;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
@@ -30,6 +30,7 @@ public class FaceDataService {
     변경여지가 없으므로 변수명은 대문자로 활용했습니다.
      */
     public static final RestTemplate REST_TEMPLATE;
+    private final FaceDataRepositoryDto repositoryDto;
 
 
     /*
@@ -42,6 +43,11 @@ public class FaceDataService {
         factory.setBufferRequestBody(false);
         REST_TEMPLATE = new RestTemplate(factory);
     }
+
+    public FaceDataService(FaceDataRepositoryDto repositoryDto) {
+        this.repositoryDto = repositoryDto;
+    }
+
     /*
     멀티파트 폼데이터를 활용해야 application/json에비해 대용량의 사진을 전송하기 용이했었습니다.
      */
@@ -53,28 +59,30 @@ public class FaceDataService {
         REST_TEMPLATE.postForObject(url, requestEntity, JsonNode.class);
     }
 
-    public static ResponseEntity<HttpStatus> sendServiceProcedure(List<MultipartFile> files, String userEmail, String startDate, String raw_len, String url, LinkedMultiValueMap<String, Object> map) {
+    public static ResponseEntity<HttpStatus> sendServiceProcedure(FaceDataRequestModel serviceRequestData) {
+        LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
         try {
-            for (MultipartFile file : files) {
-                if (!file.isEmpty()) {
-                    map.add("files",  file.getResource());
-                }else{
-                    log.info("No files found");
-                }
-            }
-            /*
-            매핑을 통해서 Member 정보를 매핑했습니다.
-             */
-            map.add("userEmail", userEmail);
-            map.add("startDate", startDate);
-            map.add("raw_len" , raw_len);
+            FaceDataRequestModelMapping(serviceRequestData, map);
         } catch (HttpStatusCodeException e) {
             return new ResponseEntity<>(HttpStatus.valueOf(e.getStatusCode().value()));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
-        sendService(url, map);
+        sendService(serviceRequestData.url(), map);
         return null;
+    }
+
+    private static void FaceDataRequestModelMapping(FaceDataRequestModel serviceRequestData, LinkedMultiValueMap<String, Object> map) {
+        for (MultipartFile file : serviceRequestData.files()) {
+            if (!file.isEmpty()) {
+                map.add("files",  file.getResource());
+                map.add("userEmail", serviceRequestData.userEmail());
+                map.add("startDate", serviceRequestData.startDate());
+                map.add("raw_len" , serviceRequestData.raw_len());
+            }else{
+                log.info("No files found");
+            }
+        }
     }
 
     public  void resultJsonProcessing(FaceDataServiceDto serviceDto, String resultData) {
@@ -115,11 +123,11 @@ public class FaceDataService {
         return dict.get("userEmail");
     }
 
-    public  void addToWaitingList(FaceDataServiceDto repositoryDto, List<MultipartFile> faceDatalist, String userEmail, String startDate) throws IOException {
-        for (MultipartFile file  : faceDatalist) {
-            FaceData faceData = new FaceData(file.getBytes(), file.getName(), file.getSize());
-            repositoryDto.upload(faceData, userEmail, startDate);
-        }
+    public void addToWaitingList(byte[] image, String name, long size,List<MultipartFile> list, String userEmail, String startDate) throws IOException {
+        for (MultipartFile ignored : list) {
+//            FaceData faceData = new FaceData(file.getBytes(), file.getName(), file.getSize());
+            repositoryDto.upload(image, name, size, userEmail, startDate);
+        }// faceData 의 요소를 다시 뽑아봐야겠다. byte[] image, String name, long size
 
     }
 

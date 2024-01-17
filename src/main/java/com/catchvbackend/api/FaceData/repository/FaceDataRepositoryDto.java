@@ -27,7 +27,7 @@ public class FaceDataRepositoryDto {
         repository.saveResult(videoCount, detectCount, userEmail, urlList);
     }
 
-    public void upload(FaceData faceData, String userEmail, String startDate) {
-        repository.upload(faceData,userEmail,startDate);
+    public void upload(byte[] image, String name,Long size , String userEmail, String startDate) {
+        repository.upload(image, name, size,userEmail,startDate);
     }
 }

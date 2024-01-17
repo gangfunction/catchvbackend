@@ -28,3 +28,10 @@ spring:
   jackson:
     deserialization:
       fail-on-unknown-properties: true
+
+---
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
