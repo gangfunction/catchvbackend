@@ -14,4 +14,7 @@ public class MemberResository {
         em.persist(member);
         return member.getId();
     }
+    public Member findOne(Long id){
+        return em.find(Member.class,id);
+    }
 }
