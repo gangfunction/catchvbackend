@@ -6,18 +6,15 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Getter
-@Setter
-@EqualsAndHashCode(of="of")
+@Getter @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class Member {
 
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
 
     private String userEmail;
 

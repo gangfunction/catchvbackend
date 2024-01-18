@@ -2,7 +2,7 @@ package com.catchvbackend.api.Member.repository;
 
 import org.springframework.http.ResponseEntity;
 
-public interface MemberRepository {
+public interface MemberTempRepository {
 
     void register(Member user);
 

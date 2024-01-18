@@ -1,6 +1,5 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.service.FaceDataService;
 import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
 import com.catchvbackend.api.FaceData.service.ResultFaceData;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +12,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.catchvbackend.api.FaceData.service.FaceDataService.REST_TEMPLATE;
+import static com.catchvbackend.api.FaceData.service.CustomRestTemplate.REST_TEMPLATE;
 
 
 @Slf4j
@@ -25,10 +24,9 @@ public class FaceDataController {
      * 컨트롤러 패키지에 Dto를 추가했었던 첫 개선점은 별 문제가 되지않지만, controller단에서
      * 로직에 관한 처리를 하는것이 바람직하지 않다고 판단했다.
      */
-    private final FaceDataServiceDto serviceDto;
+    private  FaceDataServiceDto serviceDto;
     private final ModelMapper modelMapper;
-    public FaceDataController(FaceDataServiceDto dataServiceDto, ModelMapper modelMapper) {
-        this.serviceDto = dataServiceDto;
+    public FaceDataController( ModelMapper modelMapper) {
         this.modelMapper = modelMapper;
     }
 

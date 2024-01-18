@@ -1,6 +1,7 @@
 package com.catchvbackend.api.FaceData.repository;
 
 import com.catchvbackend.api.FaceData.service.FaceDataService;
+import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
 import com.catchvbackend.api.FaceData.service.ResultFaceData;
 import com.catchvbackend.api.FaceData.service.FaceDataRequestModel;
 import lombok.extern.slf4j.Slf4j;
@@ -68,7 +69,8 @@ public class FaceDataRepository {
     public void send(List<MultipartFile> files, String userEmail, String startDate, String raw_len){
         String url = "http://localhost:5001/image/api";
         HttpStatus httpStatus = HttpStatus.CREATED;
-        ResponseEntity<HttpStatus> errorHttpStatus = FaceDataService.sendServiceProcedure(new FaceDataRequestModel(files, userEmail, startDate, raw_len, url));
+        ResponseEntity<HttpStatus> errorHttpStatus = FaceDataServiceDto
+                .sendServiceProcedure(new FaceDataRequestModel(files, userEmail, startDate, raw_len, url));
         if (errorHttpStatus != null) return;
         new ResponseEntity<>(httpStatus);
     }

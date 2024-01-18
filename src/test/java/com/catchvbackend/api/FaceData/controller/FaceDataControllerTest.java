@@ -1,8 +1,5 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.repository.data.FaceDataCluster;
-import com.catchvbackend.api.FaceData.repository.data.FaceDataClusterRepository;
-import com.catchvbackend.api.FaceData.repository.data.ServiceResult;
 import com.catchvbackend.api.FaceData.service.FaceDataService;
 import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -11,7 +8,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -33,8 +29,7 @@ class FaceDataControllerTest {
     @Autowired
     ObjectMapper objectMapper;
 
-    @MockBean
-    FaceDataClusterRepository repository;
+
 
 
     MockMvc mockMvc;
@@ -73,19 +68,7 @@ class FaceDataControllerTest {
     public void resultJsonTest(){
 
     }
-    @Test
-    public void FaceData(){
-        FaceDataCluster data = FaceDataCluster.builder()
-                .serviceResult(ServiceResult.builder()
-                        .videoCount(1)
-                        .detectCount(1)
-                        .urlList(new String[]{"kimbob"})
-                        .userEmail("userEmail@naver.com")
-                        .build())
-                .build();
-        data.setId(1);
-        Mockito.when(this.repository.save(data)).thenReturn(data);
-    }
+
 
     @Test
     public void creeateEvent_BAD_REQUEST() throws Exception {

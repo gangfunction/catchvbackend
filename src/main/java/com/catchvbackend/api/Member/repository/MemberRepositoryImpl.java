@@ -16,7 +16,7 @@ import java.util.Objects;
 
 @Slf4j
 @Repository
-public class MemberRepositoryImpl implements MemberRepository {
+public class MemberRepositoryImpl implements MemberTempRepository {
     private  JdbcTemplate jdbcTemplate;
 
     @Autowired

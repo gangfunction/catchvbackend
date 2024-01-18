@@ -2,6 +2,8 @@ package com.catchvbackend.api.FaceData.service;
 
 import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryDto;
 import lombok.*;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -12,8 +14,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
-@Setter
-@Component
 public class FaceDataServiceDto {
     /**
      * 목적은 컨트롤러에서 객체들을 받아와서 서비스단에 넘겨주는것이다.
@@ -30,10 +30,13 @@ public class FaceDataServiceDto {
     private String imageName;
     private long imageSize;
 
+    public static ResponseEntity<HttpStatus> sendServiceProcedure(FaceDataRequestModel faceDataRequestModel) {
+        return FaceDataService.sendServiceProcedure(faceDataRequestModel);
+    }
 
 
     //FaceDataServiceDto serviceDto, QueueStatus status
-    public void uploadEvaluationLogic() throws IOException {
+    public void uploadEvaluationLogic() {
         if(status != null && "500".equals(status.getCodes())){
             service.addToWaitingList(image, imageName, imageSize, fileList, userEmail, startDate);
         }

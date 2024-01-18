@@ -1,5 +1,8 @@
 package com.catchvbackend.api.FaceData.service;
 
+import lombok.Getter;
+
+@Getter
 public enum QueueStatus {
     EMPTY("200"),
     PROGRESS("202"),
@@ -9,8 +12,5 @@ public enum QueueStatus {
 
     QueueStatus(String number) {
         this.codes = number;
-    }
-    public String getCodes(){
-        return codes;
     }
 }

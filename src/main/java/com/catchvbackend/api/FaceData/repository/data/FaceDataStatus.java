@@ -1,7 +1,5 @@
-package com.catchvbackend.api.FaceData.repository.data;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public enum FaceDataStatus {
-    COMMIT,ROLLBACK,TRANSFER,COMPLETED
-}
+//package com.catchvbackend.api.FaceData.repository.data;
+//
+//public enum FaceDataStatus {
+//    COMMIT,ROLLBACK,TRANSFER,COMPLETED
+//}

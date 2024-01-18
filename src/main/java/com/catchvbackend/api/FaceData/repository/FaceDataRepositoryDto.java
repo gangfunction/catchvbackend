@@ -8,13 +8,12 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
 
 @Builder
-@RequiredArgsConstructor
 @AllArgsConstructor
-@Component
 @Getter
-@Setter
 public class FaceDataRepositoryDto {
     private FaceDataRepository repository;
+
+
 
     public List<ResultFaceData> checkResult(String userEmail) {
         return repository.checkResult(userEmail);
