@@ -1,10 +1,12 @@
 package com.catchvbackend.api.FaceData.repository;
 
-import com.catchvbackend.api.FaceData.service.ResultFaceData;
-import lombok.*;
-import org.springframework.stereotype.Component;
+import com.catchvbackend.api.FaceData.domain.face.FaceData;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Builder
@@ -12,21 +14,18 @@ import java.util.List;
 @Getter
 public class FaceDataRepositoryDto {
     private FaceDataRepository repository;
+    private RequestRepository requestRepository;
 
 
-
-    public List<ResultFaceData> checkResult(String userEmail) {
-        return repository.checkResult(userEmail);
+    public  void send(List<FaceData> faceDatum, String userEmail, LocalDateTime startDate, String rawLen) {
+        repository.send(faceDatum,userEmail,startDate,rawLen);
     }
 
-    public  void send(List<MultipartFile> faceDatalist, String userEmail, String startDate, String rawLen) {
-        repository.send(faceDatalist,userEmail,startDate,rawLen);
-    }
-    public void saveResult(int videoCount, int detectCount, String userEmail, String urlList){
-        repository.saveResult(videoCount, detectCount, userEmail, urlList);
-    }
 
-    public void upload(byte[] image, String name,Long size , String userEmail, String startDate) {
-        repository.upload(image, name, size,userEmail,startDate);
+    public void addToWaitingList(byte[] image, String imageName, long imageSize,List<MultipartFile> imageList, String userEmail, LocalDateTime startDate) {
+        for (MultipartFile ignored : imageList) {
+            requestRepository.upload(image, imageName, imageSize, userEmail, startDate);
+        }// faceData 의 요소를 다시 뽑아봐야겠다. byte[] image, String name, long size
+
     }
 }

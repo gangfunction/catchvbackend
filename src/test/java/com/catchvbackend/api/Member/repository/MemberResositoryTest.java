@@ -1,5 +1,7 @@
 package com.catchvbackend.api.Member.repository;
 
+import com.catchvbackend.api.FaceData.domain.Member;
+import com.catchvbackend.api.FaceData.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 class MemberResositoryTest {
     @Autowired
-    MemberResository memberResository;
+    MemberRepository memberResository;
     @Test
     @Transactional
     void saveMember() {

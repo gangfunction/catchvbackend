@@ -1,13 +1,14 @@
 package com.catchvbackend.api.FaceData.service;
 
+import com.catchvbackend.api.FaceData.domain.Result;
+import com.catchvbackend.api.FaceData.domain.face.FaceData;
 import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryDto;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Builder
@@ -19,16 +20,24 @@ public class FaceDataServiceDto {
      * 목적은 컨트롤러에서 객체들을 받아와서 서비스단에 넘겨주는것이다.
      * 방법은 컨트롤러에서 사용하는 속성 및 객체들에 대한 내용을 기술하고 필요에 따라 분리한다.
      */
-    private List<MultipartFile> fileList;
-    private String userEmail;
-    private String startDate;
     private String rawLen;
-    private FaceDataRepositoryDto repositoryDto;
-    private FaceDataService service;
+    private Integer detectCount;
+    private String detectedUrl;
+    private List<FaceData> faceDatum;
+    private LocalDateTime startDate;
+
+    private Long id;
+    private String userEmail;
     private QueueStatus status;
     private byte[] image;
     private String imageName;
     private long imageSize;
+
+    private FaceDataRepositoryDto repositoryDto;
+    private FaceDataService service;
+    private ResultService resultService;
+    private RequestService requestService;
+
 
     public static ResponseEntity<HttpStatus> sendServiceProcedure(FaceDataRequestModel faceDataRequestModel) {
         return FaceDataService.sendServiceProcedure(faceDataRequestModel);
@@ -36,32 +45,33 @@ public class FaceDataServiceDto {
 
 
     //FaceDataServiceDto serviceDto, QueueStatus status
-    public void uploadEvaluationLogic() {
-        if(status != null && "500".equals(status.getCodes())){
-            service.addToWaitingList(image, imageName, imageSize, fileList, userEmail, startDate);
+    public  void uploadEvaluationLogic() {
+        if (stautus != null && "500".equals(status.getCodes())) {
+            repositoryDto.addToWaitingList(FaceData.getImage(), imageName, imageSize, faceDatum, userEmail, startDate);
         }
-        repositoryDto.send(fileList, userEmail, startDate, rawLen);
+        repositoryDto.send(faceDatum, userEmail, startDate, rawLen);
+
+        //take status from class common
+        //if status is 500, add to waiting list
+        //else send to repository
+
 
     }
 
 
     /**
-     *            service.addToWaitingList(new FaceDataRequestAddWaiting(this, list, userEmail, startDate));
-     *         }
-     *         repositoryDto.send(list, userEmail, startDate, rawLen);
-     *     }
+     * service.addToWaitingList(new FaceDataRequestAddWaiting(this, list, userEmail, startDate));
+     * }
+     * repositoryDto.send(list, userEmail, startDate, rawLen);
+     * }
      */
 
-    public List<ResultFaceData> checkResult(String userEmail) {
+    public List<Result> checkResult(String userEmail) {
         return repositoryDto.checkResult(this.userEmail);
     }
 
-    public void resultJsonProcessing(String resultData){
-        service.resultJsonProcessing(this, resultData);
-    }
-
-    public void saveResult(int videoCount, int detectCount, String userEmail, String stringUrlList) {
-        repositoryDto.saveResult(videoCount,detectCount,userEmail,stringUrlList);
+    public void resultJsonProcessing(String resultData) {
+        resultService.resultJsonProcessing(resultData);
     }
 
 

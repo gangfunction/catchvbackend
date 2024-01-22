@@ -1,7 +1,7 @@
 package com.catchvbackend.api.FaceData.controller;
 
+import com.catchvbackend.api.FaceData.domain.Result;
 import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
-import com.catchvbackend.api.FaceData.service.ResultFaceData;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONException;
 import org.modelmapper.ModelMapper;
@@ -31,7 +31,7 @@ public class FaceDataController {
     }
 
     @PostMapping(value="/request")
-    public List<ResultFaceData> requestImage(@RequestBody String userEmail) throws JSONException {
+    public List<Result> requestImage(@RequestBody String userEmail) throws JSONException {
         return serviceDto.checkResult(userEmail);
     }
 

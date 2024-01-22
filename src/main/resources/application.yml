@@ -1,11 +1,12 @@
 spring:
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
         show_sql: true
+        default_batch_fetch_size: 100
   h2:
     console:
       enabled: true
