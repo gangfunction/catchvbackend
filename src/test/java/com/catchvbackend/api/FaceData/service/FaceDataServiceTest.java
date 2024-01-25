@@ -60,7 +60,6 @@ class FaceDataServiceTest {
         String userEmail = "leeegang@naver.com";
         String startDate = "2021-08-01";
         String rawLen = "0";
-        FaceDataRequestModel faceDataRequestModel = new FaceDataRequestModel(requestFileList, userEmail, startDate, rawLen, dbConnectionUrl);
 
 
         @BeforeEach
@@ -74,35 +73,12 @@ class FaceDataServiceTest {
         }
         @BeforeEach
         void setFaceDataRequestModel(){
-            this.faceDataRequestModel=new FaceDataRequestModel(requestFileList, this.userEmail, this.startDate, this.rawLen, this.dbConnectionUrl);
         }
 
         //void 메서드를 테스트할 때는 verify를 사용한다.
-        @Test
-        @DisplayName("sendService 테스트 성공")
-        void sendService() {
-            //given
-
-            //when
-
-            //then
-            assertThatThrownBy(()->{
-                FaceDataService.sendService(dbConnectionUrl,map);
-            }).isInstanceOf(HttpClientErrorException.class);
 
 
-        }
 
-        @Test
-        @DisplayName("sendServiceProcedure 테스트 성공")
-        void sendServiceProcedure() {
-            //given
-            FaceDataRequestModel model = this.faceDataRequestModel;
-            //when
-            ResponseEntity<HttpStatus> httpStatusResponseEntity = FaceDataService.sendServiceProcedure(model);
-            //then
-            assertThat(Objects.requireNonNull(httpStatusResponseEntity).getStatusCode()).isEqualTo(HttpStatus.OK);
-        }
 
         @Test
         @DisplayName("requestJsonProcessing 테스트 성공")

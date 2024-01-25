@@ -4,6 +4,7 @@ import com.catchvbackend.api.FaceData.domain.face.FaceData;
 import lombok.Getter;
 import lombok.Setter;
 import net.minidev.json.annotate.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -30,6 +31,8 @@ public class Request{
     private String uploader;
     @NotNull
     private String userEmail;
+    @NotNull
+    private String setupUrl;
 
     @JsonIgnore
     @OneToMany(mappedBy = "uploadRequest")

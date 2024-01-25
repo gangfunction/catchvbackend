@@ -5,15 +5,10 @@ import com.catchvbackend.api.FaceData.domain.Member;
 import com.catchvbackend.api.FaceData.repository.MemberRepository;
 import com.catchvbackend.api.FaceData.service.MemberService;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
-import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -25,7 +20,7 @@ public class MemberController {
      * 컨트롤러 클래스에서 메인 로직을 결정하고 httpstatus에 대한 판단은 각 서비스 로직에서 실행한다.
      */
     private final MemberService memberService;
-    private final MemberRepository userDao;
+    private final MemberRepository memberRepository;
 
 
     @PostMapping("/api")
@@ -48,13 +43,13 @@ public class MemberController {
 
     @PatchMapping("/api")
     public ResponseEntity<HttpStatus> editUser(@RequestBody Member user) {
-        userDao.edit(user);
+        memberRepository.edit(user);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping("/api")
     public ResponseEntity<HttpStatus> outUser(@RequestBody Member user) {
-        userDao.delete(user.getUserEmail());
+        memberRepository.deleteByUserEmail(user.getUserEmail());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 //    @PostMapping("/api/create")

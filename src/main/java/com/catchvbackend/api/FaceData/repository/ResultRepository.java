@@ -3,7 +3,6 @@ package com.catchvbackend.api.FaceData.repository;
 import com.catchvbackend.api.FaceData.domain.Result;
 import com.catchvbackend.api.FaceData.domain.face.FaceData;
 import lombok.RequiredArgsConstructor;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
@@ -17,6 +16,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ResultRepository {
     private final EntityManager em;
+
+    public List<Result> checkResult(String userEmail) {
+        String sql = "select * from result where userEmail=?";
+        return em.createNativeQuery(sql).getResultList();
+    }
     public void saveResult(Result result) {
         String sql = "insert into result(videoCount,detectCount,userEmail,urlList) values(?,?,?,?)";
         try {
@@ -106,10 +110,7 @@ public class ResultRepository {
         TypedQuery<Result> query = em.createQuery(cq).setMaxResults(1000);
         return query.getResultList();
     }
-        public List<Result> checkResult(String userEmail) {
-        String sql = "select * from result where userEmail=?";
-        return em.createNativeQuery(sql).getResultList();
-    }
+
 
 
 }

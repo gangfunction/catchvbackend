@@ -32,6 +32,7 @@ public class FaceDataServiceDto {
     private byte[] image;
     private String imageName;
     private long imageSize;
+    private List<MultipartFile> files;
 
     private FaceDataRepositoryDto repositoryDto;
     private FaceDataService service;
@@ -39,17 +40,17 @@ public class FaceDataServiceDto {
     private RequestService requestService;
 
 
-    public static ResponseEntity<HttpStatus> sendServiceProcedure(FaceDataRequestModel faceDataRequestModel) {
-        return FaceDataService.sendServiceProcedure(faceDataRequestModel);
+    public ResponseEntity<HttpStatus> sendServiceProcedure(List<MultipartFile> files, String url, String userEmail, LocalDateTime startDate, String raw_len) {
+        return service.sendServiceProcedure(files, url);
     }
 
 
     //FaceDataServiceDto serviceDto, QueueStatus status
     public  void uploadEvaluationLogic() {
-        if (stautus != null && "500".equals(status.getCodes())) {
-            repositoryDto.addToWaitingList(FaceData.getImage(), imageName, imageSize, faceDatum, userEmail, startDate);
+        if (status != null && "500".equals(status.getCodes())) {
+            repositoryDto.addToWaitingList(id,faceDatum, imageName, imageSize, userEmail, startDate);
         }
-        repositoryDto.send(faceDatum, userEmail, startDate, rawLen);
+        repositoryDto.send(files, userEmail, startDate, rawLen);
 
         //take status from class common
         //if status is 500, add to waiting list
@@ -67,7 +68,7 @@ public class FaceDataServiceDto {
      */
 
     public List<Result> checkResult(String userEmail) {
-        return repositoryDto.checkResult(this.userEmail);
+        return repositoryDto.checkResult(userEmail);
     }
 
     public void resultJsonProcessing(String resultData) {

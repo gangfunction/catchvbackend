@@ -25,7 +25,7 @@ public class Result {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
-    @NotNull
+    @Nullable
     @Min(0)
     private Integer detectCount;
     @Nullable

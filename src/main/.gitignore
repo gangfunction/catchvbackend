@@ -99,3 +99,6 @@ fabric.properties
 # properties
 .properties
 .logs
+
+### Querydsl
+/src/main/generated

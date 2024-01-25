@@ -1,17 +1,31 @@
 package com.catchvbackend.api.FaceData.repository;
 
+import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Repository
 @RequiredArgsConstructor
 public class RequestRepository {
     private final EntityManager em;
+    private FaceDataServiceDto serviceDto;
+    public void send(List<MultipartFile> files, String userEmail, LocalDateTime startDate, String raw_len){
+        String url = "http://localhost:5001/image/api";
+        HttpStatus httpStatus = HttpStatus.CREATED;
+        ResponseEntity<HttpStatus> errorHttpStatus = serviceDto
+                .sendServiceProcedure(files, url, userEmail, startDate, raw_len);
+        if (errorHttpStatus != null) return;
+        new ResponseEntity<>(httpStatus);
+    }
 
-    public void upload(byte[] list, String name, Long size, String userEmail, LocalDateTime startDate){
+    public void upload(Long id, byte[] list, String name, Long size, String userEmail, LocalDateTime startDate){
         String sql = "insert into facedata(id, image, name, size, uploader,startDate) values(?, ?, ?, ?, ?,?)";
         try {
             em.createNativeQuery(sql)

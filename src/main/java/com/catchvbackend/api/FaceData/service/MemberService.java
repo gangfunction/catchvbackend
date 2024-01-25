@@ -2,7 +2,6 @@ package com.catchvbackend.api.FaceData.service;
 
 
 import com.catchvbackend.api.FaceData.domain.Member;
-import com.catchvbackend.api.FaceData.domain.Result;
 import com.catchvbackend.api.FaceData.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -48,9 +47,7 @@ public class MemberService {
         return memberRepository.findAll();
     }
 
-    public Member findOne(Long memberId) {
-        return memberRepository.findOne(memberId);
-    }
+
 
 
     public ResponseEntity<HttpStatus> login(String userEmail, String userPassword) {
