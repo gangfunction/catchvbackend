@@ -13,8 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @Getter
-public class FaceDataRepositoryDto {
-    private FaceDataRepository repository;
+public class RepositoryDto {
     private RequestRepository requestRepository;
     private ResultRepository resultRepository;
 
@@ -31,7 +30,7 @@ public class FaceDataRepositoryDto {
 
     public void addToWaitingList(Long id, List<FaceData> datum, String imageName, long imageSize, String userEmail, LocalDateTime startDate) {
         for (FaceData data : datum) {
-            requestRepository.upload(id, data.getImageObject(), imageName, imageSize, userEmail, startDate);
+            requestRepository.upload(id, data.getImageObject(), imageName, imageSize, userEmail);
         }// faceData 의 요소를 다시 뽑아봐야겠다. byte[] image, String name, long size
 
     }

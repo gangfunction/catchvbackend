@@ -2,7 +2,7 @@ package com.catchvbackend.api.FaceData.service;
 
 import com.catchvbackend.api.FaceData.domain.Result;
 import com.catchvbackend.api.FaceData.domain.face.FaceData;
-import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryDto;
+import com.catchvbackend.api.FaceData.repository.RepositoryDto;
 import lombok.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -34,13 +34,13 @@ public class FaceDataServiceDto {
     private long imageSize;
     private List<MultipartFile> files;
 
-    private FaceDataRepositoryDto repositoryDto;
+    private RepositoryDto repositoryDto;
     private FaceDataService service;
     private ResultService resultService;
     private RequestService requestService;
 
 
-    public ResponseEntity<HttpStatus> sendServiceProcedure(List<MultipartFile> files, String url, String userEmail, LocalDateTime startDate, String raw_len) {
+    public ResponseEntity<?> sendServiceProcedure(List<MultipartFile> files, String url, String userEmail, LocalDateTime startDate, String raw_len) {
         return service.sendServiceProcedure(files, url);
     }
 

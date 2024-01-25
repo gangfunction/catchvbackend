@@ -1,8 +1,6 @@
 package com.catchvbackend.api.FaceData.service;
 
-import com.catchvbackend.api.FaceData.repository.FaceDataRepository;
-import com.catchvbackend.api.FaceData.repository.FaceDataRepositoryDto;
-import org.assertj.core.api.Assertions;
+import com.catchvbackend.api.FaceData.repository.RepositoryDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,17 +11,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @DisplayName("FaceData Service 기능 테스트")
@@ -32,9 +24,7 @@ class FaceDataServiceTest {
     private FaceDataService service;
 
     @Mock
-    private FaceDataRepository repository;
-    @Mock
-    private FaceDataRepositoryDto repositoryDto;
+    private RepositoryDto repositoryDto;
     @Mock
     private FaceDataServiceDto serviceDto;
 

@@ -1,12 +1,9 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.domain.LoginStatus;
 import com.catchvbackend.api.FaceData.domain.Member;
-import com.catchvbackend.api.FaceData.repository.MemberRepository;
 import com.catchvbackend.api.FaceData.service.MemberService;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,44 +11,39 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/user")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MemberController {
     /**
      * 컨트롤러 클래스에서 메인 로직을 결정하고 httpstatus에 대한 판단은 각 서비스 로직에서 실행한다.
      */
     private final MemberService memberService;
-    private final MemberRepository memberRepository;
 
 
     @PostMapping("/api")
-    public ResponseEntity<HttpStatus> showUser(@RequestBody Member user) {
-        memberService.login(user.getUserEmail(), user.getUserPassword());
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> loginUser(@RequestBody Member user) {
+        return memberService.login(user.getUserEmail(), user.getUserPassword());
     }
 
     @PostMapping("/api/logout")
-    public ResponseEntity<HttpStatus> logoutUser(@RequestBody Member user) {
-        user.setLoginStatus(LoginStatus.LOGOUT);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> logoutUser(@RequestBody Member user) {
+        return memberService.userLogout(user);
     }
 
     @PutMapping("/api")
-    public ResponseEntity<HttpStatus> registerUser(@RequestBody Member user) {
-        memberService.join(user);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> registerUser(@RequestBody Member user) {
+        return memberService.join(user);
     }
 
     @PatchMapping("/api")
-    public ResponseEntity<HttpStatus> editUser(@RequestBody Member user) {
-        memberRepository.edit(user);
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> editUser(@RequestBody Member user) {
+        return memberService.updateMemberPasswordByUserEmail(user);
     }
 
     @DeleteMapping("/api")
-    public ResponseEntity<HttpStatus> outUser(@RequestBody Member user) {
-        memberRepository.deleteByUserEmail(user.getUserEmail());
-        return new ResponseEntity<>(HttpStatus.OK);
+    public ResponseEntity<?> outUser(@RequestBody Member user) {
+        return memberService.deleteByUserEmail(user);
     }
+}
 //    @PostMapping("/api/create")
 //    public CreateResponse create(@RequestBody @Valid Member user) {
 //        return new CreateResponse(id);
@@ -83,4 +75,4 @@ public class MemberController {
 //    //lazy initializing이 중요하다
 
 
-}
+

@@ -38,7 +38,7 @@ public class MemberRepositoryTest extends BaseEntity{
         em.flush();
 
         // when
-        List<Member> foundMembers = memberRepository.findByUserEmailAndAndLoginStatus("test@example.com", LoginStatus.LOGIN);
+        List<Member> foundMembers = memberRepository.findMembersByUserEmailAndLoginStatus("test@example.com", LoginStatus.LOGIN);
 
         // then
         assertThat(foundMembers).isNotEmpty();
@@ -56,7 +56,7 @@ public class MemberRepositoryTest extends BaseEntity{
         em.flush();
 
         // when
-        Member foundMember = memberRepository.findMemberByEmail("test@example.com");
+        Member foundMember = memberRepository.findMemberByUserEmail("test@example.com");
 
         // then
         assertThat(foundMember).isNotNull();
@@ -78,6 +78,35 @@ public class MemberRepositoryTest extends BaseEntity{
         // then
         assertThat(foundResults).isNotEmpty();
         assertThat(foundResults.get(0).getUserEmail()).isEqualTo("test@example.com");
+    }
+
+    @Test
+    void findMembersByUserEmailAndLoginStatus() {
+
+    }
+
+    @Test
+    void findMemberByUserEmail() {
+    }
+
+    @Test
+    void findByEmail() {
+    }
+
+    @Test
+    void deleteMemberByUserEmail() {
+    }
+
+    @Test
+    void changeStatus() {
+    }
+
+    @Test
+    void edit() {
+    }
+
+    @Test
+    void findLoginStatusByEmail() {
     }
 
     //    private Predicate userEmailEq(String userEmailCond){
