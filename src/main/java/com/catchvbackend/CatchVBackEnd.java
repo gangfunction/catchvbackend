@@ -2,6 +2,7 @@ package com.catchvbackend;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.trace.http.InMemoryHttpTraceRepository;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.AuditorAware;
@@ -26,7 +27,10 @@ public class CatchVBackEnd {
         return () -> Optional.of(UUID.randomUUID().toString());
     }
 
-
+    @Bean
+    public InMemoryHttpTraceRepository httpTraceRepository() {
+        return new InMemoryHttpTraceRepository();
+    }
 }
 /*
 imageDaoJDBC

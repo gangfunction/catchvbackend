@@ -20,7 +20,6 @@ spring:
 spring:
   profiles:
     active: local
-# ...
 ---
 spring:
   config:
@@ -44,3 +43,27 @@ logging:
       springframework:
         security: DEBUG
 ---
+logging:
+  level:
+    com.catchvbackend.api.FaceData.controller.FaceDataController: DEBUG
+---
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  server:
+    port: 8080
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-components: always
+      #show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"

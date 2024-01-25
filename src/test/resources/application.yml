@@ -44,3 +44,30 @@ logging:
       springframework:
         security: DEBUG
 ---
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+---
+info:
+  app:
+    name: ${spring.application.name}
+    description: ${spring.application.description}
+    version: ${spring.application.version}
+    java:
+      version: ${java.version}
+      vendor: ${java.vendor}
+      home: ${java.home}
+    os:
+      name: ${os.name}
+      version: ${os.version}
+      architecture: ${os.arch}
+    user:
+      name: ${user.name}
+      timezone: ${user.timezone}
+      country: ${user.country}
+      language: ${user.language}
+      home: ${user.home}
+      dir: ${user.dir}
