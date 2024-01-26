@@ -4,6 +4,7 @@ import com.catchvbackend.api.FaceData.domain.Member;
 import com.catchvbackend.api.FaceData.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.modelmapper.ModelMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,37 +18,38 @@ public class MemberController {
      * 컨트롤러 클래스에서 메인 로직을 결정하고 httpstatus에 대한 판단은 각 서비스 로직에서 실행한다.
      */
     private final MemberService memberService;
+    private final ModelMapper modelMapper;
+
+    private Member mapMember(Member user) {
+        return modelMapper.map(user, Member.class);
+    }
 
 
     @PostMapping("/api")
     public ResponseEntity<?> loginUser(@RequestBody Member user) {
-        return memberService.login(user.getUserEmail(), user.getUserPassword());
+        return memberService.login(mapMember(user).getUserEmail(), mapMember(user).getUserPassword());
     }
 
     @PostMapping("/api/logout")
     public ResponseEntity<?> logoutUser(@RequestBody Member user) {
-        return memberService.userLogout(user);
+        return memberService.userLogout(mapMember(user));
     }
 
     @PutMapping("/api")
     public ResponseEntity<?> registerUser(@RequestBody Member user) {
-        return memberService.join(user);
+        return memberService.join(mapMember(user));
     }
 
     @PatchMapping("/api")
     public ResponseEntity<?> editUser(@RequestBody Member user) {
-        return memberService.updateMemberPasswordByUserEmail(user);
+        return memberService.updateMemberPasswordByUserEmail(mapMember(user));
     }
 
     @DeleteMapping("/api")
     public ResponseEntity<?> outUser(@RequestBody Member user) {
-        return memberService.deleteByUserEmail(user);
+        return memberService.deleteByUserEmail(mapMember(user));
     }
 }
-//    @PostMapping("/api/create")
-//    public CreateResponse create(@RequestBody @Valid Member user) {
-//        return new CreateResponse(id);
-//    }
 //    @GetMapping("/api/create")
 //    public ResponseType<Member> createv2() {
 //        List<Member> findmMembers = memberService.findMembers();

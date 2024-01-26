@@ -41,7 +41,7 @@ logging:
   level:
     org:
       springframework:
-        security: DEBUG
+        security: INFO
 ---
 logging:
   level:
@@ -62,8 +62,23 @@ management:
       enabled: true
     health:
       show-components: always
-      #show-details: always
   endpoints:
     web:
       exposure:
         include: "*"
+  metrics:
+    distribution:
+        percentiles-histogram:
+            http:
+            server:
+                requests: true
+---
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  tomcat:
+    mbeanregistry:
+        enabled: true

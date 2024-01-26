@@ -1,7 +1,9 @@
 package com.catchvbackend.api.FaceData.domain;
 
 import com.catchvbackend.api.FaceData.domain.face.FaceData;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import net.minidev.json.annotate.JsonIgnore;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +16,7 @@ import java.util.List;
 
 @Entity
 @Getter @Setter
+@RequiredArgsConstructor
 public class Request{
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "upload_request_id")
@@ -21,7 +24,6 @@ public class Request{
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
-
 
     @NotNull
     private String rawLen;
@@ -46,23 +48,14 @@ public class Request{
     @Enumerated(EnumType.STRING)
     private ResultStatus status;
 
+    public static Request  createRequest(String userEmail, String rawLen, String uploader, String setupUrl){
+        Request request = new Request();
+        request.setUserEmail(userEmail);
+        request.setRawLen(rawLen);
+        request.setUploader(uploader);
+        request.setSetupUrl(setupUrl);
+        request.setStartDate(LocalDateTime.now());
 
-    public static Request createUploadRequest(String rawLen, LocalDateTime startDate, String uploader, String userEmail, ResultStatus status, FaceData... faceDatas) {
-        Request uploadRequest = new Request();
-        uploadRequest.setRawLen(rawLen);
-        uploadRequest.setUploader(uploader);
-        uploadRequest.setUserEmail(userEmail);
-        uploadRequest.setStatus(status);
-        for (FaceData faceDatum : faceDatas) {
-            uploadRequest.addFaceData(faceDatum);
-        }
-        uploadRequest.setStartDate(LocalDateTime.now());
-
-        return uploadRequest;
-    }
-
-    private void addFaceData(FaceData faceData) {
-        faceDatum.add(faceData);
-        faceData.setUploadRequest(this);
+        return request;
     }
 }

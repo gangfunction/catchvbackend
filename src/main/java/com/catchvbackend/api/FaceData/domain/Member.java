@@ -13,9 +13,7 @@ import java.util.Set;
 
 @Entity
 @Getter @Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class Member {
 
     @Id @GeneratedValue

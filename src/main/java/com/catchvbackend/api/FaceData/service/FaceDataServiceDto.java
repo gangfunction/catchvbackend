@@ -71,8 +71,8 @@ public class FaceDataServiceDto {
         return repositoryDto.checkResult(userEmail);
     }
 
-    public void resultJsonProcessing(String resultData) {
-        resultService.resultJsonProcessing(resultData);
+    public void resultJsonProcessing(String requestUserEmail) {
+        resultService.resultJsonProcessing(requestUserEmail);
     }
 
 

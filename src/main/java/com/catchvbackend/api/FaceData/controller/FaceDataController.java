@@ -24,36 +24,36 @@ public class FaceDataController {
      * 컨트롤러 패키지에 Dto를 추가했었던 첫 개선점은 별 문제가 되지않지만, controller단에서
      * 로직에 관한 처리를 하는것이 바람직하지 않다고 판단했다.
      */
-    private  FaceDataServiceDto serviceDto;
+    private FaceDataServiceDto serviceDto;
     private final ModelMapper modelMapper;
-    public FaceDataController( ModelMapper modelMapper) {
+
+    public FaceDataController(ModelMapper modelMapper) {
         this.modelMapper = modelMapper;
     }
 
-    @PostMapping(value="/request")
+    @PostMapping(value = "/request")
     public List<Result> requestImage(@RequestBody String userEmail) throws JSONException {
         return serviceDto.checkResult(userEmail);
     }
 
-    @PostMapping(value="/result")
-    public void resultJson(@RequestBody String resultData) {
-        serviceDto.resultJsonProcessing(resultData);
+    @PostMapping(value = "/result")
+    public void resultJson(@RequestBody String requestEmail) {
+        serviceDto.resultJsonProcessing(requestEmail);
     }
 
     @PostMapping(value = "/api")
-    public void uploadImage(@RequestBody FaceDataServiceDto serviceDto) throws IOException {
-        FaceDataServiceDto dto = modelMapper.map(serviceDto, FaceDataServiceDto.class);
-        dto.uploadEvaluationLogic();
-//        FaceDataServiceDto.uploadEvaluationLogic(serviceDto, status);
+    public void uploadImage(@RequestBody FaceDataServiceDto serviceDto) {
+        FaceDataServiceDto mappedDto = modelMapper.map(serviceDto, FaceDataServiceDto.class);
+        mappedDto.uploadEvaluationLogic();
     }
 
     @GetMapping(value = "/responseCsv")
-    public void responseCsv(){
+    public void responseCsv() {
         REST_TEMPLATE.getForEntity("http://localhost:5001/image/toCsv", String.class);
     }
 
     @PostMapping(value = "/downCsv")
-    public void downCsvFile(@RequestBody String files){
+    public void downCsvFile(@RequestBody String files) {
         File file = new File(Arrays.toString(files.getBytes()));
     }
 }

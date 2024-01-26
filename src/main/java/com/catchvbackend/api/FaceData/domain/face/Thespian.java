@@ -9,7 +9,6 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("T")
 @Getter
-@Setter
 public class Thespian extends FaceData{
     private String actorName;
     private String actorRole;
