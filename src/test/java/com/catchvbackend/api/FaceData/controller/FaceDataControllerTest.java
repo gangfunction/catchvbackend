@@ -1,16 +1,14 @@
 package com.catchvbackend.api.FaceData.controller;
 
 import com.catchvbackend.api.FaceData.service.FaceDataService;
-import com.catchvbackend.api.FaceData.service.FaceDataServiceDto;
+import com.catchvbackend.api.FaceData.service.ImageServiceDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
@@ -73,7 +71,7 @@ class FaceDataControllerTest {
     @Test
     public void creeateEvent_BAD_REQUEST() throws Exception {
         //given - facedataclusterdto to build
-        FaceDataServiceDto serviceDto = FaceDataServiceDto.builder().build();
+        ImageServiceDto serviceDto = ImageServiceDto.builder().build();
         this.mockMvc.perform(post("/image"))
                 .andExpect(status().isBadRequest());
         //when

@@ -19,7 +19,7 @@ import java.util.List;
 @Transactional
 @RequiredArgsConstructor
 public class FaceDataService {
-    private RequestService requestService;
+    private ImageRequestService imageRequestService;
 
     /*
     멀티파트 폼데이터를 활용해야 application/json에비해 대용량의 사진을 전송하기 용이했었습니다.
@@ -34,7 +34,7 @@ public class FaceDataService {
 
     public ResponseEntity<?> sendServiceProcedure(List<MultipartFile> files, String url) {
         LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-        requestService.faceDataRequestModelMapping(files, map);
+        imageRequestService.faceDataRequestModelMapping(files, map);
         try {
             sendService(url, map);
             return ResponseEntity.ok().build();

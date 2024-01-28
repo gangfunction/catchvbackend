@@ -1,6 +1,6 @@
 package com.catchvbackend.api.FaceData.repository;
 
-import com.catchvbackend.api.FaceData.domain.Result;
+import com.catchvbackend.api.FaceData.domain.ImageResult;
 import com.catchvbackend.api.FaceData.domain.face.FaceData;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,23 +14,23 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 public class RepositoryDto {
-    private RequestRepository requestRepository;
-    private ResultRepository resultRepository;
+    private ImageRequestRepository imageRequestRepository;
+    private ImageResultRepository imageResultRepository;
 
     //checkresult
-    public List<Result> checkResult(String userEmail) {
-        return resultRepository.checkResult(userEmail);
+    public List<ImageResult> checkResult(String userEmail) {
+        return imageResultRepository.checkResult(userEmail);
     }
 
 
     public  void send(List<MultipartFile> files, String userEmail, LocalDateTime startDate, String rawLen) {
-        requestRepository.send(files,userEmail,startDate,rawLen);
+        imageRequestRepository.send(files,userEmail,startDate,rawLen);
     }
 
 
     public void addToWaitingList(Long id, List<FaceData> datum, String imageName, long imageSize, String userEmail, LocalDateTime startDate) {
         for (FaceData data : datum) {
-            requestRepository.upload(id, data.getImageObject(), imageName, imageSize, userEmail);
+            imageRequestRepository.upload(id, data.getImageObject(), imageName, imageSize, userEmail);
         }// faceData 의 요소를 다시 뽑아봐야겠다. byte[] image, String name, long size
 
     }

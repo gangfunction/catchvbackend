@@ -37,17 +37,17 @@ public class QThespian extends EntityPathBase<Thespian> {
     //inherited
     public final ArrayPath<byte[], Byte> imageObject;
 
+    // inherited
+    public final com.catchvbackend.api.FaceData.domain.QImageRequest imageRequest;
+
+    // inherited
+    public final com.catchvbackend.api.FaceData.domain.QImageResult imageResult;
+
     //inherited
     public final NumberPath<Long> imageSize;
 
-    // inherited
-    public final com.catchvbackend.api.FaceData.domain.QResult serviceResult;
-
     //inherited
     public final EnumPath<FaceDataStatus> status;
-
-    // inherited
-    public final com.catchvbackend.api.FaceData.domain.QRequest uploadRequest;
 
     //inherited
     public final StringPath userEmail;
@@ -74,10 +74,10 @@ public class QThespian extends EntityPathBase<Thespian> {
         this.id = _super.id;
         this.imageName = _super.imageName;
         this.imageObject = _super.imageObject;
+        this.imageRequest = _super.imageRequest;
+        this.imageResult = _super.imageResult;
         this.imageSize = _super.imageSize;
-        this.serviceResult = _super.serviceResult;
         this.status = _super.status;
-        this.uploadRequest = _super.uploadRequest;
         this.userEmail = _super.userEmail;
     }
 

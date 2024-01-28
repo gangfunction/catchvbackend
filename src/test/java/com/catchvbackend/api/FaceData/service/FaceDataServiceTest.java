@@ -26,7 +26,7 @@ class FaceDataServiceTest {
     @Mock
     private RepositoryDto repositoryDto;
     @Mock
-    private FaceDataServiceDto serviceDto;
+    private ImageServiceDto serviceDto;
 
     @Nested
     @DisplayName("성공하는 테스트")

@@ -28,13 +28,13 @@ public class QFaceData extends EntityPathBase<FaceData> {
 
     public final ArrayPath<byte[], Byte> imageObject = createArray("imageObject", byte[].class);
 
+    public final com.catchvbackend.api.FaceData.domain.QImageRequest imageRequest;
+
+    public final com.catchvbackend.api.FaceData.domain.QImageResult imageResult;
+
     public final NumberPath<Long> imageSize = createNumber("imageSize", Long.class);
 
-    public final com.catchvbackend.api.FaceData.domain.QResult serviceResult;
-
     public final EnumPath<FaceDataStatus> status = createEnum("status", FaceDataStatus.class);
-
-    public final com.catchvbackend.api.FaceData.domain.QRequest uploadRequest;
 
     public final StringPath userEmail = createString("userEmail");
 
@@ -56,8 +56,8 @@ public class QFaceData extends EntityPathBase<FaceData> {
 
     public QFaceData(Class<? extends FaceData> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.serviceResult = inits.isInitialized("serviceResult") ? new com.catchvbackend.api.FaceData.domain.QResult(forProperty("serviceResult"), inits.get("serviceResult")) : null;
-        this.uploadRequest = inits.isInitialized("uploadRequest") ? new com.catchvbackend.api.FaceData.domain.QRequest(forProperty("uploadRequest"), inits.get("uploadRequest")) : null;
+        this.imageRequest = inits.isInitialized("imageRequest") ? new com.catchvbackend.api.FaceData.domain.QImageRequest(forProperty("imageRequest"), inits.get("imageRequest")) : null;
+        this.imageResult = inits.isInitialized("imageResult") ? new com.catchvbackend.api.FaceData.domain.QImageResult(forProperty("imageResult"), inits.get("imageResult")) : null;
     }
 
 }

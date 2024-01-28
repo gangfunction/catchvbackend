@@ -2,6 +2,8 @@ package com.catchvbackend.api.FaceData.controller;
 
 import com.catchvbackend.api.FaceData.domain.Member;
 import com.catchvbackend.api.FaceData.service.MemberService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @Slf4j
+@Tag(name = "Member", description = "회원 관련 API")
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -25,26 +28,30 @@ public class MemberController {
     }
 
 
+    @Operation(summary = "회원가입", description = "회원가입을 합니다.")
     @PostMapping("/api")
     public ResponseEntity<?> loginUser(@RequestBody Member user) {
         return memberService.login(mapMember(user).getUserEmail(), mapMember(user).getUserPassword());
     }
-
+    @Operation(summary = "로그인", description = "로그인을 합니다.")
     @PostMapping("/api/logout")
     public ResponseEntity<?> logoutUser(@RequestBody Member user) {
         return memberService.userLogout(mapMember(user));
     }
 
+    @Operation(summary = "회원가입", description = "회원가입을 합니다.")
     @PutMapping("/api")
     public ResponseEntity<?> registerUser(@RequestBody Member user) {
         return memberService.join(mapMember(user));
     }
 
+    @Operation(summary = "회원정보수정", description = "회원정보를 수정합니다.")
     @PatchMapping("/api")
     public ResponseEntity<?> editUser(@RequestBody Member user) {
         return memberService.updateMemberPasswordByUserEmail(mapMember(user));
     }
 
+    @Operation(summary = "회원탈퇴", description = "회원탈퇴를 합니다.")
     @DeleteMapping("/api")
     public ResponseEntity<?> outUser(@RequestBody Member user) {
         return memberService.deleteByUserEmail(mapMember(user));

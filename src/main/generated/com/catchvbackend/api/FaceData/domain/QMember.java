@@ -26,7 +26,7 @@ public class QMember extends EntityPathBase<Member> {
 
     public final SetPath<com.catchvbackend.api.FaceData.repository.AccountRole, EnumPath<com.catchvbackend.api.FaceData.repository.AccountRole>> roles = this.<com.catchvbackend.api.FaceData.repository.AccountRole, EnumPath<com.catchvbackend.api.FaceData.repository.AccountRole>>createSet("roles", com.catchvbackend.api.FaceData.repository.AccountRole.class, EnumPath.class, PathInits.DIRECT2);
 
-    public final ListPath<Result, QResult> serviceResults = this.<Result, QResult>createList("serviceResults", Result.class, QResult.class, PathInits.DIRECT2);
+    public final ListPath<ImageResult, QImageResult> serviceImageResults = this.<ImageResult, QImageResult>createList("serviceImageResults", ImageResult.class, QImageResult.class, PathInits.DIRECT2);
 
     public final StringPath userEmail = createString("userEmail");
 

@@ -1,7 +1,7 @@
 package com.catchvbackend.api.FaceData.domain.face;
 
-import com.catchvbackend.api.FaceData.domain.Result;
-import com.catchvbackend.api.FaceData.domain.Request;
+import com.catchvbackend.api.FaceData.domain.ImageRequest;
+import com.catchvbackend.api.FaceData.domain.ImageResult;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,12 +27,12 @@ public abstract class FaceData {
     private long imageSize;
 
     @ManyToOne
-    private Result serviceResult;
+    private ImageResult imageResult;
 
     @Enumerated(EnumType.STRING)
     private FaceDataStatus status;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Request uploadRequest;
+    @ManyToOne
+    private ImageRequest imageRequest;
 
 }

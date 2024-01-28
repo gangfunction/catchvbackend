@@ -26,8 +26,8 @@ public class MemberService {
     /**
      * 회원가입
      *
-     * @param member
-     * @return
+     * @param member : 회원가입 정보
+     * @return : 회원가입 성공시 회원 id 반환
      */
     public ResponseEntity<?> join(Member member) {
         Optional<Member> findMember = Optional.ofNullable(memberRepository.findMemberByUserEmail(member.getUserEmail()));
@@ -39,9 +39,9 @@ public class MemberService {
     /**
      * 로그인
      *
-     * @param userEmail
-     * @param userPassword
-     * @return
+     * @param userEmail : 로그인 이메일
+     * @param userPassword : 로그인 비밀번호
+     * @return : 로그인 성공시 HttpStatus 200 반환
      */
     public ResponseEntity<HttpStatus> login(String userEmail, String userPassword) {
         Optional<Member> findMember = Optional.ofNullable(memberRepository.findMemberByUserEmail(userEmail));
@@ -54,8 +54,8 @@ public class MemberService {
     }
 
     /**
-     * @param member
-     * @return
+     * @param member : 회원정보
+     * @return : 회원정보 수정 성공시 HttpStatus 200 반환
      */
     public ResponseEntity<?> updateMemberPasswordByUserEmail(Member member) {
         Optional<Member> findMember = Optional.ofNullable(memberRepository.findMemberByUserEmail(member.getUserEmail()));
@@ -67,8 +67,8 @@ public class MemberService {
 
 
     /**
-     * @param member
-     * @return
+     * @param member : 회원정보
+     * @return : 회원정보 삭제 성공시 HttpStatus 200 반환
      */
     public ResponseEntity<?> deleteByUserEmail(Member member) {
         LoginStatus status = memberRepository.findLoginStatusByUserEmail(member.getUserEmail());
@@ -80,8 +80,8 @@ public class MemberService {
     }
 
     /**
-     * @param member
-     * @return
+     * @param member : 회원정보
+     * @return : 로그아웃 성공시 HttpStatus 200 반환
      */
     public ResponseEntity<?> userLogout(Member member) {
         LoginStatus status = memberRepository.findLoginStatusByUserEmail(member.getUserEmail());

@@ -1,9 +1,9 @@
 package com.catchvbackend.api.FaceData.repository;
 
+import com.catchvbackend.api.FaceData.domain.ImageResult;
 import com.catchvbackend.api.FaceData.domain.LoginStatus;
 import com.catchvbackend.api.FaceData.domain.Member;
-import com.catchvbackend.api.FaceData.domain.Result;
-import com.catchvbackend.entity.BaseEntity;
+import com.catchvbackend.entity.TimeEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(SpringExtension.class)
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
-public class MemberRepositoryTest extends BaseEntity{
+public class MemberRepositoryTest extends TimeEntity {
 
     @Autowired
     private TestEntityManager em;
@@ -66,18 +66,18 @@ public class MemberRepositoryTest extends BaseEntity{
     @Test
     public void testFindByEmail() {
         // given
-        Result result = new Result();
-        result.setUserEmail("test@example.com");
-        result.setVideoCount(30);
-        em.persist(result);
+        ImageResult imageResult = new ImageResult();
+        imageResult.setUserEmail("test@example.com");
+        imageResult.setVideoCount(30);
+        em.persist(imageResult);
         em.flush();
 
         // when
-        List<Result> foundResults = memberRepository.findByEmail("test@example.com");
+        List<ImageResult> foundImageResults = memberRepository.findByEmail("test@example.com");
 
         // then
-        assertThat(foundResults).isNotEmpty();
-        assertThat(foundResults.get(0).getUserEmail()).isEqualTo("test@example.com");
+        assertThat(foundImageResults).isNotEmpty();
+        assertThat(foundImageResults.get(0).getUserEmail()).isEqualTo("test@example.com");
     }
 
     @Test

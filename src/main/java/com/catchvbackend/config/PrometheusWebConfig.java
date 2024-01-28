@@ -16,6 +16,7 @@ public class PrometheusWebConfig {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/actuator/**").permitAll()
+                .antMatchers("/swagger-ui/**").permitAll()
                 .anyRequest().authenticated();
         return http.build();
     }
