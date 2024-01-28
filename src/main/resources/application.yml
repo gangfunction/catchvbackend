@@ -1,0 +1,98 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        default_batch_fetch_size: 100
+  datasource:
+    url: jdbc:postgresql://localhost:5432/catchv
+    username: admin
+    password: admin
+---
+springdoc:
+  packages-to-scan: com.catchvbackend.api
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: /swagger-ui/sample/index.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /swagger-ui/sample/swagger.json
+    groups:
+      enabled: true
+---
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+---
+spring:
+  profiles:
+    active: local
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+---
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+---
+logging:
+  level:
+    org:
+      springframework:
+        security: INFO
+---
+logging:
+  level:
+    com.catchvbackend.api.FaceData.controller.FaceDataController: DEBUG
+---
+management:
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+    env:
+      enabled: true
+  server:
+    port: 8080
+  endpoint:
+    shutdown:
+      enabled: true
+    health:
+      show-components: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    distribution:
+        percentiles-histogram:
+            http:
+            server:
+                requests: true
+---
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+server:
+  tomcat:
+    mbeanregistry:
+        enabled: true

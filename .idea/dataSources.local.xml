@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-233.11799.300">
-    <data-source name="@localhost [2]" uuid="51bcdcc0-d2af-4324-bd22-2f1ad1692e0c">
-      <database-info product="MySQL" version="8.2.0" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.2.0" exact-driver-version="8.0">
-        <extra-name-characters>#@</extra-name-characters>
-        <identifier-quote-string>`</identifier-quote-string>
+    <data-source name="H2" uuid="d8569bab-88fd-4880-8cb0-461fb9923178">
+      <database-info product="H2" version="2.1.210 (2022-01-17)" jdbc-version="4.2" driver-name="H2 JDBC Driver" driver-version="2.1.210 (2022-01-17)" dbms="H2" exact-version="2.1.210" exact-driver-version="2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>sa</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="@" />
+          <node kind="database" negative="1">
+            <node kind="schema" negative="1" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

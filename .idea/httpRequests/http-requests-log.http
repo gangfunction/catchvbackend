@@ -1,4 +1,19 @@
 POST http://localhost:8080/image/request
+Content-Type: application/json
+Content-Length: 6
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+
+}
+
+<> 2024-01-08T190749.500.json
+
+###
+
+POST http://localhost:8080/image/request
 Content-Length: 0
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.9)

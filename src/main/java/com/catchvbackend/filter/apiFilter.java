@@ -21,7 +21,7 @@ public class apiFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
         try {
             if(nullCheck((HttpServletRequest) request, (HttpServletResponse) response)){
                 chain.doFilter(request, response);

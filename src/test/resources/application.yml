@@ -1,0 +1,73 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+        default_batch_fetch_size: 100
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+---
+spring:
+  profiles:
+    active: local
+# ...
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+---
+spring:
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+---
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+---
+management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
+
+---
+info:
+  app:
+    name: ${spring.application.name}
+    description: ${spring.application.description}
+    version: ${spring.application.version}
+    java:
+      version: ${java.version}
+      vendor: ${java.vendor}
+      home: ${java.home}
+    os:
+      name: ${os.name}
+      version: ${os.version}
+      architecture: ${os.arch}
+    user:
+      name: ${user.name}
+      timezone: ${user.timezone}
+      country: ${user.country}
+      language: ${user.language}
+      home: ${user.home}
+      dir: ${user.dir}
