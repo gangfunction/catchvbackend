@@ -2,6 +2,9 @@ package com.catchvbackend.api.FaceData.domain;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.catchvbackend.domain.ImageRequest;
+import com.catchvbackend.domain.ResultStatus;
+import com.catchvbackend.domain.face.FaceData;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -22,7 +25,7 @@ public class QImageRequest extends EntityPathBase<ImageRequest> {
 
     public static final QImageRequest imageRequest = new QImageRequest("imageRequest");
 
-    public final ListPath<com.catchvbackend.api.FaceData.domain.face.FaceData, com.catchvbackend.api.FaceData.domain.face.QFaceData> faceDatum = this.<com.catchvbackend.api.FaceData.domain.face.FaceData, com.catchvbackend.api.FaceData.domain.face.QFaceData>createList("faceDatum", com.catchvbackend.api.FaceData.domain.face.FaceData.class, com.catchvbackend.api.FaceData.domain.face.QFaceData.class, PathInits.DIRECT2);
+    public final ListPath<FaceData, com.catchvbackend.api.FaceData.domain.face.QFaceData> faceDatum = this.<FaceData, com.catchvbackend.api.FaceData.domain.face.QFaceData>createList("faceDatum", FaceData.class, com.catchvbackend.api.FaceData.domain.face.QFaceData.class, PathInits.DIRECT2);
 
     public final NumberPath<Long> id = createNumber("id", Long.class);
 

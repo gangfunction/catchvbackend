@@ -1,7 +1,8 @@
 package com.catchvbackend.api.FaceData.service;
 
-import com.catchvbackend.api.FaceData.domain.Member;
-import com.catchvbackend.api.FaceData.repository.MemberRepository;
+import com.catchvbackend.api.service.MemberService;
+import com.catchvbackend.model.Member;
+import com.catchvbackend.api.repository.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

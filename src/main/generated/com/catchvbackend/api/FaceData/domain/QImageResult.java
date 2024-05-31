@@ -2,6 +2,8 @@ package com.catchvbackend.api.FaceData.domain;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.ResultStatus;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;

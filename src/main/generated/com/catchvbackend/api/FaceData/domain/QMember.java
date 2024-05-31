@@ -2,6 +2,10 @@ package com.catchvbackend.api.FaceData.domain;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.catchvbackend.domain.AccountRole;
+import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.LoginStatus;
+import com.catchvbackend.model.Member;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
@@ -24,7 +28,7 @@ public class QMember extends EntityPathBase<Member> {
 
     public final EnumPath<LoginStatus> loginStatus = createEnum("loginStatus", LoginStatus.class);
 
-    public final SetPath<com.catchvbackend.api.FaceData.repository.AccountRole, EnumPath<com.catchvbackend.api.FaceData.repository.AccountRole>> roles = this.<com.catchvbackend.api.FaceData.repository.AccountRole, EnumPath<com.catchvbackend.api.FaceData.repository.AccountRole>>createSet("roles", com.catchvbackend.api.FaceData.repository.AccountRole.class, EnumPath.class, PathInits.DIRECT2);
+    public final SetPath<AccountRole, EnumPath<AccountRole>> roles = this.<AccountRole, EnumPath<AccountRole>>createSet("roles", AccountRole.class, EnumPath.class, PathInits.DIRECT2);
 
     public final ListPath<ImageResult, QImageResult> serviceImageResults = this.<ImageResult, QImageResult>createList("serviceImageResults", ImageResult.class, QImageResult.class, PathInits.DIRECT2);
 

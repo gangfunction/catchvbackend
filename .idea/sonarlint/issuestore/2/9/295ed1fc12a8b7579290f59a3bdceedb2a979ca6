@@ -1,0 +1,9 @@
+
+…
+java:S1128"IRemove this unused import 'org.springframework.data.domain.AuditorAware'.(éà³×J$729f2db4-aa08-4d4d-a39c-546747eff937
+ 
+java:S1128	"_Remove this unused import 'org.springframework.data.jdbc.repository.config.EnableJdbcAuditing'.(÷ÍÇñýÿÿÿÿJ$52af3196-a1ed-4655-8664-8e65c2c76334
+p
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿJ$8494d26f-7b6f-46d4-b403-2428318f1537
+l
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿJ$39548e72-a7aa-4982-8850-745da2726702

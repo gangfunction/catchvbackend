@@ -1,8 +1,9 @@
 package com.catchvbackend.api.FaceData.repository;
 
-import com.catchvbackend.api.FaceData.domain.ImageResult;
-import com.catchvbackend.api.FaceData.domain.LoginStatus;
-import com.catchvbackend.api.FaceData.domain.Member;
+import com.catchvbackend.api.repository.MemberRepository;
+import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.LoginStatus;
+import com.catchvbackend.model.Member;
 import com.catchvbackend.entity.TimeEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

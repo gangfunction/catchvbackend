@@ -1,6 +1,7 @@
 package com.catchvbackend.api.FaceData.service;
 
-import com.catchvbackend.api.FaceData.repository.RepositoryDto;
+import com.catchvbackend.api.dto.ImageServiceDto;
+import com.catchvbackend.api.dto.RepositoryDto;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,7 +1,8 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.domain.Member;
-import com.catchvbackend.api.FaceData.service.MemberService;
+import com.catchvbackend.model.Member;
+import com.catchvbackend.api.service.MemberService;
+import com.catchvbackend.api.controller.MemberController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

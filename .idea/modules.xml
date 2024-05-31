@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/catchvbackend.iml" filepath="$PROJECT_DIR$/.idea/modules/catchvbackend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/catchvbackend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/catchvbackend.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/catchvbackend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/catchvbackend.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.catchvbackend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.catchvbackend.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.catchvbackend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.catchvbackend.test.iml" />
     </modules>
   </component>
 </project>

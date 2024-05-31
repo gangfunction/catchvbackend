@@ -1,7 +1,6 @@
 package com.catchvbackend.api.FaceData.controller;
 
-import com.catchvbackend.api.FaceData.service.FaceDataService;
-import com.catchvbackend.api.FaceData.service.ImageServiceDto;
+import com.catchvbackend.api.dto.ImageServiceDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
