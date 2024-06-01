@@ -1,11 +1,11 @@
 
 ˜
-java:S6809R"UCall transactional methods via an injected dependency instead of directly via 'this'.(şšª¶8ëÂèùü1J$13f36906-adb6-454f-b3bc-5503dc9558de
-‹
-java:S5361["HReplace this call to "replaceAll()" by a call to the "replace()" method.(÷áÑå8ìÂèùü1J$6313aa23-ba5d-4282-9f93-dc7def089ede
+java:S6809B"UCall transactional methods via an injected dependency instead of directly via 'this'.(şšª¶8¨éæ’ı1J$0ee3e38e-578f-4165-80ba-289a7dfb11f7
 
-java:S6809p"UCall transactional methods via an injected dependency instead of directly via 'this'.(·ĞãÜıÿÿÿÿ8íÂèùü1J$ebf21dbe-2d6c-42e6-86a3-2b56442bbf40
-
-java:S6809s"UCall transactional methods via an injected dependency instead of directly via 'this'.(–şÃíşÿÿÿÿ8ßĞ¢úü1J$d5f8a86c-28bf-41e9-99fe-05ab403e9ee4
-j
-java:S1452…"&Remove usage of generic wildcard type.(¿ù¼ß8§ùıùü1J$5e8d6bfb-ea4c-4db6-9c06-55e6f2c79c4c
+java:S6809U"UCall transactional methods via an injected dependency instead of directly via 'this'.(îü¤üÿÿÿÿ8ªéæ’ı1J$c1df6564-2dcb-4593-a35c-a7c27f753bff
+˜
+java:S6809}"UCall transactional methods via an injected dependency instead of directly via 'this'.(òÁ›Å8¬éæ’ı1J$0f719279-1a61-4b6a-a473-2bb434ef3be9
+o
+java:S1452˜"&Remove usage of generic wildcard type.(•ÃÖáùÿÿÿÿ8œæ›“ı1J$d1d6e422-7bf8-4223-be59-52b8be9e2e45
+‘
+java:S5361ª"HReplace this call to "replaceAll()" by a call to the "replace()" method.(¢±Ã†ùÿÿÿÿ8ßœ“ı1J$6b63332b-9eec-4058-9fcd-684f4a4b2168

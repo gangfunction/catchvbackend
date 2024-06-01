@@ -5,7 +5,7 @@ import static com.querydsl.core.types.PathMetadataFactory.*;
 import com.catchvbackend.domain.AccountRole;
 import com.catchvbackend.domain.ImageResult;
 import com.catchvbackend.domain.LoginStatus;
-import com.catchvbackend.model.Member;
+import com.catchvbackend.domain.Member;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;

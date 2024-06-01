@@ -1,9 +1,3 @@
 
-•
-java:S1104"YMake REST_TEMPLATE a static final constant or non-public and provide accessors if needed.(şÃ™ÙJ$c4683bef-b379-41aa-9f5a-7becf62f4760
-o
-java:S1444"3Make this "public static REST_TEMPLATE" field final(şÃ™ÙJ$c84851ea-4d80-489d-8d50-0546ad167f88
-”
-java:S3008"XRename this field "REST_TEMPLATE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÃ™ÙJ$5f669f0f-11da-4af6-8f73-dc577809eb0a
-{
-java:S1118":Add a private constructor to hide the implicit public one.(¶ÂîìÿÿÿÿÿJ$39699076-84ce-4bc2-8ada-2d907da292a7
+£
+java:S1128"[Remove this unused import 'org.springframework.http.client.SimpleClientHttpRequestFactory'.(å€ªöøÿÿÿÿ8‚ñâı1J$bebbe3e9-1161-4bfc-a8cb-aa1bdaca10f5

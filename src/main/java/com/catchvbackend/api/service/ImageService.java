@@ -1,43 +1,43 @@
 package com.catchvbackend.api.service;
 
-import com.catchvbackend.api.dto.ImageServiceDto;
-import com.catchvbackend.api.repository.CustomImageRepositoryImpl;
+import com.catchvbackend.api.dto.ImageServiceDTO;
+import com.catchvbackend.api.repository.FaceDataRepository;
 import com.catchvbackend.api.repository.ImageRepository;
 import com.catchvbackend.domain.ImageResult;
 import com.catchvbackend.domain.face.FaceData;
 import com.fasterxml.jackson.databind.JsonNode;
-import java.time.LocalDateTime;
-import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.client.HttpStatusCodeException;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class ImageService {
-    private final CustomImageRepositoryImpl customImageRepositoryImpl;
     private final ImageRepository imageRepository;
-    private ImageServiceDto imageServiceDto;
+    private final FaceDataRepository faceDataRepository;
+    private final RestTemplate restTemplate;
+    private final ImageProcessingQueue imageProcessingQueue;
 
-    public void faceDataRequestModelMapping(List<MultipartFile> files, LinkedMultiValueMap<String, Object> map) {
+
+    public void faceDataRequestModelMapping(List<MultipartFile> files, LinkedMultiValueMap<String, Object> map, ImageServiceDTO imageServiceDto) {
         for (MultipartFile file : files) {
             if (!file.isEmpty()) {
                 map.add("files", file.getResource());
@@ -50,33 +50,17 @@ public class ImageService {
         }
     }
 
-    public static String requestImageEmailExtraction(String userEmail) throws JSONException {
-        HashMap<String, String> dict = new HashMap<>();
-        JSONObject json = new JSONObject(String.valueOf(userEmail));
-        Iterator<?> i = json.keys();
-        requestImageEmailFind(i, dict, json);
-        return dict.get("userEmail");
-    }
-
-    private static void requestImageEmailFind(Iterator<?> i, HashMap<String, String> dict, JSONObject json) {
-        while (i.hasNext()) {
-            String k = i.next().toString();
-            dict.put(k, json.getString(k));
-        }
-    }
 
     public void resultJsonProcessing(String resultData) {
         try {
             JSONObject jsonObject = new JSONObject(resultData);
-            int videoCount = Integer.parseInt(jsonObject.getString("total_inspected_video_count"));
+            int videoCount = jsonObject.getInt("total_inspected_video_count");
             JSONArray result = jsonObject.getJSONArray("result");
-            JSONObject processUserInfo = (JSONObject) result.get(0);
+            JSONObject processUserInfo = result.getJSONObject(0);
             String userEmail = processUserInfo.getString("requested_user_email");
             JSONArray processUrlLists = processUserInfo.getJSONArray("urls");
-            ArrayList<String> urlList = new ArrayList<>();
-            if (processUrlLists != null) {
-                urlListMapping(processUrlLists, urlList);
-            }
+            List<String> urlList = new ArrayList<>();
+            urlListMapping(processUrlLists, urlList);
             int detectCount = urlList.size();
             ImageResult createdImageResult = ImageResult.createServiceResult(videoCount, detectCount, userEmail, urlList);
             saveResult(createdImageResult);
@@ -85,54 +69,89 @@ public class ImageService {
         }
     }
 
-    private static void urlListMapping(JSONArray processUrlLists, ArrayList<String> urlList) {
-        for (int i = 0; i < processUrlLists.length(); i++) {
-            String tempString = processUrlLists.getString(i);
-            String ptempString = tempString.replaceAll("\"", "");
-            log.info(ptempString);
-            urlList.add(ptempString);
-        }
-    }
 
     @Transactional
     public void saveResult(ImageResult imageResultData) {
-        customImageRepositoryImpl.saveResult(imageResultData);
+        imageRepository.saveResult(imageResultData);
+    }
+
+
+    @Scheduled(fixedDelay = 5000)
+    @Transactional
+    public void processQueue() {
+        while (!imageProcessingQueue.isEmpty()) {
+            try {
+                ImageServiceDTO imageServiceDto = imageProcessingQueue.takeFromQueue();
+                processImageServiceDTO(imageServiceDto);
+            } catch (InterruptedException e) {
+                log.error("Error processing queue", e);
+                Thread.currentThread().interrupt();
+            }
+        }
     }
 
 
     @Transactional
-    public void addToWaitingList(Long id, List<FaceData> datum, String imageName, long imageSize, String userEmail, LocalDateTime startDate) {
-        for (FaceData data : datum) {
-            customImageRepositoryImpl.upload(id, data.getImageObject(), imageName, imageSize, userEmail);
+    public void addToWaitingList(ImageServiceDTO imageServiceDto) {
+        imageProcessingQueue.addToQueue(imageServiceDto);
+        log.info("Added to queue: {}", imageServiceDto.getId());
+    }
+
+
+    @Transactional
+    public void processImageServiceDTO(ImageServiceDTO imageServiceDto) {
+        Long id = imageServiceDto.getId();
+        List<FaceData> datum = imageServiceDto.getFaceDatum();
+        String imageName = imageServiceDto.getImageName();
+        long imageSize = imageServiceDto.getImageSize();
+        String userEmail = imageServiceDto.getUserEmail();
+        if (datum != null) {
+            for (FaceData data : datum) {
+                if (data != null && data.getImageObject() != null) {
+                    faceDataRepository.upload(id, new BASE64DecodedMultipartFile(data.getImageObject(), imageName), imageName, imageSize, userEmail);
+                } else {
+                    log.warn("FaceData or imageObject is null for id: {}", id);
+                }
+            }
+        } else {
+            log.warn("FaceDatum list is null for id: {}", id);
         }
     }
+
+
     @Transactional
-    public void uploadEvaluationLogic(ImageServiceDto imageServiceDto) {
-        if (imageServiceDto.getStatus() != null && "500".equals(imageServiceDto.getStatus().getCodes())) {
-            addToWaitingList(imageServiceDto.getId(),
-                imageServiceDto.getFaceDatum(), imageServiceDto.getImageName(), imageServiceDto.getImageSize(), imageServiceDto.getUserEmail(), imageServiceDto.getStartDate());
+    public void uploadEvaluationLogic(ImageServiceDTO imageServiceDto) {
+        if ("500".equals(imageServiceDto.getStatus().getCodes())) {
+            addToWaitingList(imageServiceDto);
         }
-        send(imageServiceDto.getFiles());
+        sendFiles(imageServiceDto.getFiles(), imageServiceDto);
     }
-    @Transactional
-    public void send(List<MultipartFile> files) {
-        sendServiceProcedure(files, "http://localhost:5001/image/api");
+
+
+    public void sendFiles(List<MultipartFile> files, ImageServiceDTO imageServiceDto) {
+        String url = "http://localhost:5001/image/api";
+        sendServiceProcedure(files, url, imageServiceDto);
     }
+
 
     public List<ImageResult> checkResult(String userEmail) {
         return imageRepository.findByUserEmail(userEmail);
     }
 
-    public static void sendService(String url, LinkedMultiValueMap<String, Object> map) {
+
+    public void sendService(String url, LinkedMultiValueMap<String, Object> map) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
-        HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity
-            = new HttpEntity<>(map, headers);
-        CustomRestTemplate.REST_TEMPLATE.postForObject(url, requestEntity, JsonNode.class);
+        HttpEntity<LinkedMultiValueMap<String, Object>> requestEntity = new HttpEntity<>(map, headers);
+        restTemplate.postForObject(url, requestEntity, JsonNode.class);
     }
-    public ResponseEntity<?> sendServiceProcedure(List<MultipartFile> files, String url) {
+
+    /**
+     * Sends the service procedure.
+     */
+    public ResponseEntity<?> sendServiceProcedure(List<MultipartFile> files, String url, ImageServiceDTO imageServiceDto) {
         LinkedMultiValueMap<String, Object> map = new LinkedMultiValueMap<>();
-        faceDataRequestModelMapping(files, map);
+        faceDataRequestModelMapping(files, map, imageServiceDto);
         try {
             sendService(url, map);
             return ResponseEntity.ok().build();
@@ -143,4 +162,14 @@ public class ImageService {
         }
     }
 
+    /**
+     * Maps the URL list from the JSON array.
+     */
+    private void urlListMapping(JSONArray processUrlLists, List<String> urlList) {
+        for (int i = 0; i < processUrlLists.length(); i++) {
+            String tempString = processUrlLists.getString(i).replaceAll("\"", "");
+            log.info(tempString);
+            urlList.add(tempString);
+        }
+    }
 }

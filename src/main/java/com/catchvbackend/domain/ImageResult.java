@@ -1,6 +1,5 @@
 package com.catchvbackend.domain;
 
-import com.catchvbackend.model.Member;
 import com.catchvbackend.domain.face.FaceData;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,12 +10,16 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-@Getter @Setter
+@Getter
+@Setter
 @Entity
 @NoArgsConstructor
 public class ImageResult {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_result_id")
     private Long id;
 
@@ -41,27 +44,37 @@ public class ImageResult {
     @Nullable
     private String rawLen;
 
-    @OneToMany(mappedBy = "imageResult", cascade = CascadeType.ALL)
-    private ArrayList<FaceData> faceDatum = new ArrayList<>();
+    @OneToMany(mappedBy = "imageResult", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<FaceData> faceDatum = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private ResultStatus status;
 
-
-    public void setMember(String userEmail){
-        this.userEmail = userEmail;
+    public void setMember(Member member) {
+        this.member = member;
         member.getServiceImageResults().add(this);
     }
 
+    public void addFaceData(FaceData faceData) {
+        faceDatum.add(faceData);
+        faceData.setImageResult(this);
+    }
 
-    public static ImageResult createServiceResult(Integer videoCount, Integer detectCount, String userEmail, ArrayList<String> urlList) {
+    public void removeFaceData(FaceData faceData) {
+        faceDatum.remove(faceData);
+        faceData.setImageResult(null);
+    }
+
+    public static ImageResult createServiceResult(Integer videoCount, Integer detectCount, String userEmail, List<String> urlList) {
         ImageResult serviceImageResult = new ImageResult();
         serviceImageResult.setVideoCount(videoCount);
         serviceImageResult.setDetectCount(detectCount);
         serviceImageResult.setUserEmail(userEmail);
-        serviceImageResult.setDetectedUrl(urlList.toString());
-
+        serviceImageResult.setDetectedUrl(String.join(",", urlList));
         return serviceImageResult;
     }
 
+    public List<FaceData> getFaceDatum() {
+        return Collections.unmodifiableList(faceDatum);
+    }
 }

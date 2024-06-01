@@ -1,10 +1,9 @@
 package com.catchvbackend.api.service;
 
-
 import com.catchvbackend.domain.LoginStatus;
 import com.catchvbackend.exception.MemberAlreadyExistsException;
 import com.catchvbackend.exception.MemberNotFoundException;
-import com.catchvbackend.model.Member;
+import com.catchvbackend.domain.Member;
 import com.catchvbackend.api.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,12 +17,10 @@ import java.util.Optional;
 
 @Slf4j
 @Service
-@Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class MemberService {
 
     private final MemberRepository memberRepository;
-
 
     /**
      * 회원가입
@@ -33,7 +30,7 @@ public class MemberService {
      */
     @Transactional
     public ResponseEntity<Long> join(Member member) {
-        Optional<Member> findMember = Optional.ofNullable(memberRepository.findMemberByUserEmail(member.getUserEmail()));
+        Optional<Member> findMember = memberRepository.findMemberByUserEmail(member.getUserEmail());
         if (findMember.isPresent()) {
             throw new MemberAlreadyExistsException("이미 존재하는 회원입니다.");
         }
@@ -59,6 +56,8 @@ public class MemberService {
     }
 
     /**
+     * 회원정보 수정
+     *
      * @param member : 회원정보
      * @return : 회원정보 수정 성공시 HttpStatus 200 반환
      */
@@ -67,12 +66,12 @@ public class MemberService {
         Member existingMember = memberRepository.findMemberByUserEmail(member.getUserEmail())
             .orElseThrow(() -> new MemberNotFoundException("존재하지 않는 회원입니다."));
         existingMember.setUserPassword(member.getUserPassword());
-        memberRepository.save(existingMember);
         return ResponseEntity.ok().build();
     }
 
-
     /**
+     * 회원정보 삭제
+     *
      * @param member : 회원정보
      * @return : 회원정보 삭제 성공시 HttpStatus 200 반환
      */
@@ -82,11 +81,13 @@ public class MemberService {
         if (status == LoginStatus.LOGOUT) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
-        memberRepository.deleteMemberByUserEmail(member);
+        memberRepository.deleteMemberByUserEmail(member.getUserEmail());
         return ResponseEntity.ok().build();
     }
 
     /**
+     * 로그아웃
+     *
      * @param member : 회원정보
      * @return : 로그아웃 성공시 HttpStatus 200 반환
      */

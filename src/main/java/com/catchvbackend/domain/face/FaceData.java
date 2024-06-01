@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "dtype")
 @Getter @Setter
-public abstract class FaceData {
+public class FaceData {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "face_data_id")
     private Long id;
@@ -22,6 +22,7 @@ public abstract class FaceData {
     @NotNull
     private String imageName;
     @NotNull
+    @Lob
     private byte[] imageObject;
     @Min(0)
     private long imageSize;

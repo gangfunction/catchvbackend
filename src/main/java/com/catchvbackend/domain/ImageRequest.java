@@ -1,7 +1,6 @@
 package com.catchvbackend.domain;
 
 import com.catchvbackend.domain.face.FaceData;
-import com.catchvbackend.model.Member;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

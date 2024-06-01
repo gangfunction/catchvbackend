@@ -1,7 +1,8 @@
 package com.catchvbackend.api.controller;
 
-import com.catchvbackend.api.dto.ImageServiceDto;
+import com.catchvbackend.api.dto.ImageServiceDTO;
 import com.catchvbackend.api.service.ImageService;
+import com.catchvbackend.api.service.JsonProcessingService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
@@ -15,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
-import static com.catchvbackend.api.service.CustomRestTemplate.REST_TEMPLATE;
 
 @Tag(name = "Request", description = "이미지 요청 API")
 @Slf4j
@@ -24,42 +24,42 @@ import static com.catchvbackend.api.service.CustomRestTemplate.REST_TEMPLATE;
 @RequiredArgsConstructor
 public class RequestController {
 
-    private final ModelMapper modelMapper;
-    private final ImageService imageService;
+  private final ModelMapper modelMapper;
+  private final ImageService imageService;
+  private final RestTemplate restTemplate;
+  private final JsonProcessingService jsonProcessingService;
 
-    @Operation(summary = "이미지 요청", description = "이미지를 요청합니다.")
-    @PostMapping(value = "/api", consumes = "multipart/form-data")
-    public ResponseEntity<?> uploadImage(@RequestParam("files") List<MultipartFile> files,
-        @RequestParam("userEmail") String userEmail,
-        @RequestParam("rawLen") String rawLen) {
-        try {
-            ImageServiceDto serviceDto = ImageServiceDto.builder()
-                .files(files)
-                .userEmail(userEmail)
-                .rawLen(rawLen)
-                .build();
-            ImageServiceDto mappedDto = modelMapper.map(serviceDto, ImageServiceDto.class);
-            imageService.uploadEvaluationLogic(mappedDto);
-            return ResponseEntity.ok().build();
-        } catch (Exception e) {
-            log.error("Error uploading image", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error uploading image");
-        }
-    }
-    @Operation(summary = "결과리스트 응답", description = "결과 리스트를 CSV로 응답합니다.")
-    @GetMapping(value = "/responseCsv")
-    public ResponseEntity<?> responseCsv() {
-        try {
-            ResponseEntity<String> response = REST_TEMPLATE.getForEntity("http://localhost:5001/image/toCsv", String.class);
-            HttpHeaders headers = new HttpHeaders();
-            headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=results.csv");
-            headers.set(HttpHeaders.CONTENT_TYPE, "application/csv");
-            return new ResponseEntity<>(response.getBody(), headers, HttpStatus.OK);
-        } catch (Exception e) {
-            log.error("Error fetching CSV response", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error fetching CSV response");
-        }
-    }
+  @Operation(summary = "이미지 요청", description = "이미지를 요청합니다.")
+  @PostMapping(value = "/api", consumes = "multipart/form-data")
+  public ResponseEntity<?> uploadImage(@RequestParam("files") List<MultipartFile> files,
+      @RequestParam("userEmail") String userEmail,
+      @RequestParam("rawLen") String rawLen) {
+    ImageServiceDTO serviceDto = ImageServiceDTO.builder()
+        .files(files)
+        .userEmail(userEmail)
+        .rawLen(rawLen)
+        .build();
+    ImageServiceDTO mappedDto = modelMapper.map(serviceDto, ImageServiceDTO.class);
+    imageService.uploadEvaluationLogic(mappedDto);
+    return ResponseEntity.ok().build();
+  }
 
-
+  @Operation(summary = "결과리스트 응답", description = "결과 리스트를 CSV로 응답합니다.")
+  @GetMapping(value = "/responseCsv")
+  public ResponseEntity<?> responseCsv() {
+    ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:5001/image/toCsv",
+        String.class);
+    HttpHeaders headers = new HttpHeaders();
+    headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=results.csv");
+    headers.set(HttpHeaders.CONTENT_TYPE, "application/csv");
+    return new ResponseEntity<>(response.getBody(), headers, HttpStatus.OK);
+  }
+  @PostMapping(value = "/processImageJson", consumes = "application/json")
+  public ResponseEntity<String> processImageJson(@RequestBody String jsonPayload) {
+    jsonProcessingService.processJsonPayload(jsonPayload);
+    return ResponseEntity.ok("Image JSON processed successfully");
+  }
 }
+
+
+

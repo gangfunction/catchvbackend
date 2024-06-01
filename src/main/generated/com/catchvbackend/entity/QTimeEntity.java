@@ -2,6 +2,7 @@ package com.catchvbackend.entity;
 
 import static com.querydsl.core.types.PathMetadataFactory.*;
 
+import com.catchvbackend.domain.entity.TimeEntity;
 import com.querydsl.core.types.dsl.*;
 
 import com.querydsl.core.types.PathMetadata;
