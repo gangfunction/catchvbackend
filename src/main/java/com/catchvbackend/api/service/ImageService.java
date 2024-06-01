@@ -3,7 +3,7 @@ package com.catchvbackend.api.service;
 import com.catchvbackend.api.dto.ImageServiceDTO;
 import com.catchvbackend.api.repository.FaceDataRepository;
 import com.catchvbackend.api.repository.ImageRepository;
-import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.ImageResponse;
 import com.catchvbackend.domain.face.FaceData;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.RequiredArgsConstructor;
@@ -62,8 +62,8 @@ public class ImageService {
             List<String> urlList = new ArrayList<>();
             urlListMapping(processUrlLists, urlList);
             int detectCount = urlList.size();
-            ImageResult createdImageResult = ImageResult.createServiceResult(videoCount, detectCount, userEmail, urlList);
-            saveResult(createdImageResult);
+            ImageResponse createdImageResponse = ImageResponse.createServiceResult(videoCount, detectCount, userEmail, urlList);
+            saveResult(createdImageResponse);
         } catch (Exception e) {
             log.error("Error processing result json", e);
         }
@@ -71,8 +71,8 @@ public class ImageService {
 
 
     @Transactional
-    public void saveResult(ImageResult imageResultData) {
-        imageRepository.saveResult(imageResultData);
+    public void saveResult(ImageResponse imageResponseData) {
+        imageRepository.saveResult(imageResponseData);
     }
 
 
@@ -134,7 +134,7 @@ public class ImageService {
     }
 
 
-    public List<ImageResult> checkResult(String userEmail) {
+    public List<ImageResponse> checkResult(String userEmail) {
         return imageRepository.findByUserEmail(userEmail);
     }
 

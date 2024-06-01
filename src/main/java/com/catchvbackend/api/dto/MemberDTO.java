@@ -1,7 +1,7 @@
 package com.catchvbackend.api.dto;
 
 import com.catchvbackend.domain.AccountRole;
-import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.ImageResponse;
 import com.catchvbackend.domain.LoginStatus;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.List;
@@ -31,6 +31,6 @@ public class MemberDTO {
   private Set<AccountRole> roles;
 
   @JsonIgnore
-  private List<ImageResult> serviceImageResults;
+  private List<ImageResponse> serviceImageResponses;
 
 }

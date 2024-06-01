@@ -32,6 +32,6 @@ public class Member {
 
     @JsonIgnore
     @OneToMany(mappedBy = "member" , cascade = CascadeType.ALL)
-    private final List<ImageResult> serviceImageResults = new ArrayList<>();
+    private final List<ImageResponse> serviceImageResponses = new ArrayList<>();
 
 }

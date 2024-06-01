@@ -55,7 +55,7 @@ public class ImageRequest implements Serializable {
     @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "image_result_id")
-    private ImageResult imageResult;
+    private ImageResponse imageResponse;
 
     @Enumerated(EnumType.STRING)
     private ResultStatus status;

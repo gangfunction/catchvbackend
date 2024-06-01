@@ -26,7 +26,7 @@ public class QMember extends EntityPathBase<Member> {
 
     public final SetPath<AccountRole, EnumPath<AccountRole>> roles = this.<AccountRole, EnumPath<AccountRole>>createSet("roles", AccountRole.class, EnumPath.class, PathInits.DIRECT2);
 
-    public final ListPath<ImageResult, QImageResult> serviceImageResults = this.<ImageResult, QImageResult>createList("serviceImageResults", ImageResult.class, QImageResult.class, PathInits.DIRECT2);
+    public final ListPath<ImageResponse, QImageResult> serviceImageResults = this.<ImageResponse, QImageResult>createList("serviceImageResults", ImageResponse.class, QImageResult.class, PathInits.DIRECT2);
 
     public final StringPath userEmail = createString("userEmail");
 

@@ -1,8 +1,8 @@
 package com.catchvbackend.api.repository;
 
+import com.catchvbackend.domain.ImageResponse;
 import com.catchvbackend.domain.LoginStatus;
 import com.catchvbackend.domain.Member;
-import com.catchvbackend.domain.ImageResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -19,8 +19,8 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     Optional<Member> findMemberByUserEmail(String email);
 
-    @Query("select m from ImageResult m where m.userEmail = ?1")
-    List<ImageResult> findByEmail(String email);
+    @Query("select m from ImageResponse m where m.userEmail = ?1")
+    List<ImageResponse> findByEmail(String email);
 
     @Modifying
     @Transactional

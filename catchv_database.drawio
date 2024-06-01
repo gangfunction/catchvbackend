@@ -21,7 +21,7 @@
             <mxRectangle x="440" y="-160" width="100" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WJzGjXHDjndigrRj7wi2-130" value="status FaceDataStatus&lt;br&gt;faceResource FaceResource&lt;br&gt;serviceImageResult ServiceResult&lt;br&gt;uploadRequest UploadRequest" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="WJzGjXHDjndigrRj7wi2-129">
+        <mxCell id="WJzGjXHDjndigrRj7wi2-130" value="status FaceDataStatus&lt;br&gt;faceResource FaceResource&lt;br&gt;serviceImageResponse ServiceResult&lt;br&gt;uploadRequest UploadRequest" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="WJzGjXHDjndigrRj7wi2-129">
           <mxGeometry y="50" width="230" height="90" as="geometry" />
         </mxCell>
         <mxCell id="WJzGjXHDjndigrRj7wi2-133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.544;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="WJzGjXHDjndigrRj7wi2-130" target="WJzGjXHDjndigrRj7wi2-125">

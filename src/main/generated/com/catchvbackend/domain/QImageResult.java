@@ -11,10 +11,10 @@ import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
- * QImageResult is a Querydsl query type for ImageResult
+ * QImageResult is a Querydsl query type for ImageResponse
  */
 @Generated("com.querydsl.codegen.DefaultEntitySerializer")
-public class QImageResult extends EntityPathBase<ImageResult> {
+public class QImageResult extends EntityPathBase<ImageResponse> {
 
     private static final long serialVersionUID = -1127990064L;
 
@@ -41,10 +41,10 @@ public class QImageResult extends EntityPathBase<ImageResult> {
     public final NumberPath<Integer> videoCount = createNumber("videoCount", Integer.class);
 
     public QImageResult(String variable) {
-        this(ImageResult.class, forVariable(variable), INITS);
+        this(ImageResponse.class, forVariable(variable), INITS);
     }
 
-    public QImageResult(Path<? extends ImageResult> path) {
+    public QImageResult(Path<? extends ImageResponse> path) {
         this(path.getType(), path.getMetadata(), PathInits.getFor(path.getMetadata(), INITS));
     }
 
@@ -53,10 +53,10 @@ public class QImageResult extends EntityPathBase<ImageResult> {
     }
 
     public QImageResult(PathMetadata metadata, PathInits inits) {
-        this(ImageResult.class, metadata, inits);
+        this(ImageResponse.class, metadata, inits);
     }
 
-    public QImageResult(Class<? extends ImageResult> type, PathMetadata metadata, PathInits inits) {
+    public QImageResult(Class<? extends ImageResponse> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.member = inits.isInitialized("member") ? new QMember(forProperty("member")) : null;
     }

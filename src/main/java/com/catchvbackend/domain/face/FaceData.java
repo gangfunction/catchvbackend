@@ -1,7 +1,7 @@
 package com.catchvbackend.domain.face;
 
 import com.catchvbackend.domain.ImageRequest;
-import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.ImageResponse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,7 +28,7 @@ public class FaceData {
     private long imageSize;
 
     @ManyToOne
-    private ImageResult imageResult;
+    private ImageResponse imageResponse;
 
     @Enumerated(EnumType.STRING)
     private FaceDataStatus status;
@@ -40,8 +40,8 @@ public class FaceData {
         this.status = newStatus;
     }
 
-    public void associateWithImageResult(ImageResult result) {
-        this.imageResult = result;
+    public void associateWithImageResult(ImageResponse result) {
+        this.imageResponse = result;
     }
 
 }
