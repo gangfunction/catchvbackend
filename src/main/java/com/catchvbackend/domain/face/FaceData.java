@@ -36,4 +36,12 @@ public class FaceData {
     @ManyToOne
     private ImageRequest imageRequest;
 
+    public void updateStatus(FaceDataStatus newStatus) {
+        this.status = newStatus;
+    }
+
+    public void associateWithImageResult(ImageResult result) {
+        this.imageResult = result;
+    }
+
 }

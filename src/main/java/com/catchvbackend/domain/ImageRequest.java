@@ -1,10 +1,12 @@
 package com.catchvbackend.domain;
 
 import com.catchvbackend.domain.face.FaceData;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.io.Serializable;
+import java.util.Objects;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -16,12 +18,16 @@ import java.util.List;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class ImageRequest {
+public class ImageRequest implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_request_id")
     private Long id;
+
+    @Version
+    private Long version;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
@@ -62,5 +68,17 @@ public class ImageRequest {
         imageRequest.setSetupUrl(setupUrl);
         imageRequest.setStartDate(LocalDateTime.now());
         return imageRequest;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ImageRequest that = (ImageRequest) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

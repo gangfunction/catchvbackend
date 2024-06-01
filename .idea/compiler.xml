@@ -25,7 +25,7 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mysema.commons/mysema-commons-lang/0.2.4/d09c8489d54251a6c22fbce804bdd4a070557317/mysema-commons-lang-0.2.4.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.eclipse.jdt/ecj/3.26.0/4837be609a3368a0f7e7cf0dc1bdbc7fe94993de/ecj-3.26.0.jar" />
         </processorPath>
-        <module name="com.example.catchvbackend.main~1" />
+        <module name="com.example.catchvbackend.main~2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

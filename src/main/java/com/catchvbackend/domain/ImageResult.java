@@ -1,6 +1,8 @@
 package com.catchvbackend.domain;
 
 import com.catchvbackend.domain.face.FaceData;
+import java.io.Serializable;
+import java.util.Objects;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,11 +19,15 @@ import java.util.List;
 @Setter
 @Entity
 @NoArgsConstructor
-public class ImageResult {
+public class ImageResult implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_result_id")
     private Long id;
+
+    @Version
+    private Long version;
 
     @NotNull
     @Min(0)
@@ -65,7 +71,8 @@ public class ImageResult {
         faceData.setImageResult(null);
     }
 
-    public static ImageResult createServiceResult(Integer videoCount, Integer detectCount, String userEmail, List<String> urlList) {
+    public static ImageResult createServiceResult(Integer videoCount, Integer detectCount,
+        String userEmail, List<String> urlList) {
         ImageResult serviceImageResult = new ImageResult();
         serviceImageResult.setVideoCount(videoCount);
         serviceImageResult.setDetectCount(detectCount);
@@ -76,5 +83,20 @@ public class ImageResult {
 
     public List<FaceData> getFaceDatum() {
         return Collections.unmodifiableList(faceDatum);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        ImageResult that = (ImageResult) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

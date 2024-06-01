@@ -1,7 +1,7 @@
 package com.catchvbackend.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
-import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

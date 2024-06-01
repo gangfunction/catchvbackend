@@ -29,7 +29,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 
     implementation 'com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.7'
     implementation group: 'org.javassist', name: 'javassist', version: '3.15.0-GA'
