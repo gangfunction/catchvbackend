@@ -77,5 +77,5 @@ public class ImageServiceDTO {
      * 파일 목록
      */
     private final List<MultipartFile> files;
-    
+
 }

@@ -34,3 +34,6 @@ Made with [contributors-img](https://contrib.rocks).
 >   - (이유3): 서비스상 들어오는 정보와 데이터베이스의 조작이 일관되었다면, 훌륭하지만 그렇지 않을 가능성을 상정하기위함입니다.
 - 주석을 통해, 명확히 선택에 관한 이유가 없던 기술들을 제거한다.(일자: )
 - 실 운영상황을 상정하여 모니터링 및 서버환경을 구비한다.(일자: )
+
+#### 구조 
+![chrome-capture-2024-6-1 (1)](https://github.com/gangfunction/catchvbackend/assets/62240333/d6918e05-9754-404a-8982-d7b8a63b8ada)
