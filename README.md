@@ -36,3 +36,8 @@ Made with [contributors-img](https://contrib.rocks).
 
 ### 구조 
 ![chrome-capture-2024-6-1 (1)](https://github.com/gangfunction/catchvbackend/assets/62240333/d6918e05-9754-404a-8982-d7b8a63b8ada)
+### 변화점
+- Restful API를 채택하였습니다.
+- 서비스레이어와 DTO와 혼재되어있던 부분을 분리했습니다.
+- JPA를 사용하였습니다.
+- QueryDSL을 활용했습니다.
