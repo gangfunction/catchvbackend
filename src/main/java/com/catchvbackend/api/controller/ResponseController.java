@@ -1,7 +1,7 @@
 package com.catchvbackend.api.controller;
 
 import com.catchvbackend.api.service.ImageService;
-import com.catchvbackend.domain.ImageResult;
+import com.catchvbackend.domain.ImageResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/image")
 @RequiredArgsConstructor
-public class ResultController {
+public class ResponseController {
     private final ImageService imageService;
 
 
@@ -36,7 +36,7 @@ public class ResultController {
     @GetMapping(value = "/result")
     public ResponseEntity<?> resultImage(@RequestParam String userEmail) {
         try {
-            List<ImageResult> results = imageService.checkResult(userEmail);
+            List<ImageResponse> results = imageService.checkResult(userEmail);
             if (results.isEmpty()) {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No results found for the given email");
             }

@@ -95,3 +95,7 @@ j
 :src/main/java/com/catchvbackend/config/QueryDslConfig.java,d/c/dc61931ae63599e08400a43457c80fc5e6378aac
 h
 8src/main/java/com/catchvbackend/config/FilterConfig.java,c/1/c1d8f6038bf590e2eb2a127f5efd1ec7a943bd83
+v
+Fsrc/main/java/com/catchvbackend/api/controller/ResponseController.java,9/9/9924369c8b9acb9ff1867c8ce76188cac9e843ca
+i
+9src/main/java/com/catchvbackend/domain/ImageResponse.java,3/c/3cc2c8df59126d65fcb538caae76d865b9a84101

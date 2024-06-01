@@ -14,15 +14,15 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-class ResultControllerTest {
+class ResponseControllerTest {
 
   @InjectMocks
-  private ResultController resultController;
+  private ResponseController responseController;
 
   @Mock
   private ImageService imageService;
 
-  public ResultControllerTest() {
+  public ResponseControllerTest() {
     MockitoAnnotations.openMocks(this);
   }
 
@@ -30,7 +30,7 @@ class ResultControllerTest {
   void testResultJson() {
     String requestEmail = "test@example.com";
 
-    ResponseEntity<?> response = resultController.resultJson(requestEmail);
+    ResponseEntity<?> response = responseController.resultJson(requestEmail);
 
     assertEquals(HttpStatus.OK, response.getStatusCode());
   }
@@ -42,7 +42,7 @@ class ResultControllerTest {
 
     when(imageService.checkResult(userEmail)).thenReturn(results);
 
-    ResponseEntity<?> response = resultController.resultImage(userEmail);
+    ResponseEntity<?> response = responseController.resultImage(userEmail);
 
     assertEquals(HttpStatus.OK, response.getStatusCode());
     assertEquals(results, response.getBody());

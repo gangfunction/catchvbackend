@@ -19,7 +19,7 @@ import java.util.List;
 @Setter
 @Entity
 @NoArgsConstructor
-public class ImageResult implements Serializable {
+public class ImageResponse implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -58,27 +58,27 @@ public class ImageResult implements Serializable {
 
     public void setMember(Member member) {
         this.member = member;
-        member.getServiceImageResults().add(this);
+        member.getServiceImageResponses().add(this);
     }
 
     public void addFaceData(FaceData faceData) {
         faceDatum.add(faceData);
-        faceData.setImageResult(this);
+        faceData.setImageResponse(this);
     }
 
     public void removeFaceData(FaceData faceData) {
         faceDatum.remove(faceData);
-        faceData.setImageResult(null);
+        faceData.setImageResponse(null);
     }
 
-    public static ImageResult createServiceResult(Integer videoCount, Integer detectCount,
+    public static ImageResponse createServiceResult(Integer videoCount, Integer detectCount,
         String userEmail, List<String> urlList) {
-        ImageResult serviceImageResult = new ImageResult();
-        serviceImageResult.setVideoCount(videoCount);
-        serviceImageResult.setDetectCount(detectCount);
-        serviceImageResult.setUserEmail(userEmail);
-        serviceImageResult.setDetectedUrl(String.join(",", urlList));
-        return serviceImageResult;
+        ImageResponse serviceImageResponse = new ImageResponse();
+        serviceImageResponse.setVideoCount(videoCount);
+        serviceImageResponse.setDetectCount(detectCount);
+        serviceImageResponse.setUserEmail(userEmail);
+        serviceImageResponse.setDetectedUrl(String.join(",", urlList));
+        return serviceImageResponse;
     }
 
     public List<FaceData> getFaceDatum() {
@@ -91,7 +91,7 @@ public class ImageResult implements Serializable {
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
-        ImageResult that = (ImageResult) o;
+        ImageResponse that = (ImageResponse) o;
         return Objects.equals(id, that.id);
     }
 
